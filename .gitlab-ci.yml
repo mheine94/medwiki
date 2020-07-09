@@ -14,7 +14,7 @@ build_prod:
         - cp -a ./.gitlab-ci.yml /wikipedia-medication-extractor/.gitlab-ci.yml
         - cp -a ./package-lock.json /wikipedia-medication-extractor/package-lock.json
         - cp -a ./package.json /wikipedia-medication-extractor/package.json
-        - cp -a ./README.md /ot/wikipedia-medication-extractor/README.md
+        - cp -a ./README.md /wikipedia-medication-extractor/README.md
         - cp -a ./public /wikipedia-medication-extractor/public
         - cd /wikipedia-medication-extractor
         - npm install
