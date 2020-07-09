@@ -1,17 +1,12 @@
 stages:
     - build
 before_script:
-  - systemctl stop wikiapi
-  - cd /root/wikipedia-medication-extractor
-  - git pull
-  - npm install
 build_prod:
     stage: build
     script:
         - echo $env:CI_JOB_ID
         - echo $env:GITLAB_USER_EMAIL
         - pwd
-        - systemctl start wikiapi
         
     only:
         refs:
