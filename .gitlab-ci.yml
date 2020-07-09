@@ -19,7 +19,7 @@ build_prod:
         - cp -a ./public /root/wikipedia-medication-extractor/public
         - cd /root/wikipedia-medication-extractor
         - npm install
-        - systemd restart wikiapi
+        - systemctl restart wikiapi
         
     only:
         refs:
