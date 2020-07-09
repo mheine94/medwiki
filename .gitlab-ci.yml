@@ -1,13 +1,10 @@
 stages:
     - build
 before_script:
-    - npm install
 build_prod:
     stage: build
     script:
-        - echo $env:CI_JOB_ID
-        - echo $env:GITLAB_USER_EMAIL
-        - pwd
+        - npm install
         - npm run build
         - cp -a ./pages/ /wikipedia-medication-extractor/pages
         - cp -a ./.next/ /wikipedia-medication-extractor/.next
