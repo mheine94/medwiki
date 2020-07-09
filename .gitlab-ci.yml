@@ -5,6 +5,7 @@ before_script:
 build_prod:
     stage: build
     script:
+        - pwd
         - npm install
         - npm run build
         - cp -a ./pages/ /wikipedia-medication-extractor/pages
