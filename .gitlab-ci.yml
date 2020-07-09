@@ -1,6 +1,7 @@
 stages:
     - build
 before_script:
+    - git clean -fd
 build_prod:
     stage: build
     script:
