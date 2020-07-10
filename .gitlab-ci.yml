@@ -9,9 +9,7 @@ build_prod:
         - npm install
         - npm run build
         - rm -r /wikipedia-medication-extractor/pages
-        - rm -r /wikipedia-medication-extractor/public
         - cp -a ./pages/ /wikipedia-medication-extractor/pages
-        - cp -a ./public /wikipedia-medication-extractor/public
         - cp -a ./.gitignore /wikipedia-medication-extractor/.gitignore
         - cp -a ./.gitlab-ci.yml /wikipedia-medication-extractor/.gitlab-ci.yml
         - cp -a ./package-lock.json /wikipedia-medication-extractor/package-lock.json
