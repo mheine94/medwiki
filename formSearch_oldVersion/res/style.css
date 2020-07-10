@@ -18,7 +18,11 @@ main {
     background: #eee;
 }
 
-label, p {
+label, input, select, textarea {
+    margin-top: .3em;
+}
+
+label {
     display: block;
     font-size: 1.2em;
 }
@@ -33,16 +37,19 @@ textarea {
     resize: vertical;
 }
 
-#textareaOutput {
-    resize: none;
-}
-
-input, select {
+input, select, button {
     font-size: 1em;
     padding: .3em;
     background-color: #fff;
 }
 
-label, input, select, textarea, p {
-    margin-bottom: .3em;
+button {
+    cursor: pointer;
+}
+
+#textareaOutput {
+    resize: none;
+    overflow-x: auto;
+    overflow-wrap: normal;
+    white-space: pre;
 }

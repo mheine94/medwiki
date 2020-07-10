@@ -1,5 +1,7 @@
 const formSearch = document.getElementById('formSearch');
 const textareaOutput = document.getElementById('textareaOutput');
+const btnReset = document.getElementById('btnReset');
+const textareaQuery = document.getElementById('textareaQuery');
 
 formSearch.addEventListener('submit', async function (event) {
     try {
@@ -23,13 +25,20 @@ formSearch.addEventListener('submit', async function (event) {
                 'query': data.query.replace(/\s+/g, ' ').trim().split(/\s*,\s*/g)
             }),
         });
-        if (!response.ok) {
-            throw 'Response returned with status: ' + response.status;
-        }
+        if (!response.ok) throw new Error('Response returned with status: ' + response.status);
         let outputString = JSON.stringify(await response.json(), null, 4);
         textareaOutput.value = outputString;
         textareaOutput.rows = (outputString.match(/\n/g) || []).length + 1;
     } catch (err) {
         console.error(err);
+        let outputString = err.toString();
+        textareaOutput.value = outputString;
+        textareaOutput.rows = (outputString.match(/\n/g) || []).length + 1;
     }
+});
+
+btnReset.addEventListener('click', function (event) {
+    event.preventDefault();
+    textareaQuery.value = "";
+    textareaQuery.focus();
 });
