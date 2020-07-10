@@ -35,12 +35,12 @@ module.exports = async (req, res) => {
           result = await apiSearch(query,lang)
         }
       }
-      
-  
+      res.statusCode = 200
+      res.setHeader("Content-Type",'application/json')
       try {
   
         let jsonpretty = JSON.stringify(result, null, 4)
-        res.header("Content-Type",'application/json');
+        res.setHeader("Content-Type",'application/json')
         res.send(jsonpretty)
   
       } catch (exjson) {
