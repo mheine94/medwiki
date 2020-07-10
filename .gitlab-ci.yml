@@ -9,7 +9,6 @@ build_prod:
         - npm install
         - npm run build
         - cp -a ./pages/ /wikipedia-medication-extractor/pages
-        - cp -a ./.next/ /wikipedia-medication-extractor/.next
         - cp -a ./.gitignore /wikipedia-medication-extractor/.gitignore
         - cp -a ./.gitlab-ci.yml /wikipedia-medication-extractor/.gitlab-ci.yml
         - cp -a ./package-lock.json /wikipedia-medication-extractor/package-lock.json
@@ -18,6 +17,7 @@ build_prod:
         - cp -a ./public /wikipedia-medication-extractor/public
         - cd /wikipedia-medication-extractor
         - npm install
+        - npm run build
         - systemctl restart wikiapi
         
     only:
