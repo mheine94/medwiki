@@ -8,17 +8,21 @@ build_prod:
         - pwd
         - npm install
         - npm run build
+        - rm -r /wikipedia-medication-extractor/pages
+        - rm -r /wikipedia-medication-extractor/public
         - cp -a ./pages/ /wikipedia-medication-extractor/pages
+        - cp -a ./public /wikipedia-medication-extractor/public
         - cp -a ./.gitignore /wikipedia-medication-extractor/.gitignore
         - cp -a ./.gitlab-ci.yml /wikipedia-medication-extractor/.gitlab-ci.yml
         - cp -a ./package-lock.json /wikipedia-medication-extractor/package-lock.json
         - cp -a ./package.json /wikipedia-medication-extractor/package.json
         - cp -a ./README.md /wikipedia-medication-extractor/README.md
-        - cp -a ./public /wikipedia-medication-extractor/public
+       
         - cd /wikipedia-medication-extractor
         - npm install
+        - systemctl stop wikiapi
         - npm run build
-        - systemctl restart wikiapi
+        - systemctl start wikiapi
         
     only:
         refs:
