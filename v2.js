@@ -142,34 +142,7 @@ async function mutliSearch(querySplit, lang) {
 }
 
 
-function search(term, lang) {
-  return get('https://' + lang + '.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + term + '&utf8=&format=json')
-}
 
-function getHtmlPage(title, lang) {
-  return get('https://' + lang + '.wikipedia.org/wiki/' + title)
-}
-
-
-
-function get(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, (resp) => {
-      let data = '';
-
-      resp.on('data', (chunk) => {
-        data += chunk;
-      });
-      resp.on('end', () => {
-        try {
-          resolve(data)
-        } catch (ex) {
-          reject(data)
-        }
-      })
-    })
-  })
-}
 
 async function apiSearch(word, lang) {
   try {
