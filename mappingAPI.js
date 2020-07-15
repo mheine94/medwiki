@@ -7,7 +7,7 @@ const allowedFields =
 "openTerm",
 "unit"]
 module.exports = async (req, res) => {
-    let documentId = req.query.documentId
+    let documentId = req.params.documentId
     let sheetId = req.query.sheetId
     let key = req.query.key
     console.log("documentid",req.query.documentId)
