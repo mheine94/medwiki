@@ -1,16 +1,24 @@
+const Queue = require('bull')
+
+Array.prototype.unique = function () {
+  return this.filter(function (value, index, self) {
+    return self.indexOf(value) === index;
+  });
+}
+
 module.exports = async function(job){
-    console.log("proccing wikipai")
+    console.log("wikiApi:",job.data)
     const lang = job.data.lang
     const querySplit = job.data.querySplit
-
-    let qJob = await wikiQueryQ.add({bongo:"spast"})
-    let res = await qJob.finished() 
+    let res = await wikiApi(querySplit,lang)
     return res
   }
 
   async function wikiApi(querySplit,lang){
+    let wikiQ = new Queue("wikiQ")
     let queryPromises = querySplit.map(q => new Promise(async (resolve) => {
-        let res = await apiSearch(q, lang)
+        let job = await  wikiQ.add({word:q,lang:lang})
+        let res = await job.finished()
         resolve({ query: q, result: res })
       }))
       let queryResults = await Promise.all(queryPromises)

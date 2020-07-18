@@ -1,8 +1,30 @@
-const util = require("./util")
- 
-const get = util.get
-const getErrorResponse = util.getErrorResponse
+const https = require('https')
+const cheerio = require('cheerio')
+require('events').EventEmitter.prototype._maxListeners = 0;
+function get(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, (resp) => {
+      let data = '';
 
+      resp.on('data', (chunk) => {
+        data += chunk;
+      });
+      resp.on('end', () => {
+        try {
+          resolve(data)
+        } catch (ex) {
+          reject(data)
+        }
+      })
+    })
+  })
+}
+ function getErrorResponse (message, query) {
+  return {
+    error: message,
+    query: query
+}
+}
  function getHtmlPage(title, lang) {
     return get('https://' + lang + '.wikipedia.org/wiki/' + title)
   }
@@ -65,7 +87,7 @@ const getErrorResponse = util.getErrorResponse
     
               let infoDict = createTableDict($, '.infobox');
               if (!infoDict)
-                throw new Error('Page: "' + pageTitle + '" has no infobox.');
+                return getErrorResponse('Page: "' + pageTitle + '" has no infobox.',word);
               // console.log(JSON.stringify(Object.fromEntries(infoDict.entries()), null, 2));
     
               let drugClassBox;
@@ -169,7 +191,7 @@ const getErrorResponse = util.getErrorResponse
       }
   }
   module.exports = async function(job){
-      console.log("proccing wikipedia")
-    // Do some heavy work
-    return job.data
+    console.log(`wikiSearch:`,job.data)
+    let res = await wikipediaSearch(job.data.word,job.data.lang)
+    return res
   }
