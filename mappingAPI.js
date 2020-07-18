@@ -10,9 +10,9 @@ module.exports = async (req, res) => {
     let documentId = req.params.documentId
     let sheetId = req.query.sheetId
     let key = req.query.key
-    console.log("documentid",req.query.documentId)
-    console.log("sheetid",req.query.sheetId)
-    console.log("key",req.query.key)
+    console.log("documentid",documentId)
+    console.log("sheetid",sheetId)
+    console.log("key",key)
     let result = await apiCall(documentId,sheetId,key)
     let jsonpretty = JSON.stringify(result, null, 4)
     res.statusCode = 200
