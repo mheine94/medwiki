@@ -11,6 +11,7 @@ const port = 3000
 app.use(express.static('formSearch_oldVersion'))
 app.use(bodyParser.json());
 app.use(bodyParser.text());
+app.use(bodyParser.urlencoded({extended:false}))
 app.get('/api', (req, res) => res.send("hallo api user"))
 app.post('/api/v2', wikiApiRequestHandler)
 app.get('/api/v2', wikiApiRequestHandler)
@@ -51,7 +52,7 @@ async function wikiApiRequestHandler(req, res){
     let wikiQ = new Queue('wikiQ')
     let wikiApiQ = new Queue("wikiApiQ")
 
-    if (body) {
+    if (!(Object.keys(body).length === 0 && body.constructor === Object)) {
       let queryWords;
       if (body.query) {
         console.log("Post body query:", body.query)
