@@ -1,13 +1,13 @@
 {
-  "name": "wikipedia-api",
+  "name": "wikipedia-medication-extractor",
   "version": "2.0.0",
-  "description": "",
+  "description": "extract CAS, INN, ATC from wikipedia",
   "main": "index.js",
   "scripts": {
     "start": "node src\\index.js",
     "docs": ".\\node_modules\\.bin\\jsdoc src -c .\\jsDocConf.json -d docs"
   },
-  "author": "",
+  "author": "Maurice Heine, Leon Schoepfner",
   "license": "ISC",
   "dependencies": {
     "bull": "^3.15.0",
