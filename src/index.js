@@ -1,3 +1,6 @@
+const os = require('os')
+let cpuCount = os.cpus().length
+
 const mappingApi = require('./mappingAPI')
 const Queue = require('bull')
 const path = require('path')
@@ -25,8 +28,8 @@ var wikiApiQ = new Queue("wikiApiQ")
 
 
 // You can use concurrency as well:
-wikiQ.process(200,path.join(__dirname,'wikipedia-processor.js'));
-wikiApiQ.process(10,path.join(__dirname,'wikiAPI-processor.js'));
+wikiQ.process(cpuCount*2,path.join(__dirname,'wikipedia-processor.js'));
+wikiApiQ.process(cpuCount*2,path.join(__dirname,'wikiAPI-processor.js'));
 
 
 /**
