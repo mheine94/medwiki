@@ -45,8 +45,8 @@ http://medication-wiki-api.uni-muenster.de/api/v2
 * sheetId: (optional) Id der Tabelle
 * key: (optional) gibt an auf welchen key die Einträge gemappt werden sollen 
 ### Beispiel
-http://localhost:3000/api/sheet/documentId
-http://localhost:3000/api/sheet/documentId?key=opusCode
-http://localhost:3000/api/sheet/documentId?sheetId=sheetId&key=opusCode
+http://medication-wiki-api.uni-muenster.de/api/sheet/documentId
+http://medication-wiki-api.uni-muenster.de/api/sheet/documentId?key=opusCode
+http://medication-wiki-api.uni-muenster.de/api/sheet/documentId?sheetId=sheetId&key=opusCode
 
 
