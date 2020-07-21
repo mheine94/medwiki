@@ -28,7 +28,7 @@ var wikiApiQ = new Queue("wikiApiQ")
 
 
 // You can use concurrency as well:
-wikiQ.process(cpuCount*2,path.join(__dirname,'wikipedia-processor.js'));
+wikiQ.process(cpuCount*4,path.join(__dirname,'wikipedia-processor.js'));
 wikiApiQ.process(cpuCount*2,path.join(__dirname,'wikiAPI-processor.js'));
 
 
