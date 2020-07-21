@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start -p 80"
+    "start": "node src\\index.js",
+    "docs": ".\\node_modules\\.bin\\jsdoc src -c .\\jsDocConf.json -d docs"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +16,8 @@
     "csv-parse": "^4.10.1",
     "express": "^4.17.1",
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.4"
   }
 }
