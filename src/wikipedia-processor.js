@@ -16,8 +16,7 @@ function get(url) {
           reject(data)
         }
       })
-    })
-  })
+      })})
 }
  function getErrorResponse (message, query) {
   return {

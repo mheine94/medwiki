@@ -10,24 +10,33 @@ module.exports = async (req, res) => {
     let documentId = req.params.documentId
     let sheetId = req.query.sheetId
     let key = req.query.key
+
+    let columns = req.query.columns
+
+    console.log("columns",columns)
     console.log("documentid",documentId)
     console.log("sheetid",sheetId)
     console.log("key",key)
-    let result = await apiCall(documentId,sheetId,key)
+    let result = await apiCall(documentId,sheetId,key,columns)
     let jsonpretty = JSON.stringify(result, null, 4)
     res.statusCode = 200
     res.setHeader("Content-Type",'application/json')
     res.send(jsonpretty)
 }
 
-async function apiCall(documentId,sheetId,key){
+async function apiCall(documentId,sheetId,key,columns){
   try{
     if(!documentId){
       throw new Error("No document id")
     }
   let tsvText = await downloadTsv(documentId,sheetId)
   let parsedTsv = parseTsv(tsvText)
-  let fieldFilter = getFieldFilter(allowedFields)
+    let fieldFilter; 
+  if(columns!==null && columns!=undefined){
+    fieldFilter = columns
+  }
+
+    fieldFilter = allowedFields
   let filteredTsv = parsedTsv.map(row=>fieldFilter(row))
   let result = key?mapOnKey(key, filteredTsv):filteredTsv
   return result
