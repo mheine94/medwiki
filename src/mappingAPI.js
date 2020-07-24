@@ -92,7 +92,7 @@ function getErrorResponse(message,query){
  * @returns
  */
 async function downloadTsv(documentId,sheetId){
-  let response = await (await fetch(`https://docs.google.com/spreadsheets/d/${documentId}/export?${(sheetId?`gid=${sheetId}&`:'')}output=tsv`))
+  let response = await (await fetch(`https://docs.google.com/spreadsheets/d/${documentId}/export?${sheetId?`gid=${sheetId}&`:''}output=tsv`))
   let text = await response.text()
   return text
 }
