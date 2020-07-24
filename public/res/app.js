@@ -22,7 +22,7 @@ formSearch.addEventListener('submit', async function (event) {
             },
             body: JSON.stringify({
                 'lang': data.lang,
-                'query': data.query.replace(/\s+/g, ' ').trim().split(/\s*[,\n]\s*/g)
+                'query': data.query.replace(/\s+/g, ' ').trim().split(/\s|\s*,\s*/g)
             }),
         });
         if (!response.ok) throw new Error('Response returned with status: ' + response.status);
