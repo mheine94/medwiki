@@ -34,7 +34,7 @@ async function apiCall(documentId,sheetId,key,columns){
     fieldFilter = getFieldFilter(columns)
     filteredTsv = parsedTsv.map(row=>fieldFilter(row))
   }else{
-    filteredTsv = parseTsv
+    filteredTsv = parsedTsv
   }
   let result = key?mapOnKey(key, filteredTsv):filteredTsv
   return result
