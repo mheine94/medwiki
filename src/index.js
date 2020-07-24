@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 app.post('/api/v2', wikiApiRequestHandler)
 app.get('/api/v2', wikiApiRequestHandler)
-app.get('/api/sheet/:documentId', mappingApi)
+app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 
 
 app.listen(port, () => console.log(`Wikipedia-medication-extractor listening at http://localhost:${port}`))
