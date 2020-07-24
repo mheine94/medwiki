@@ -1,18 +1,15 @@
 const parser = require("csv-parse/lib/sync")
 const fetch = require("node-fetch")
-const allowedFields = 
-[ "opusCode",
-"opusName",
-"LOINC",
-"openTerm",
-"unit"]
 module.exports = async (req, res) => {
     let documentId = req.params.documentId
     let sheetId = req.query.sheetId
     let key = req.query.key
 
     let columns = req.query.columns
-
+    if(columns!=null && columns != undefined)
+      {
+        columns= columns.split(/,/g)
+      }
     console.log("columns",columns)
     console.log("documentid",documentId)
     console.log("sheetid",sheetId)
@@ -31,13 +28,14 @@ async function apiCall(documentId,sheetId,key,columns){
     }
   let tsvText = await downloadTsv(documentId,sheetId)
   let parsedTsv = parseTsv(tsvText)
-    let fieldFilter; 
+   let filteredTsv;
+   let fieldFilter; 
   if(columns!==null && columns!=undefined){
     fieldFilter = getFieldFilter(columns)
+    let filteredTsv = parsedTsv.map(row=>fieldFilter(row))
+  }else{
+    filteredTsv = parseTsv
   }
-
-    fieldFilter = getFieldFilter(allowedFields)
-  let filteredTsv = parsedTsv.map(row=>fieldFilter(row))
   let result = key?mapOnKey(key, filteredTsv):filteredTsv
   return result
   }catch (ex) {
