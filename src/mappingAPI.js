@@ -2,7 +2,7 @@ const parser = require("csv-parse/lib/sync")
 const fetch = require("node-fetch")
 module.exports = async (req, res) => {
     let documentId = req.params.documentId
-    let sheetId = req.params.sheetId
+    let sheetId = req.query.sheetId
     let key = req.query.key
 
     let columns = req.query.columns
