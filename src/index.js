@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.post('/api/v2?', wikiApiRequestHandler)
-app.get('/api/v2?', wikiApiRequestHandler)
+app.post('/api', wikiApiRequestHandler)
+app.get('/api', wikiApiRequestHandler)
 app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 
 
