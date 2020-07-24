@@ -32,7 +32,7 @@ async function apiCall(documentId,sheetId,key,columns){
    let fieldFilter; 
   if(columns!==null && columns!=undefined){
     fieldFilter = getFieldFilter(columns)
-    let filteredTsv = parsedTsv.map(row=>fieldFilter(row))
+    filteredTsv = parsedTsv.map(row=>fieldFilter(row))
   }else{
     filteredTsv = parseTsv
   }
