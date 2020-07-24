@@ -72,9 +72,9 @@ https://wikiapi.now.sh/api/search?query=nurofen,ibuhexal,ibuflam,ondansetron,zof
 * key: (optional) gibt an auf welchen key die Einträge gemappt werden sollen 
 
 ### Beispiel
-http://medication-wiki-api.uni-muenster.de/api/sheet/documentId  
-http://medication-wiki-api.uni-muenster.de/api/sheet/documentId?key=opusCode  
-http://medication-wiki-api.uni-muenster.de/api/sheet/documentId?sheetId=sheetId&key=opusCode  
+http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID  
+http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID/?key=opusCode  
+http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=opusCode&colums=LOINC,SNOMED  
 
 
 ```json
