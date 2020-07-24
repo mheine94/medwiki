@@ -44,9 +44,33 @@ http://medication-wiki-api.uni-muenster.de/api/v2
 * documentId: Die Dokumentenid
 * sheetId: (optional) Id der Tabelle
 * key: (optional) gibt an auf welchen key die Einträge gemappt werden sollen 
+
 ### Beispiel
 http://medication-wiki-api.uni-muenster.de/api/sheet/documentId
 http://medication-wiki-api.uni-muenster.de/api/sheet/documentId?key=opusCode
 http://medication-wiki-api.uni-muenster.de/api/sheet/documentId?sheetId=sheetId&key=opusCode
 
+
+```json
+{
+"0121": {
+        "opusCode": "0121",
+        "opusName": "Kreatinin",
+        "openTerm": "CREA:VEN",
+        "LOINC": "38483-4"
+    },
+    "0120": {
+        "opusCode": "0120",
+        "opusName": "Harnstoff-N",
+        "openTerm": "UREA",
+        "LOINC": "6299-2"
+    },
+    "0122": {
+        "opusCode": "0122",
+        "opusName": "Bilirubin, gesamt",
+        "openTerm": "BILI",
+        "LOINC": "1975-2"
+    },
+}
+```
 
