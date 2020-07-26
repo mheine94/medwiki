@@ -1,7 +1,6 @@
 const parser = require("csv-parse/lib/sync")
 const fetch = require("node-fetch")
 const path = require('path')
-require('dotenv').config();
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 module.exports = async (req, res) => {
@@ -30,8 +29,7 @@ async function apiCall(documentId,sheetId,key,columns){
     if(!documentId){
       throw new Error("No document id")
     }
-  let tsvText = await downloadTsv(documentId,sheetId)
-  let parsedTsv = parseTsv(tsvText)
+  let parsedTsv = await getRowValues(await getSheet(documentId,sheetId))
    let filteredTsv;
    let fieldFilter; 
   if(columns!==null && columns!=undefined){
@@ -70,7 +68,7 @@ function parseTsv(tsvString){
   })
 }
 
-async function getFieldFilter(keys){
+function getFieldFilter(keys){
   return (o)=> keys.reduce((obj, key) => ({ ...obj, [key]: o[key] }), {});
 }
 
@@ -117,19 +115,17 @@ async function getRowValues(sheet){
   return values
 } 
 
-function diff(a,b){
+function diff(a,b,sym){
   const aKeys =Object.keys(a)
   const bKeys =Object.keys(b)
   
-  const diffObjs = aKeys.filter(k => !bKeys.includes(k))
+  let diffObjs = aKeys.filter(k => !bKeys.includes(k))
                         .map(k=>a[k])
-                        .concat(
-                          bKeys.filter(k=> !aKeys.includes(k))
-                          .map(k=>b[k])
-                        )
+  if(sym)
+    diffObjs.concat(
+      bKeys.filter(k=> !aKeys.includes(k))
+      .map(k=>b[k])
+    )
                         
   return diffObjs                     
 } 
-
-
-test("1orqZQRDy_bGurIEoMjSb5VIBfGMsDcGkWZam6WgVF4w",418456443)
