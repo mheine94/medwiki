@@ -1,5 +1,9 @@
 const parser = require("csv-parse/lib/sync")
 const fetch = require("node-fetch")
+const path = require('path')
+require('dotenv').config();
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+
 module.exports = async (req, res) => {
     let documentId = req.params.documentId
     let sheetId = req.params.sheetId
@@ -66,7 +70,7 @@ function parseTsv(tsvString){
   })
 }
 
-function getFieldFilter(keys){
+async function getFieldFilter(keys){
   return (o)=> keys.reduce((obj, key) => ({ ...obj, [key]: o[key] }), {});
 }
 
@@ -80,3 +84,52 @@ function mapOnKey(key,tsv){
     ,{})
   return result
 }
+async function getSheet(sheetId,gid){
+  // spreadsheet key is the long id in the sheets URL
+  const doc = new GoogleSpreadsheet(sheetId);
+  // use service account creds
+  //await doc.useServiceAccountAuth({
+   // client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+   // private_key: process.env.GOOGLE_PRIVATE_KEY,
+  //});
+  // OR load directly from json file if not in secure environment
+  await doc.useServiceAccountAuth(require(path.join(__dirname,'..','imi-sheet-api-277897e53174.json')));
+  // OR use API key -- only for read-only access to public sheets
+  //doc.useApiKey('YOUR-API-KEY');
+  
+  await doc.loadInfo(); // loads document properties and worksheets
+  //await doc.updateProperties({ title: 'renamed doc' });
+  
+  const sheet = gid?doc.sheetsById[gid]:doc.sheetsByIndex[0]
+  //console.log("Gidsheet" ,gidsheet.title)
+   //await sheet.addRow(["bongo","mongo"])
+  // adding / removing sheets
+  //const newSheet = await doc.addSheet({ title: 'hot new sheet!' });
+  //await newSheet.delete();
+  return sheet
+}
+
+async function getRowValues(sheet){
+  await sheet.loadHeaderRow();
+  const headers = sheet.headerValues
+  const rows = await sheet.getRows()
+  const values = rows.map(row=>headers.reduce((p,c)=>{p[c]=row[c];return p},{}))
+  return values
+} 
+
+function diff(a,b){
+  const aKeys =Object.keys(a)
+  const bKeys =Object.keys(b)
+  
+  const diffObjs = aKeys.filter(k => !bKeys.includes(k))
+                        .map(k=>a[k])
+                        .concat(
+                          bKeys.filter(k=> !aKeys.includes(k))
+                          .map(k=>b[k])
+                        )
+                        
+  return diffObjs                     
+} 
+
+
+test("1orqZQRDy_bGurIEoMjSb5VIBfGMsDcGkWZam6WgVF4w",418456443)
