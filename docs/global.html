@@ -112,8 +112,8 @@
 
 
 <div class="description">
-    Parses the infobox of a table and and returs a dict containing the table 
-information.
+    <p>Parses the infobox of a table and and returs a dict containing the table
+information.</p>
 </div>
 
 
@@ -165,7 +165,7 @@ information.
 
             
 
-            <td class="description last">The cheerio instance</td>
+            <td class="description last"><p>The cheerio instance</p></td>
         </tr>
 
     
@@ -188,7 +188,7 @@ information.
 
             
 
-            <td class="description last">The jQuery selector</td>
+            <td class="description last"><p>The jQuery selector</p></td>
         </tr>
 
     
@@ -258,7 +258,7 @@ information.
 
         
 <div class="param-desc">
-    The TableDict contains a key for each table heading.
+    <p>The TableDict contains a key for each table heading.</p>
 </div>
 
 
@@ -295,50 +295,45 @@ information.
 
 
 <div class="description">
-    Generates a diff for the jsons a and b. Symetric if the sym is true.
-
-example:
-a
-```json
-{
-"0121": {
-        "opusCode": "0121",
-        "opusName": "Kreatinin"
+    <p>Generates a diff for the jsons a and b. Symetric if the sym is true.</p>
+<p>example:
+a</p>
+<pre class="prettyprint source lang-json"><code>{
+&quot;0121&quot;: {
+        &quot;opusCode&quot;: &quot;0121&quot;,
+        &quot;opusName&quot;: &quot;Kreatinin&quot;
     },
-    "0120": {
-        "opusCode": "0120",
-        "opusName": "Harnstoff-N"
+    &quot;0120&quot;: {
+        &quot;opusCode&quot;: &quot;0120&quot;,
+        &quot;opusName&quot;: &quot;Harnstoff-N&quot;
     },
-    "0122": {
-        "opusCode": "0122",
-        "opusName": "Bilirubin, gesamt"
+    &quot;0122&quot;: {
+        &quot;opusCode&quot;: &quot;0122&quot;,
+        &quot;opusName&quot;: &quot;Bilirubin, gesamt&quot;
     },
 }
-```
-
-b
-```json
-{
-"0121": {
-        "opusCode": "0121",
-        "opusName": "Kreatinin",
-        "openTerm": "CREA:VEN",
-        "LOINC": "38483-4"
+</code></pre>
+<p>b</p>
+<pre class="prettyprint source lang-json"><code>{
+&quot;0121&quot;: {
+        &quot;opusCode&quot;: &quot;0121&quot;,
+        &quot;opusName&quot;: &quot;Kreatinin&quot;,
+        &quot;openTerm&quot;: &quot;CREA:VEN&quot;,
+        &quot;LOINC&quot;: &quot;38483-4&quot;
     },
-    "0122": {
-        "opusCode": "0122",
-        "opusName": "Bilirubin, gesamt",
-        "openTerm": "BILI",
-        "LOINC": "1975-2"
+    &quot;0122&quot;: {
+        &quot;opusCode&quot;: &quot;0122&quot;,
+        &quot;opusName&quot;: &quot;Bilirubin, gesamt&quot;,
+        &quot;openTerm&quot;: &quot;BILI&quot;,
+        &quot;LOINC&quot;: &quot;1975-2&quot;
     },
 }
-```
-```json
-    "0120": {
-        "opusCode": "0120",
-        "opusName": "Harnstoff-N"
+</code></pre>
+<pre class="prettyprint source lang-json"><code>    &quot;0120&quot;: {
+        &quot;opusCode&quot;: &quot;0120&quot;,
+        &quot;opusName&quot;: &quot;Harnstoff-N&quot;
     }
-```
+</code></pre>
 </div>
 
 
@@ -390,7 +385,7 @@ b
 
             
 
-            <td class="description last">Json a</td>
+            <td class="description last"><p>Json a</p></td>
         </tr>
 
     
@@ -413,7 +408,7 @@ b
 
             
 
-            <td class="description last">Json b</td>
+            <td class="description last"><p>Json b</p></td>
         </tr>
 
     
@@ -436,7 +431,7 @@ b
 
             
 
-            <td class="description last">flag for symetric diff -> elements from a that are not in b and vice versa.</td>
+            <td class="description last"><p>flag for symetric diff -&gt; elements from a that are not in b and vice versa.</p></td>
         </tr>
 
     
@@ -506,7 +501,7 @@ b
 
         
 <div class="param-desc">
-    Object containing the difference elements.
+    <p>Object containing the difference elements.</p>
 </div>
 
 
@@ -543,9 +538,9 @@ b
 
 
 <div class="description">
-    Searches every medication name in the medicationNames array with 
+    <p>Searches every medication name in the medicationNames array with
 the wikipediaSearch function. It aggregates the results so that two medications
-with the same inn are grouped together in one object in the result.
+with the same inn are grouped together in one object in the result.</p>
 </div>
 
 
@@ -597,7 +592,7 @@ with the same inn are grouped together in one object in the result.
 
             
 
-            <td class="description last">Array of medicationNames that will be searched on wikipedia.</td>
+            <td class="description last"><p>Array of medicationNames that will be searched on wikipedia.</p></td>
         </tr>
 
     
@@ -620,7 +615,7 @@ with the same inn are grouped together in one object in the result.
 
             
 
-            <td class="description last">("en" | "de") The language in wich wikipedia will be queried.</td>
+            <td class="description last"><p>(&quot;en&quot; | &quot;de&quot;) The language in wich wikipedia will be queried.</p></td>
         </tr>
 
     
@@ -690,7 +685,7 @@ with the same inn are grouped together in one object in the result.
 
         
 <div class="param-desc">
-    innDict Object containing one object per inn and an unknown array containing not found medications.
+    <p>innDict Object containing one object per inn and an unknown array containing not found medications.</p>
 </div>
 
 
@@ -727,7 +722,7 @@ with the same inn are grouped together in one object in the result.
 
 
 <div class="description">
-    Handles the http requests to the wikipediaApi
+    <p>Handles the http requests to the wikipediaApi</p>
 </div>
 
 
@@ -779,7 +774,7 @@ with the same inn are grouped together in one object in the result.
 
             
 
-            <td class="description last">express the express request object</td>
+            <td class="description last"><p>express the express request object</p></td>
         </tr>
 
     
@@ -802,7 +797,7 @@ with the same inn are grouped together in one object in the result.
 
             
 
-            <td class="description last">the express result object</td>
+            <td class="description last"><p>the express result object</p></td>
         </tr>
 
     
@@ -887,9 +882,9 @@ with the same inn are grouped together in one object in the result.
 
 
 <div class="description">
-    Searches wikipedia with the query and if the page has an infobox parses
+    <p>Searches wikipedia with the query and if the page has an infobox parses
 inn, drugclass, cas, atc and the sum formula. If the first result doesn't have
-an infobox then the next pages in the wikipedia search will be analysed instead.
+an infobox then the next pages in the wikipedia search will be analysed instead.</p>
 </div>
 
 
@@ -941,7 +936,7 @@ an infobox then the next pages in the wikipedia search will be analysed instead.
 
             
 
-            <td class="description last">The medication name that will be searched for.</td>
+            <td class="description last"><p>The medication name that will be searched for.</p></td>
         </tr>
 
     
@@ -964,7 +959,7 @@ an infobox then the next pages in the wikipedia search will be analysed instead.
 
             
 
-            <td class="description last">("en", "de") The language in wich wikipedia will be searched.</td>
+            <td class="description last"><p>(&quot;en&quot;, &quot;de&quot;) The language in wich wikipedia will be searched.</p></td>
         </tr>
 
     
@@ -1034,7 +1029,7 @@ an infobox then the next pages in the wikipedia search will be analysed instead.
 
         
 <div class="param-desc">
-    searchResult An object containing the parsed information or an error object.
+    <p>searchResult An object containing the parsed information or an error object.</p>
 </div>
 
 
@@ -1079,7 +1074,7 @@ an infobox then the next pages in the wikipedia search will be analysed instead.
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Jul 27 2020 15:06:46 GMT+0200 (Central European Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Jul 27 2020 15:08:54 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
