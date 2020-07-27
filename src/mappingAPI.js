@@ -91,7 +91,7 @@ async function getSheet(sheetId,gid){
    // private_key: process.env.GOOGLE_PRIVATE_KEY,
   //});
   // OR load directly from json file if not in secure environment
-  await doc.useServiceAccountAuth(require('./imi-sheet-api-277897e53174.json'));
+  await doc.useServiceAccountAuth(require('./google-credentials.json'));
   // OR use API key -- only for read-only access to public sheets
   //doc.useApiKey('YOUR-API-KEY');
   
