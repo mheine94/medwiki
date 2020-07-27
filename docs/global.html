@@ -229,7 +229,7 @@ information.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="wikipedia-processor.js.html">wikipedia-processor.js</a>, <a href="wikipedia-processor.js.html#line43">line 43</a>
+        <a href="wikipedia-processor.js.html">wikipedia-processor.js</a>, <a href="wikipedia-processor.js.html#line42">line 42</a>
     </li></ul></dd>
     
 
@@ -270,6 +270,254 @@ information.
     <dd>
         
 <span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="diff"><span class="type-signature"></span>diff<span class="signature">(a, b, sym)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Generates a diff for the jsons a and b. Symetric if the sym is true.
+
+example:
+a
+```json
+{
+"0121": {
+        "opusCode": "0121",
+        "opusName": "Kreatinin"
+    },
+    "0120": {
+        "opusCode": "0120",
+        "opusName": "Harnstoff-N"
+    },
+    "0122": {
+        "opusCode": "0122",
+        "opusName": "Bilirubin, gesamt"
+    },
+}
+```
+
+b
+```json
+{
+"0121": {
+        "opusCode": "0121",
+        "opusName": "Kreatinin",
+        "openTerm": "CREA:VEN",
+        "LOINC": "38483-4"
+    },
+    "0122": {
+        "opusCode": "0122",
+        "opusName": "Bilirubin, gesamt",
+        "openTerm": "BILI",
+        "LOINC": "1975-2"
+    },
+}
+```
+```json
+    "0120": {
+        "opusCode": "0120",
+        "opusName": "Harnstoff-N"
+    }
+```
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Json a</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Json b</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sym</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">flag for symetric diff -> elements from a that are not in b and vice versa.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mappingAPI.js.html">mappingAPI.js</a>, <a href="mappingAPI.js.html#line170">line 170</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Object containing the difference elements.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
 
 
     </dd>
@@ -595,7 +843,7 @@ with the same inn are grouped together in one object in the result.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line38">line 38</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line41">line 41</a>
     </li></ul></dd>
     
 
@@ -757,7 +1005,7 @@ an infobox then the next pages in the wikipedia search will be analysed instead.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="wikipedia-processor.js.html">wikipedia-processor.js</a>, <a href="wikipedia-processor.js.html#line71">line 71</a>
+        <a href="wikipedia-processor.js.html">wikipedia-processor.js</a>, <a href="wikipedia-processor.js.html#line70">line 70</a>
     </li></ul></dd>
     
 
@@ -825,13 +1073,13 @@ an infobox then the next pages in the wikipedia search will be analysed instead.
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createTableDict">createTableDict</a></li><li><a href="global.html#wikiApi">wikiApi</a></li><li><a href="global.html#wikiApiRequestHandler">wikiApiRequestHandler</a></li><li><a href="global.html#wikipediaSearch">wikipediaSearch</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createTableDict">createTableDict</a></li><li><a href="global.html#diff">diff</a></li><li><a href="global.html#wikiApi">wikiApi</a></li><li><a href="global.html#wikiApiRequestHandler">wikiApiRequestHandler</a></li><li><a href="global.html#wikipediaSearch">wikipediaSearch</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Tue Jul 21 2020 16:42:15 GMT+0200 (Central European Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Jul 27 2020 15:06:46 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
