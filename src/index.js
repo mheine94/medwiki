@@ -9,7 +9,7 @@ const fetch = require("node-fetch")
 const express = require('express')
 const bodyParser = require('body-parser');
 const app = express()
-const port = 80
+const port = 3000
 
 app.use(express.static('public'))
 app.use(bodyParser.json());
@@ -78,7 +78,7 @@ async function wikiApiRequestHandler(req, res){
       }
     }
     
-    res.statusCode = resutl.error?400:200
+    res.statusCode = result.error?400:200
     res.setHeader("Content-Type", 'application/json')
     try {
 
