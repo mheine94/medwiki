@@ -7,24 +7,45 @@ module.exports = async (req, res) => {
     let documentId = req.params.documentId
     let sheetId = req.params.sheetId
     let key = req.query.key
-
     let columns = req.query.columns
+    let requestJson = req.body
     if(columns!=null && columns != undefined)
-      {
-        columns= columns.split(/,/g)
-      }
+    {
+      columns= columns.split(/,/g)
+    }
     console.log("columns",columns)
     console.log("documentid",documentId)
     console.log("sheetid",sheetId)
     console.log("key",key)
-    let result = await apiCall(documentId,sheetId,key,columns)
-    let jsonpretty = JSON.stringify(result, null, 4)
-    res.statusCode = 200
-    res.setHeader("Content-Type",'application/json')
-    res.send(jsonpretty)
+
+    switch(req.method){
+      case "GET":
+        let result = await get(documentId,sheetId,key,columns)
+        let jsonpretty = JSON.stringify(result, null, 4)
+        res.setHeader("Content-Type",'application/json')
+        if(!result.error){
+          res.statusCode = 200
+          res.send(jsonpretty)
+        }else{
+          res.statusCode = 400
+          res.send(jsonpretty)  
+        }
+      break
+      case "POST":
+        const err = await post(documentId, sheetId, key, columns,requestJson)
+        if(!err){
+          res.sendStatus(200)
+        }else{
+          let jsonpretty = JSON.stringify(err, null, 4)
+          res.statusCode = 400
+          res.setHeader("Content-Type",'application/json')
+          res.send(jsonpretty)
+        }  
+      break
+    } 
 }
 
-async function apiCall(documentId,sheetId,key,columns){
+async function get(documentId,sheetId,key,columns){
   try{
     if(!documentId){
       throw new Error("No document id")
@@ -44,6 +65,24 @@ async function apiCall(documentId,sheetId,key,columns){
     return getErrorResponse(ex.message, `documentId:${documentId},sheetId:${sheetId},key:${key}`)
   }
 }
+
+async function post(documentId, sheetId, key, columns, postJson){
+  try{
+    if(!documentId){
+      throw new Error("No document id")
+    }
+
+    if(!key){
+      throw new Error("No key")
+    }
+
+  let sheetData = mapOnKey(key,await getRowValues(await getSheet(documentId,sheetId)))
+  const inPostJsonButNotInSheet = diff(postJson,sheetData)
+  await appendRows(documentId, sheetId, inPostJsonButNotInSheet)
+  }catch (ex) {
+    return getErrorResponse(ex.message, `documentId:${documentId},sheetId:${sheetId},key:${key}`)
+  }
+} 
 
 function getErrorResponse(message,query){
   return {
@@ -72,16 +111,24 @@ function getFieldFilter(keys){
   return (o)=> keys.reduce((obj, key) => ({ ...obj, [key]: o[key] }), {});
 }
 
-function mapOnKey(key,tsv){
-  let result = tsv.reduce((obj, row)=>{
-    if(row[key]!=null && row[key]!= undefined){
-      obj[row[key]]=row
-    }
-    return obj
-  }
-    ,{})
+function mapOnKey(key,data){
+  let result = data.reduce((obj, row)=>{
+      if(row[key]!=null && row[key]!= undefined){
+        obj[row[key]]=row
+      }
+      return obj 
+    },{})  
+  
+   
   return result
 }
+async function appendRows(sheetId,gid,data){
+  if(data && data.length > 0){
+    const doc = await getSheet(sheetId,gid)
+    await Promise.all(data.map((element)=> doc.addRow(element)))
+  }
+} 
+
 async function getSheet(sheetId,gid){
   // spreadsheet key is the long id in the sheets URL
   const doc = new GoogleSpreadsheet(sheetId);
