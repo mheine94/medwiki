@@ -78,16 +78,14 @@ async function wikiApiRequestHandler(req, res){
       }
     }
     
-    res.statusCode = 200
+    res.statusCode = resutl.error?400:200
     res.setHeader("Content-Type", 'application/json')
     try {
 
       let jsonpretty = JSON.stringify(result, null, 4)
       res.setHeader("Content-Type", 'application/json')
       res.send(jsonpretty)
-
     } catch (exjson) {
-
       res.json(result)
     }
   } catch (ex) {

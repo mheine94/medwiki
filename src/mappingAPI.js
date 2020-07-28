@@ -62,7 +62,7 @@ async function get(documentId,sheetId,key,columns){
   let result = key?mapOnKey(key, filteredTsv):filteredTsv
   return result
   }catch (ex) {
-    return getErrorResponse(ex.message, `documentId:${documentId},sheetId:${sheetId},key:${key}`)
+    return getErrorResponse(ex.message,{"documentId":documentId,"sheetId":sheetId,"key":key})
   }
 }
 
@@ -80,7 +80,7 @@ async function post(documentId, sheetId, key, columns, postJson){
   const inPostJsonButNotInSheet = diff(postJson,sheetData)
   await appendRows(documentId, sheetId, inPostJsonButNotInSheet)
   }catch (ex) {
-    return getErrorResponse(ex.message, `documentId:${documentId},sheetId:${sheetId},key:${key}`)
+    return getErrorResponse(ex.message,{"documentId":documentId,"sheetId":sheetId,"key":key})
   }
 } 
 
