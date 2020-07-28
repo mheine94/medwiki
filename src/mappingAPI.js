@@ -75,9 +75,15 @@ async function post(documentId, sheetId, key, columns, postJson){
     if(!key){
       throw new Error("No key")
     }
-
+    let postData;
+  if(!postJson.length){
+    postData = new Object()
+    postData[postJson[key]]=postJson 
+  } else{
+    postData = mapOnKey(key,postJson)
+  } 
   let sheetData = mapOnKey(key,await getRowValues(await getSheet(documentId,sheetId)))
-  const inPostJsonButNotInSheet = diff(postJson,sheetData)
+  const inPostJsonButNotInSheet = diff(postData,sheetData)
   await appendRows(documentId, sheetId, inPostJsonButNotInSheet)
   }catch (ex) {
     return getErrorResponse(ex.message,{"documentId":documentId,"sheetId":sheetId,"key":key})
