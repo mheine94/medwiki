@@ -131,7 +131,10 @@ function mapOnKey(key,data){
 async function appendRows(sheetId,gid,data){
   if(data && data.length > 0){
     const doc = await getSheet(sheetId,gid)
-    await Promise.all(data.map((element)=> doc.addRow(element)))
+    for(let i =0; i< data.length;i++){
+      await doc.addRow(data[i])
+    } 
+    //await Promise.all(data.map((element)=> doc.addRow(element)))
   }
 } 
 
