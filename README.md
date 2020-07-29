@@ -68,12 +68,13 @@ https://wikiapi.now.sh/api/search?query=nurofen,ibuhexal,ibuflam,ondansetron,zof
 ## Google-Sheets-api
 ### Parameters
 * documentId: Die Dokumentenid
-* sheetId: (optional) Id der Tabelle
+* sheetId: (optional) gid des Tabellenblatts
+* columns: (optional) Filter die Spalten
 * key: (optional) gibt an auf welchen key die Einträge gemappt werden sollen 
 
 ### Beispiel
 http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID  
-http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID/?key=opusCode  
+http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=opusCode  
 http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=opusCode&colums=LOINC,SNOMED  
 
 
@@ -100,3 +101,41 @@ http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=op
 }
 ```
 
+### Post Diff in die Tabelle
+Berechtige den Service Account auf die Tabelle:
+sheets@imi-sheet-api.iam.gserviceaccount.com
+
+### Parameters
+* documentId: Die Dokumentenid
+* sheetId: (optional) gid des Tabellenblatts
+* key: gibt an auf welchen key die Einträge gemappt werden sollen 
+
+### Beispiel
+http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=opusCode  
+
+Post Body (einzeln)
+``` json
+    {
+        "opusCode": "0122",
+        "opusName": "Bilirubin, gesamt",
+        "openTerm": "BILI",
+        "LOINC": "1975-2"
+    }
+```
+Post body (mehrfach)
+``` json
+    [
+        {
+            "opusCode": "0122",
+            "opusName": "Bilirubin, gesamt",
+            "openTerm": "BILI",
+            "LOINC": "1975-2"
+        },
+        {
+            "opusCode": "0120",
+            "opusName": "Harnstoff-N",
+            "openTerm": "UREA",
+            "LOINC": "6299-2"
+        }
+    ]
+```
