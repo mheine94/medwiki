@@ -1,0 +1,327 @@
+Amineurin
+Amlodipin
+Cellcept
+Cotrium
+L-Thyroxin
+Pantozol
+Prednisolon
+Prograf
+Sildenafil
+Torem
+Dabepoetin alfa
+Vitarenal
+Vigantoletten
+CPS-Pulver
+Ramipril
+Amoclav 875/125mg
+Aranesp
+Valcyte
+Vitrenal
+Torem 
+Cotrim
+Meropenem
+Meropenem als KI
+Propanolol
+Vigantolette
+Natriumphosphat
+NaCl 10%
+Nystatin
+Magnesium inresa 10%
+NaBic
+KCl 7,45%
+Ferro Sanol
+Paracetamol
+Dipidolor
+Konakion
+Ampicillin
+Claforan (Cefotaxim)
+ Propranolol
+NaCl 0,9% Nasentropfen
+Tazobac
+Otriven NT 0,025%
+Nurofen
+Salbutamol-Inhalation
+Atrovent
+Piperacillin/Tazobactam (nach Pip-Anteil)
+E 153 G5%
+NaCl 0,9%
+Metoprolol
+Salbutamol (3 Tropfen, in 2 ml NaCl 0,9%)
+E 153+G5
+Erythropoetin
+Natriumglycerophosphat
+Mg 10 % Inresa
+Pantoprazol
+Calciumgluconat 10 %
+Fluconazol
+Fludrocortison (Astonin H)
+Alfacalcidol (1-Alfa)
+NaCl 0,9% Schenkel 1
+NaCl 0,9 % Schenkel 2
+EPO
+Chloralhydrat
+Vanco
+Heparin-DTI (Offenhalten)
+NaCl 10% (je 300 ml Nahrung)
+NaBic 8,4%
+sab simplex
+Päd II
+FFP
+E153+ G5%
+Novalgin
+NaCl 0,9 % für PORT
+EK
+Erythropoetin 
+Calcium-DTI
+Humanalbumin (als 20%ige Lösung)
+NaCl 0.9 % ad 48 ml
+Calciumglukonat 10 % 15 ml
+TPE
+Fette
+Omeprazol
+NaCl 0.9 %
+Hydrocortison
+Humanalbumin 20% (10g = 50ml)
+Melatonin 
+10 g Humanalbumin 20 %
+.Humanalbumin 20 %
+Humanalbumin 20 %
+E 153 + G 5 %
+Calciumgluconat 10 % in jeweils 300 ml Nahrung
+Dimenhydrinat
+NaCl 0,9% ad 48 ml
+NaCl 0,9 %
+E153G5%
+Zofran
+E153 (Volumenbolus 5ml/kg über 1 Stunde)
+Bexsero
+E153
+E153 Bolus
+Emla-pflaster (vor Portanstechen)
+Humanalbumin (20% Lösung)
+E153 50 ml über 30 min
+EK über 5 Stunden
+Cefpodoxim
+E153 Bolus über 1 h
+Infanrix hexa, A21CD448A
+Prevenar 13, CD1581
+Vancomycin
+Nimenrix
+Cefpodoxim 
+Otriven (je Nasenloch)
+Humanalbumin 20%
+Humanalbumin (20%)
+Humanalbumin (20%-Lösung)
+NaCl 0,9% 200ml über 2h
+Pantozl
+Cotrimoxazol
+Aciclovir
+Dexamethason
+Palladon ret.
+Palladon akut1,3
+Clexane
+Calcitonon
+Zoledronat (in 250 ml über 15 min)
+NaCl
+Sterofundin
+Kalium (10 mval pro Stunde)
+Natriumglycerolphosphat
+Calciumglukonat (1 Amp/h)
+Dexamethason,
+Daratumumab
+Bortezomib
+NACL
+Tavegil
+ Montelukast
+Montelukast
+Fasturtec
+Fresubin
+Amphomoronal
+Magnesium Verla Dragee
+Montekulast
+Piperacillin/Tazobactam Kabi 4g/0,5g Pulv. z. Herst. e. Inf.-Lsg. - PIPERACILLIN NATRIUM. 
+Clarithromycin
+Sterofundin + 40 mval KCL (über mind. 4h)
+Kalinor BT
+Inhalation mit NaCl 0,9%
+Nacl
+PCM
+Nacl.
+Amoxiclav 875/125
+Chlorhexamed Splg.
+Teicoplanin
+Inhalation mit NaCl 0,9% mit Salbutamol + Atrovent
+Olimel 3,5%
+Pomalidomid
+Doxorubicin
+Emend
+Kevatril
+Hydrierung
+Allopurinol
+Ampho LT
+Neupogen
+Voriconazol (VFend)
+Ciprofloxacin
+Olimel 3,5%1500 + Addel 1 Amp.+Cernevit 1 Amp. über die Nacht
+Lyrica
+Ursofalk
+2_Voriconazol
+2_Aciclovir
+Melphalan
+Pentamidin-Inhalation
+Ranitidin
+Tazobac 
+Mukositis-Lsg.
+Olimel 5,7%
+Diflucan
+Piperacillin/Tazobactam
+Resonium 
+KCL (Laufrate 10 mmol/l)
+KCL (Laufrate 10 mmol/h)
+KCl (10mval/h)
+Pentacarinat-Inhalation
+Citalopram
+Magnesium Verla
+Vergentan
+Vomex
+Granisetron
+Fludarabin
+2_Amphomoronal
+2_Ciprofloxacin
+Caphosol MSP
+Sterofundin 1500 ml
+Nikofrenon
+Treosulfan
+SDH (Prämed ATG)
+Tavegil (Prämed ATG)
+Nikofrenon 10 
+SDH 150 mg
+ATG 700 mg
+Magnesium
+Lasix
+Kalium
+1_Ciclosporin A
+TPE 25 kcal/kg
+SDH (Prämed TX)
+ClinOleic 20 %, Emulsion z. Inf.
+Tavegil (Premäd TX)
+MCP (Prämed TX)
+MTX
+Leucovorin (6h nach MTX)
+Zopiclon
+Palladon Bolus
+Laxoberal 
+2_Piperacillin/Tazobactam
+2_Gentamicin 
+Furosemid
+Lasix 
+2_Teicoplanin
+2_Meropenem 
+1_Advantan
+Laxoberal
+Novalgin 4g/50ml NaCl 0,9%
+2_Pentacarinat
+2_Cotrimoxazol
+Multivitamindragee
+Amitryptilin
+Ideos
+Pamidronat über 3h
+Magnesium optopan
+Enoxaparin (Clexane)
+Excipial U Lipolotio
+Pamifos
+Paracetamol-ratiopharm® 500 mg TAB - PARACETAMOL
+Sterofundin ISO Inf.-Lsg., Ecoflac Plus 500 ml - CALCIUMCHLORID DIHYDRAT. KALIUMCHLORID. M
+Tavegil® Inj.-Lsg. 2 mg/2ml - CLEMASTIN FUMARAT
+Rituximab Truxima
+Ranitidin-ratiopharm® 50 mg/5 ml Inj.-Lsg. - RANITIDIN HYDROCHLORID
+PCM Prämed
+Allopurinol Prämed
+Tavegil Prämed
+Solu Dec
+Rituximab
+Hydratation parallel
+Solu Decortin
+Oseltamivir
+-Sterofundin
+Kiovig
+Reducto spezial2
+Kalinor
+-Methylprednisolon
+Budesonid
+-Piperacillin/Tazobactam
+-Paracetamol
+Ampho-Moronal
+Voriconazol
+Tavor expedit
+-Meropenem
+-Linezolid
+Methotrexat
+Cytarabin
+Lenalidomid [Revlimid]
+Methotrexat i.th.
+Dexamethason i.th.
+Cytarabin i.th.
+Magnesiumsulfat 50 % Inresa Konz. MAGNESIUMSULFAT HEPTA
+TPE (35 kcal/kg KG)
+Kalinor BT (40 mval)
+Kaliumchlorid (über 8 Stunden)
+-Leucovorin [Folinsäure]
+-Butylscopolaminiumbromid [Buscopan]
+Pentacarinat
+Sab simplex
+Folinsäure [Leucovorin]
+Filgrastim
+Ciclosporin A
+-Magnesiumsulfat
+-Ciclosporin A [Sandimmun]
+Kalinor retard (8 mmol)
+KCL 7,45% (über 4 h)
+Magnesiumsulfat (über 3 h)
+KCL
+Olimel 5,7 % E Emulsion z. Inf., 1500 ml - ALANIN. ARGININ. ASPARAGINSÄURE. CALCIUMCHLORID
+Baclofen
+Riopan® Magen Gel, 1600 mg Gel z. Einn. - MAGALDRAT
+-Metamizol-Na. [Novalgin]
+-Olimel Peri 2,5%
+Meropenem Dr. Eberth 1 g Pulv. z. Herst. e. Inj.-Lsg. od. Inf.-Lsg. - MEROPENEM-3-WASSER
+-Human-Albumin 20% Infusionslösung
+-Morphin
+-Haloperidol
+Nacl 0,9%
+Quetiapin
+Quetiapin ret. 
+Olanzapin
+Valproat
+Valproat (Ergenyl chrono)
+Dipiperon
+Diazepam
+Ibuprofen
+Gelomyrtol
+ACC Schleimlöser 600mg
+Dolo Dobendan
+Tavor (OÄ dixit)
+Otriven Nasentropfen Anwendung
+Lithium
+Duloxetin
+Lorazepam
+Quetiapin 
+Lithium 
+Quetiaptin retard 
+Novothyral® 75, TAB - LEVOTHYROXIN NATRIUM. LIOTHYRO
+Vigantoletten 1000 I.E. Vitamin D3 TAB - COLECALCIFEROL
+Eisentabletten AbZ 50mg
+Reducto® spezial 602 mg/360 mg TAB m. veränd. Wirkst.freisetz. - KALIUMDIHYDROGENPHOSPHAT.
+MOVICOL® Junior aromafrei 6,9 g Pulv. z. Herst. e. Lsg. z. Einn. - 
+Ibu-ratiopharm® 400 mg akut Schmerztabletten - IBUPROFEN
+Otriven® gg. Schnupfen 0,1 % DSS oh. Konserv., 10 ml - XYLOMETAZOLIN HYDROCHLORID
+ferro sanol® duodenal 100mg HKP - EISEN(II)-GLYCIN-SULFAT-KOMPLE
+Cyclosporin 
+Mycophenolatmofetil
+Letermovir
+Multivitamin Dragee
+Methylprednisolon
+Vigantoletten 
+Amphomoronalp
+KCl in Sterofundin
+KCL 40.0 in 4 Std.
