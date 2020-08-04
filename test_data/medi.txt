@@ -1,30 +1,75 @@
+ 350ml E153+ G5%
+ BicaNorm
+ Fenofibrat 
+ Ibuprofen 400 mg
+ Isoptodex ATR - 2Trp./Auge
+ Isoptodex ATR 2Trp./Auge
+ Laxoberal
  Montelukast
  NaCl Bypass 0,9%
+ Novalgin Trpf. 
+ Omeprazol (iv Lsg. über PEJ)
  Propranolol
+ Torasemid
+, Quetiapin 
+-Aciclovir
+-Alizaprid [Vergentan]
 -Butylscopolaminiumbromid [Buscopan]
 -Ceftazidim
 -Ciclosporin A [Sandimmun]
+-Clemastin (Tavegil)
+-Clemastin [Tavegil]
+-Dexamethason
+-Dimenhydrinat [Vomex A]
+-Enoxaparin [Clexane]
+-Flucloxacillin
+-Furosemid
+-Glucose 10%
+-Granisetron
 -Haloperidol
+-Heparin
 -Human-Albumin 20% Infusionslösung
+-Humanalbumin
+-Humaninsulin
+-KCl 7,45%
+-Konakion
 -Leucovorin [Folinsäure]
 -Linezolid
+-MCP
 -Magnesiumsulfat
 -Meropenem
 -Metamizol-Na. [Novalgin]
 -Methylprednisolon
 -Morphin
 -Moxifloxacin
+-Mycophenolatmofetil [CellCept]
+-NaCl 0,9 %
 -Natriumhydrogencarbonat 8,4%
+-Natriumphosphat
+-Novaminsulfon
 -Olimel 5,7%
 -Olimel Peri 2,5%
+-Pantoprazol
 -Paracetamol
 -Piperacillin/Tazobactam
 -Rasburicase [Fasturtec]
 -Sterofundin
+-Teicoplanin
+-Tranexamsäure
+-Vitamin B12
+-Voriconazol
 .Humanalbumin 20 %
+1).Quetiapin
 10 g Humanalbumin 20 %
+1000 ml Sterofundin
+100ml E153
 100ml Päd I
 150 mg Ebrantil/50 ml NaCl 0,9%
+1500 ml ITPE (in der Dialyse) 
+1500ml Sterofundin
+150mg Solu-Decortin H/50ml NaCl
+1700 IE Heparin ad 50 ml NaCl 0,9%
+190 µg Prostaglandin E1 ad 50 ml NaCl 0,9%
 1_Advantan
 1_Beclometason
 1_Budenofalk
@@ -36,10 +81,15 @@
 1_Enbrel (in 50 ml NaCl über 2 Std.)
 1_Infliximab
 1_MMF
+1_Mycophenolatmofetil
+1_Piperacillin/Tazobactam 
 1_Ruxolitinib
+1_Sandimmun 
 1_Urbason
 1g Intratect
+1�_Tazobactam/Piperacillin 
 220ml Päd I
+250mg Lasix/50ml Nacl
 2_ Linezolid
 2_ Meropenem
 2_ Teicoplanin
@@ -47,30 +97,43 @@
 2_Ambisome
 2_Ambisome 
 2_Amphomoronal
+2_Amphomoronal Susp
+2_Canesten gyn
 2_Caspofungin
 2_Ceftazidim
 2_Ceftriaxon
 2_Ciprofloxacin
+2_Clotrimazol Creme
 2_Cotrim
 2_Cotrim forte
 2_Cotrimoxazol
 2_Cotrimoxazol (TMP Anteil)
 2_Cotrimoxazol (TMP-Anteil)
+2_Daptomycin
+2_Entecavir
 2_Foscavir
 2_GENTAMICIN 
 2_Ganciclovir
+2_Gentamicin
 2_Gentamicin 
 2_Gentamycin
 2_Letermovir
 2_Linezolid
+2_Meronem
 2_Meropenem
 2_Meropenem 
 2_Micafungin
 2_Noxafil
+2_Oseltamivir (Tamiflu)
 2_Pentacarinat
 2_Pentacarinat-Inhalation
+2_Pentacarinatinhalation
+2_Pierpacillin/Tazobactam
+2_Pip/Taz
 2_Piperacillin/Tazobactam
+2_Piperacillin/Tazobactam (nach Pip-Anteil)
 2_Piperacillin/Tazobactam (nach Pip.-Anteil)
+2_Piperazillin+Tazobactam
 2_Posaconazol
 2_Quetiapin
 2_Tazobac
@@ -79,10 +142,15 @@
 2_Teicoplanin
 2_Teicoplanin 
 2_Tigecyclin
+2_Urbason
 2_Valaciclovir
 2_Vancomycin
 2_Voriconazol
 2_Voriconazol 
+3000ml Sterofundin
+3_ATG 700mg
+3_ATG 800mg
+3_ATG 900mg
 3_Fludarabin
 3_MTX
 3_Methotrexat
@@ -90,164 +158,546 @@
 3_Thiotepa
 3_Thiothepa
 3_Treosulfan
+4 mg Palladon
+40 ml EK!2764231931550907
+4mg Palladon DP 
+4mg Palladon/ NaCl 0,9%
 6-fach Impfung
+ACC Akut (Acetylcystein) BT
 ACC Schleimlöser 600mg
 ACC akut 600 mg gegen Husten
+ALA
+ASS
+ASS 
+ASS 100
+ASS 100 
+ASS 100 mg
+ASS 100mg
+ASS-ratiopharm® 100 mg TAH, Tbl. - ACETYLSALICYLSÄURE
 ATG 1000mg/300ml NaCl 0,9%
+ATG 2200mg
 ATG 700 mg
 ATG 800mg/240ml NaCl 0,9%
+ATG n. Plan
+Abschwellende Nasentropfen
+Acetylsalicylsäure
 Aciclovir
+Aciclovir (lokal auf Läsion an Lippe)
+Aciclovir 400 mg
+Aciclovir Lippencreme
 Aciclovir Ratioph Lippenhe - ACICLOVIR - Creme
+Acic® 400 mg TAB - ACICLOVIR
+Acimethin
 Actrapid
+Actrapid 50I.E./50 ml Nacl 0,9%
 Actrapid 50IE/50ml NaCl
+Actrapid 50IE/NaCl 50ml
 Actrapid 50iE/ NaCl 0,9% 50ml
 Actrapid Bolus
 Actrapid nach 30er Regel
+Actrapid nach Plan
 Actrapid- Bolus
+Actrapid-Bolus
+Actrapid® FlexPen® 100 IE/ml Inj.-Lsg. im Pen - INSULIN HUMAN
+Adenuric
+Advantan 0,1 % dünn auf betroffene Stellen
+Advantan 0.1% Creme
+Advantan Creme 1x tgl dünn auftragen
+Advantan-Milch
+Advantan® 0,1 % Creme - METHYLPREDNISOLON ACEPONAT
+Advantan® 0,1 % Milch - METHYLPREDNISOLON ACEPONAT
+Aerodur
 Agomelatin
+Akineton
+Akineton ret
+Albumin 20%
 Albumin 20%-50.0
+Aldactone
 Alemtuzumab (Campath) 
+Alendronsäure-ratiopharm® 70 mg TAB - NATRIUM ALENDRONAT
 Alfacalcidol (1-Alfa)
 Alfare 13,5% in Tee
 Allopurinol
+Allopurinol 
+Allopurinol 100mg
+Allopurinol 300 mg
 Allopurinol Prämed
+Allopurinol-ratiopharm® 100 mg TAB - ALLOPURINOL
+AmBisome 
 Ambisome
+Ambisome liposomal (AmbiSome)
+Ambisome.
+Ambrohexal 15mg/ml
 Amineurin
+Aminopäd
+Aminopäd 10%
+Amiodaron
 Amiodaron (600mg/50ml G5%)
 Amiodaron(600mg/ 50ml G5%)
+Amisulprid
+Amisulprid 200mg
+Amitriptylin(Amineurin) 50mg
+Amitriptylinoxid
 Amitryptilin
 Amlodipin
+Amlodipin 
+Amlodipin 10mg
+Amlodipin 5
+Amlodipin HEXAL® 5 mg TAB - AMLODIPIN BESILAT
 Amoclav 875/125mg
+AmoxiClav
+AmoxiHEXAL® 750 mg FTA - AMOXICILLIN TRIHYDRAT
+Amoxicillin
+Amoxicillin 
+Amoxicillin 875mg/ Clavulansäure 125mg  
+Amoxicillin/Clavulansäure (nach Amoxicilin-Anteil)
+Amoxiclav (nach Amoxicillin-Anteil)
 Amoxiclav 875/125
+AmoxyClav (Augmentan)
 Ampho LT
+Ampho Moronal
 Ampho-Moronal
+Ampho-Moronal® SUS - AMPHOTERICIN B
+Ampho-Moronal® TAB - AMPHOTERICIN B
 Amphomoronal
+Amphomoronal LT
+Amphomoronal Suspension
 Amphomoronalp
 Ampicillin
+Ampicillin Tbl.
+Anoro 55/22 ug 
+Antibabypille
 Antifungol
 Antifungol Creme
+Antifungol® HEXAL® 3 VTA, 200 mg/VTA - CLOTRIMAZOL
+Antifungol® HEXAL® 6 Vaginalcreme, 10 mg/g Vaginalcreme - CLOTRIMAZOL
+Antra MUPS® 10 mg TMR - OMEPRAZOL HEMIMAGNESIUM
 Apixaban
+Apixaban 
+Aplona
+Aplona® Pulv. - APFELFRUCHT-PULVER
+Aprepitant
 Aprepitant 
+Aqua
+Aqua 50ml
 Ara-C (Cytarabin) als KI über 30 min
 Aranesp
+Aranesp 40 Ug
 Arcoxia
 Aredia
+Argatra
+Argatroban
+Arilin 500mg Tbl.
 Aripiprazol
+Aripiprazol 
+Aripiprazol (OÄ dixit)
+Aripirazol
+Arlevert 20/40mg 
+Arterenol 5mg/50ml
 Artrenol 5mg/50ml Nacl
+Asenapin
+Aspirin (ASS)
+Astonin
+Atopi Control
 Atorvastatin
+Atorvastatin 20 
+Atorvastatin 20 : 0-0-1-0 (mg), täglich
+Atorvastatin 40
+Atorvastatin Puren 40 mg FTA - ATORVASTATIN HEMICALCIUM-1,5-W
+Atorvastatin-ratiopharm® 40 mg FTA - ATORVASTATIN HEMICALCIUM
+Atosil
+Atosil (Promethazin)
+Atosil 30°
+Atosil® Tropfen - PROMETHAZIN HYDROCHLORID
+Atozet 10/40
+Atozet 10/40mg
+Atropin
+Atrovastatin 20
 Atrovent
+Atrovent 20 Hub
+Atrovent Emra Lsg. f. e. Vernebler - IPRATROPIUM BROMID-1-WASSER
+Augensalbe (z.B. Bepanthen)
+Avène Clearence Hydra Creme
+Azathioprin-ratiopharm® 50 mg FTA - AZATHIOPRIN
+Azithromycin
+BI 836858
+BMX-Mundspüllösung
+BTM - Palladon® retard 4 mg, REK - HYDROMORPHON HYDROCHLORID
+BTM Oxycodon 30 mg
+BTM Palladon
+BTM Palladon 10mg
+BTM Palladon 4 mg
+BTM Palladon 4 mg 
+BTM Palladon 4mg  
+BTM Palladon 8 mg
+BTM Palladon 8mg
+BTM Palladon® retard 4 mg, REK - HYDROMORPHON HYDROCHLORID
+BTM) Palladon® injekt 2 mg - HYDROMORPHON HYDROCHLORID
+BTM) Palladon® retard 4 mg, REK - HYDROMORPHON HYDROCHLORID
+BUTYLSCOPOLAMINIUMBROMID
 Baclofen
+Baclofen 
+Baclofen 5
+Baldiparan
+Baldrian
 Baldriparan
+Baldriparan z. Beruhigung UTA - BALDRIANWURZEL-TROCKENEXTRAKT (3-6:1). AUSZUGSMITTEL: ETHA
+Baraclude
+Basis 2
 Basis 2 (Broviac neu)
 Basis II
+Batrafen Creme Anwwendung (für das Gesicht)
 Beba Pre
+Beloc
 Beloc 5mg
+Beloc zok 23,75 mg bei Tachykardie
+Beloc-Zok® 95 mg, RET - METOPROLOL SUCCINAT
 Beloc-Zok® mite 47,5 mg, RET - METOPROLOL SUCCINAT
+Belok Zok
+Bepanthen (beide Augen)
+Bepanthen Mundspüllösung
+Bepanthen Mundspüllösung 
+Bepanthen Nasensalbe
+Bepanthen-Nasenpflege
+Bepanthen® WUND- u. HEILSALBE 50 mg/g Salbe - DEXPANTHENOL
+Beridual 20ng/50ng
+Berodual® LS 250µg/500µg Lsg. f. e. Vernebler - FENOTEROL HYDROBROMID. IPRATROPIUM BROMID-
+Berodual® N DOS - FENOTEROL HYDROBROMID. IPRATRO
+Berotec® N 100µg DOS, DOS - FENOTEROL HYDROBROMID
+Betahistin STADA® 16mg TAB - BETAHISTIN DIMESILAT
+Betaisodona® Lsg. - POVIDON IOD
 Bexsero
 Bicanorm
+Bier
+Bifiteral
+Bifiteral® 667 g/l, Sirup - LACTULOSE
+Bisohexal
 Bisoprolol
+Bisoprolol 
+Bisoprolol 1,25
+Bisoprolol 10mg
+Bisoprolol 5
+Bisoprolol 5 mg
+Bisoprolol 5mg
+Bisorprolol
 Blauer Schenkel
 Bortezomib
+Boswellia Serrata
 Brauner Schenkel
+Bricanyl
+Bricanyl® 0,5 mg Inj.-Lsg. - TERBUTALIN SULFAT
+Bromazepam
+Bromocriptin 
+Buccolam
 Budenofalk
 Budenosid
 Budesonid
+Budesonid Easyhaler 0,2mg/Dosis
+Buprenorophin
+Bupropion
+Bupropion 
 Buscopan
+Buscopan 
 Buscopan® Amp., 20 mg/1 ml, Inj.-Lsg. - BUTYLSCOPOLAMINIUMBROMID
 Buscopan® Dragées 10 mg - BUTYLSCOPOLAMINIUMBROMID
+Butylscopolamin
+CCNU oral
 CPS-Pulver
 Calcitonon
+Calcitriol
+Calcium 500mg
+Calcium Brause 500mg
 Calcium Glukonat
 Calcium-DTI
+Calcium-Sandoz® D Osteo KTA, 500 mg/400 I.E. - CALCIUMCARBONAT. COLECALCIFERO
+Calcium-Sandoz® Fortissimum 1000 mg - CALCIUM-D-GLUCONAT-CALCIUMLACTAT-GEMISCH (2:3)-2-WAS
 Calcium/VitaminD 600mg/400 IE
+Calciumgluconat
 Calciumgluconat 10 %
+Calciumgluconat 10 % 
 Calciumgluconat 10 % in jeweils 300 ml Nahrung
+Calciumgluconat B.Braun 10% Inj.-Lsg. - CALCIUM-GLUCONAT 1-WASSER
 Calciumglukonat (1 Amp/h)
 Calciumglukonat 10 % 15 ml
+Calciumglukonat 10%
 Calicum/Vitamin 600 mg 400 I.E. Brause
 Calziumglukonat (Laufrate mind. 5h, 5 Amp. = 2,25 mmol)
+Candesarta
 Candesartan
+Candesartan 8mg
+Candesartan-ratiopharm® 16 mg TAB - CANDESARTAN CILEXETIL
 Candesartan-ratiopharm® 32 mg TAB - CANDESARTAN CILEXETIL
+Candesartan-ratiopharm® 4 mg TAB - CANDESARTAN CILEXETIL
+Candesartan-ratiopharm® 8 mg TAB - CANDESARTAN CILEXETIL
+Candesartan/HCT 32/12,5 mg
+Canesten Gyn
+Caphosol MSL
 Caphosol MSP
+Captopril
+Carbamazepin
+Carbamazepin 400 mg
+Carboplatin
+Carboplatin 
+Carboplation
+Cariprazin
+Cariprazin 
+Cariprazin (OÄ dixit)
+Carmen® 10 mg FTA - LERCANIDIPIN HYDROCHLORID
 Carum Carvi
+Carvedilol 
+Carvedilol HEXAL® 12,5 mg TAB - CARVEDILOL
 Caspofungin
+Caspofungin 
 Catapressan
+Cefotaxim
+Cefotaxim 2g
+Cefotaxim Fresenius 1 g, Pulv. z. Herst. e. Inj.-Lsg. - CEFOTAXIM NATRIUM
+Cefotaxim Fresenius 2g z. Inf., Pulv. z. Herst. e. Inf.-Lsg. - CEFOTAXIM NATRIUM
 Cefpodoxim
 Cefpodoxim 
 Ceftazidim
+Ceftazidin
+Ceftolozan-Tazobactam (Ceftoloz.-Anteil)
+Ceftriaxon
+Ceftriaxon 
+Ceftriaxon .
+Ceftriaxon 2 g
+Ceftriaxon Kabi 2,0g Inf.-Fl. - CEFTRIAXON-DINATRIUM 3,5 H2O
+Cefuroxim
+Cefuroxim 
+CellCept
+CellCept 
 Cellcept
+Certican
+Ceterizin
+Cetirizin-ratiopharm® bei Allergien, FTA - CETIRIZIN DIHYDROCHLORID
+Cetricin
+Cetrotide
 Chloralhydrat
+Chloralhydrat (zum Nachgeben)
+Chlorhexamed
 Chlorhexamed Splg.
+Chlorhexamed Spüllösung
+Chlorhexamed zum Spülen des Mundraums
+Chlorhexidine
+Cholestyramin
+Ciatyl
 Ciclosporin
 Ciclosporin A
 Ciclosporin A 
+Cidofovir
+CiproHEXAL® 500 mg, FTA - CIPROFLOXACIN HYDROCHLORID-1-W
 Ciprofloxacin
+Ciprofloxazin 
+Circadin
+Circadin 2 mg RET - MELATONIN
+Cisplatin
+Cisplatin 
 Citalopram
+Citalopram STADA® 20mg FTA - CITALOPRAM HYDROBROMID
 Claforan (Cefotaxim)
 Clarithromycin
+Clemastin
 Clemastin (Prämed vor STZ)
+Clemastin (Prämedikation)
 Clemastin (Tavegil) SZT Prämedikation
+Clemastin /Tavegil 
 Clexane
+Clexane 
+Clexane (Enoxaparin)
+Clexane 0,4
+Clexane 0,4ml
+Clexane 20
+Clexane 20 mg
+Clexane 40
+Clexane 60
+Clexane 8000 I.E.
+Clexane® 2.000 I. E. (20 mg)/0,2 ml Inj.-Lsg. - ENOXAPARIN NATRIUM
+Clexane® 4.000 I. E. (40 mg)/0,4 ml Inj.-Lsg. - ENOXAPARIN NATRIUM
+Clexane® 6.000 I. E. (60 mg)/0,6 ml Inj.-Lsg. mit Sicherheitssystem - ENOXAPARIN NATRIUM
+Clexane® 8.000 I. E. (80 mg)/0,8 ml Inj.-Lsg. mit Sicherheitssystem - ENOXAPARIN NATRIUM
 ClinOleic 20 %
 ClinOleic 20 %, Emulsion z. Inf.
 ClinOleic 20 %, Emulsion z. Inf., 500ml - OLIVENÖL, RAFFINIERT ZUR PARENTERALEN ANWENDUNG.
+ClinOleic 20%
+ClindaHEXAL® 600 mg FTA - CLINDAMYCIN HYDROCHLORID
+Clindamycin
 Clinoleic
+Clinoleic 20%
+Clinoleic 20%.
+Clinoleic 20%ig
+Clonidin
+Clopidogrel
+Clopidogrel 75
+Clopidrogel 75mg
+Clotrimazol
+Clozapin
+Clozapin 
+Clyssie Einmalklistier - 
+Codein
+Codein 0,5mg/Trpf.
 Coffein
+Coffein 
+Coffein Einmalgabe
+Coffein Loading
+Coffein loading dose
+Coffeinbase
+Coffeinbase (5mg/kg KG) bis 20.06.2020
+Coffeincitrat
+Coffeine 200  mg vor EKT
+Coffeinum
+Coffeinum N 0,2 g, TAB - COFFEIN vor EKT
+Coffeinum vor EKT
+Colecalciferol 
+Colestryramin
+Colestyramin HEXAL
+Concor
+Concor 
+Concor® 5 mg FTA - BISOPROLOL FUMARAT
+Concor® COR 2,5mg FTA - BISOPROLOL FUMARAT
+Contractubex -Salbe (für Narbe)
+Cordarex
+Cordarex®, 200 mg TAB - AMIODARON HYDROCHLORID
 Corneregel
+Corvaton ret.
 Cotrim
 Cotrim (TMP-Anteil)
+Cotrim forte
+Cotrim forte-ratiopharm® 960 mg TAB - CO-TRIMOXAZOL
+Cotrim-ratiopharm® 80 mg TAB 
 Cotrim-ratiopharm® Amp. SF 480 mg/5 ml - CO-TRIMOXAZOL
 Cotrimoxazol
 Cotrimoxazol (nach TMP-Anteil)
 Cotrimoxazol Saft 800/40 mg 
 Cotrium
+Creme gegen Neurodermitis auf Zimmer
+Cyclophosphamid
+Cyclophosphamid 3650mg
 Cyclosporin 
+Cyklokapron®, FTA - TRANEXAMSÄURE
+Cymeven 100mg
 Cytarabin
 Cytarabin 
+Cytarabin - 3g/m² 
+Cytarabin / 30 min. 2.Spritze
 Cytarabin / 3h
+Cytarabin /30 min.  1.Spritze
+Cytarabin /3h
+Cytarabin 100 mg/m² - Tag 1 - 7
 Cytarabin 175mg / 24h
+Cytarabin 177 mg/24h
+Cytarabin 3g/m²
+Cytarabin 3h 
 Cytarabin i.th.
+Cytarabin über 3h 
 Cytarabin/ 24h (835mg)
 Cytarabin/30min
+Cytotec
+Cytotect
+Cytotect 100 E/ml
 D Fluorette
+D-Flourette
+D-Flouretten
 D-Fluorette
 Dabepoetin alfa
+Dactinomycin
+Daivobet Gel (topische Anwendung)
+Daivobet Gel. (topische Anwendung)
+Daivonex Salbe (topische Anwendung)
+Daptomycin
 Daratumumab
+Darbepoetin alfa 
+Darbopoetin
 Dauersondierung
+Daunorubicin
+Daunorubicin 60mg/m²
+Decoderm Tri aus Eigenbestand
+Decortin
+Decortin H
+Decortin® 5 mg TAB - PREDNISON
+Decortin® H 20 mg TAB - PREDNISOLON
 Defibrotide
+Dekristol
+Dekristol 20000 IE
+Depo-Clinovir Fertigspritze
 Dermatop (kortikoidfreie Basiscreme)
+Dexagentamicin 
 Dexametason
 Dexamethason
 Dexamethason 
+Dexamethason 4 mg
 Dexamethason i.th.
 Dexamethason,
+Dexamethaxon
+Dexyane Med (bereits im Zimmer) über Karison Hände bds. 
 Diazepam
+Diazepam 
+Diazepam (Valium)
+Diazepam Desitin® rectal tube 10 mg Rektallsg. - DIAZEPAM
+Diazoxid
+Diclofenac Salbe
 Diclofenac Salbenverband
+Diclofenac-ratiopharm® 75 mg SL Retardkapseln - DICLOFENAC NATRIUM
 Diflucan
+Diflucan nach Hämodialyse
+Diflukan (Fluconazol)
+Digitoxin
 Dimenhydrinat
 Dipidolor
+Dipidolor als KI in 100ml NaCl 0,9%
 Dipiperon
+Dipiperon 
 Dobendan Strep Dolo 1.4/10 - - Lutschtabletten
 Dolantin
 Dolo Dobendan
+Dolo- Dobendan Lutschtablette
+Dolo-Dobendan
+Dolo-Dobendan Lutschtabletten
+Dolo-Dobendan® 1,4 mg/10 mg LUT - BENZOCAIN. CETYLPYRIDINIUM CHL
+Dolodobendan Lutschtabletten
+Dominal 
+Domperidon
+Donepezil
+Doppelblindversuch Medikinet retard 40mg
+Doppelherz-Omega3-Konzentrat (Stück)
 Dormicum
 Doxorubicin
+Dronabinol
+Dronabinol Tropfen
+Dropizol
 Dulcolax
+Dulcolax Zäpfchen
 Duloxetin
+Duloxetin 
+Duloxetin.
+Duodart 0,5/0,4mg
+Duodart® 0,5 mg/0,4 mg HKP - DUTASTERID. TAMSULOSIN HYDROCH
+Durogesic
 Durogesic 
+Durogesic Pflaster
 Durogesic® SMAT 125 µg/Stunde Transdermales Pflaster - FENTANYL
+Durogesic® SMAT 25 µg/Stunde Transdermales Pflaster - FENTANYL
 Durogesic® SMAT 50 µg/Stunde Transdermales Pflaster - FENTANYL
 Durogesic® SMAT µg/Stunde Transdermales Pflaster - FENTANYL
+E + G
+E + G (+30 ml Glucose 20% auf 75 ml E + G)
 E 153 + G %
 E 153 + G 5 %
 E 153 + G5
+E 153 + G5%
 E 153 G5%
 E 153+G5
+E+G
+E+G 
 E+G5%
 E153
+E153  G5% 1l
 E153 (Volumenbolus 5ml/kg über 1 Stunde)
+E153 (aus der Hand)
 E153 + G
 E153 + G5
+E153 + G5%
+E153 +G5
 E153 50 ml über 30 min
 E153 Bolus
 E153 Bolus über 1 h
@@ -255,117 +705,344 @@ E153 G5
 E153 G5%
 E153+ G5%
 E153+G5
+E153+G5 (210 ml)
 E153+G5%
+E153+G5% 800 ml
+E153/ G 5%
+E153/ G5
 E153/G5%
+E153G5
+E153G5 (gesamt 500 ml)
 E153G5%
+E153G5% (ab abends)
 EK
+EK !2760301935830210
+EK !2764231931631305
+EK !276423203254390014
 EK 30 ml
 EK über 5 Stunden
 ELIQUIS® 2,5 mg FTA - APIXABAN
 EPO
+Ebrantil
+Ebrantil 150mg /50 ml NaCl 0,9%
+Ebrantil retard
+Edoxaban
+Effentora 100 µg Buccaltabletten - FENTANYLCITRAT
+Eigenes Gemisch
 Eisentabletten AbZ 50mg
+Elidel 10mg/g Creme
+Eliquis
+Eliquis 5 mg  
 Emend
 Emla-pflaster (vor Portanstechen)
+Enahexal comp 10/25mg (Enalapril/Hydrochlorothiazid)
+Enalapril
+Enalapril 10mg
+Enantone Gyn
+Enantone Gyn Monatsdepot 
+Enoxaparin
+Enoxaparin 
 Enoxaparin (Clexane)
+Entecavir
+Entecavir-Saft (0,05mg/ml)
+Entecavir-ratiopharm® 0,5 mg FTA - ENTECAVIR-1-WASSER
+Epiduo 2,5%
+Epiduo Gel
+Eplerenon
+Eplerenon 
+Ergenyl chrono
 Erythropoetin
 Erythropoetin 
 Escitalopram
+Escitalopram Tbl.
 Esidrix
 Esomeprazol
+Esomeprazol 
+Esomeprazol 40
+Esomeprazol über PEG
+Espumisan Emulsion
+Etoposid (Etopophos) /1h
+Etoposid 6h vor AraC!
 Etoposid/1h 6h vor Cytarabin!!
+Etoricoxib
+Eucerin AtopiControl Akut Creme - 
+Eunova Langzeit
+Eunova Multivitamin
+Euthyrox
+Euthyrox (Levothyroxin) 125 µg
+Euthyrox (Levothyroxin) 150/125 µg
+Euthyrox 150 µg (Levothyroxin)
+Evaluna Antibaby-Pille
 Excipial U Lipolotio
+Excipial® U Lipolotio - 
+Ezetimib 
+F16IL2
 FFP
 Faktor XIII (Fibrogammin)
+Fastjekt Autoinjektor 300 Mikrogramm
 Fasturtec
+Fasturtec (Rasburicase) als KI
 Fasturtec (Rasburicase, als KI über 30 Min)
+Fasturtec (über 30 min)
 Fenistil
+Fenistil 
+Fenistil (1 mg/ml)
 Fenistil Gel - DIMETINDEN - Gel
 Fenistil Gel - DIMETINDEN MALEAT
+Fenistil-Gel
+Fenistil® Dragees - DIMETINDEN MALEAT
+Fenistil® Gel - DIMETINDEN MALEAT
+Fenistil® Tropfen - DIMETINDEN MALEAT
+Ferinject 50 mg Eisen/ml, Inj.- u. Inf.-Lsg., 10 ml - EISENCARBOXYMALTOSE
+Ferrlecit 
+Ferrlecit (an der Dialyse)
 Ferro Sanol
 Ferro Sanol 
+Ferro sanol
 Ferro sanol duodenal
+Ferro-Sanol duodenal
 FerroSanol
+Ferrosanol
 Ferrosanol 
+Ferrosanol (1 Tropfen = 1,5 mg)
+Ferrosanul duo 1 std. nach dem Essen
 Fett
 Fett 
+Fett (nach Plan)
+Fett-Infusion
 Fette
 Fette (Smoflipid)
 Fette lt. Verordnung
+Fette n. Plan
+Fette nach Plan
 Fibrogamin
 Fibrogammin
 Fibrogammin 
+Filgastrim
 Filgrastim
+Floxal
+Floxal AT
+Floxal AT 
+Floxal Augentropfen
+Floxal Augentropfen bds.
+Fluanxol 
+Fluclox 3g
+Fluclox Stragen 1 g, Pulv. z. Herst. e. Inj.- bzw. Inf.-Lsg. - FLUCLOXACILLIN NATRIUM-1-WA
 Flucloxacillin
 Fluconazol
 Fluconazol (Diflucan)
+Flucoxacilin
 Fludarabin
 Fludrocortison (Astonin H)
+Fluoxetin
+Fluoxetin-ratiopharm® 
+Fluoxetin-ratiopharm® 20 mg TAB - FLUOXETIN HYDROCHLORID
+Fluphenazin
+Fluphenazin 
+Fluticason 125 µg
+Fluticason 250 µg
+Flutide Mite 50
+Fluvastatin
+Fluvoxamin
 Folat (Folsäure)
 Folinsäure [Leucovorin]
+Folsäure
 Folsäure 0,4 mg Tbl
 Folverlan® 5mg Tbl. - FOLSÄURE
+Foradil® P, 12 µg, HKP mit Pulv. z. Inh. - FORMOTEROLFUMARAT-DIHYDRAT
+Formoterol 12 
+Fortecortin
+Fortecortin® 4 mg TAB - DEXAMETHASON
+Fortecortin® Inject 8 mg Inj.-Lsg. in e. Amp. - DEXAMETHASON DIHYDROGENPHOSPHA
+Fortimel 
+Fortimel Jucy 
+Fortimel compact (125 ml/300 kcal)
+Fortimel compact (125ml/300kcal)
 Foscavir
+Fosfomycin
+Fosfomycin (nach Urikultabnahme)
+Fosfomycin 3g Granulat in Wasser aufgelöst 
+Fosfomycin Eberth 3 g Granulat z. Herst. e. Lsg. z. Einn. - FOSFOMYCIN-TROMETAMOL
+Fosrenol
+Fosrenol® 1000 mg KTA - LANTHAN(III)-CARBONAT-X-WASSER
 Fresubin
 Fresubin 
+Fresubin (200ml/400kcal) 
+Fresubin 2 kcal (200 ml/400 kcal)
+Fresubin Drinks (kalt)
+Fresubin Energy Drink
+Fresubin Energy Fibre
+Fresubin Flasche
 Fresubin Frucht
+Fresubin Hepa
+Fresubin Nephro
+Fresubin Protein Energy Drink
+Fresubin Pudding 
+Fresubin protein / high energy
 Furosemid
+Furosemid 
 Furosemid (Lasix)
+Furosemid (d1/2)
 Furosemid 20mg ad 20ml NaCl 0,9%
 Furosemid-ratiopharm® 40 mg TAB - FUROSEMID
+Fusidinsäure aus Eigenbestand
+G-CSF
+G40%
+G5
+Gabapentin
 Ganfort 0,3 mg/ml+5 mg/ml Augentropfen
+Gastrocepin
 Gastrografin
 Gastrografin 5ml+5 ml Aqua
+Gastrozepin
+Gaviscon Dual (Alginat) Gel
 Gelomyrtol
 Gemcitabin
 Gentamicin
 Gentamicin 
+Gentamicin (als Kurzinfusion)
+Gentamicin AT
 Gentamycin
+Gliolan
+Gliolan® 30 mg/ml, Pulv. z. Herst. e. Lsg. z. Einn. - 5-AMINO-4-OXOPENTANSÄURE-HYDRO
+Gluc+Elyte
+Gluc30%
+Glucose
+Glucose (10% Infusion als TPE), Infusion I
 Glucose (Infusion I)
+Glucose + Elektrolyte
 Glucose + Elyte I
 Glucose + Elyte II
 Glucose + Elyte III
+Glucose 2,5%/NaCl 0,45%
 Glucose 20%
+Glucose 20% -Elektrolytlösung (Infusion II)
+Glucose 30%
 Glucose 30% (Broviac neu)
 Glucose 5%
 Glucose 5% (AB-Schenkel)
 Glucose 5% (CSA-Schenkel)
 Glucose 5% 2500 ml
+Glucose 50%
+Glucose 70%
+Glucose/Elektrolyte
 Glukose
+Glukose 20% (iv-Lsg)
+Glukose 40%
 Glukose+Elyte
+Glycilax® f. Erwachsene - GLYCEROL 85%
+Glycosade 
 Granisetron
+Granisetron-hameln 1 mg/ml Konz. z. Herst. e. Inj.-Lsg. od. Inf.-Lsg., 1 ml - GRANISETRON 
+Guttaplast (lokal plantar)
+HA 20%
+HCT
+HCT 
+HCT HEXAL® 12,5 mg, Tbl. - HYDROCHLOROTHIAZID
 HCT HEXAL® 25 mg, Tbl. - HYDROCHLOROTHIAZID
+HP Energy Sondenkost
+HP Energy Sondenkost 
+HP Engergy 
 Haemocomplettan
 Haloperidol
+Hepa Merz
+Hepa-Merz® Inf.-Lsg.s-Konzentrat - ORNITHIN ASPARTAT
+HepaMerz
+Hepamerz
+Hepamerz 
 Heparin
+Heparin 1900 IE
+Heparin 3200 IE ad 50 mL NaCl 0.9%
+Heparin 3450 IE ad 50 mL NaCl 0.9%
 Heparin 5000 IE ad 50 ml NaCl 0,9%
+Heparin 600 IE
 Heparin-DTI (Offenhalten)
+Heparin-Natrium-5000-ratiopharm®, Amp. - HEPARIN NATRIUM VOM SCHWEIN
+Heparin-Natrium-7500-ratiopharm® FS, FER - HEPARIN NATRIUM VOM SCHWEIN
+Heparinperfusor
+Hepatect
+Humalog100IE/ml
+Human-Albumin 20 % Behring, salzarm Inf.-Lsg., 100 ml - ALBUMINLÖSUNG (HUMAN), KONZENT
+Human-Albumin 200g/l
+Human-Insulin (Actrapid)
+Humana SL zur Nacht 
 Humanalbumin
 Humanalbumin (20% Lösung)
 Humanalbumin (20%)
 Humanalbumin (20%-Lösung)
 Humanalbumin (als 20%ige Lösung)
+Humanalbumin 100ml (200g/l)
+Humanalbumin 100ml (200g/l) 
 Humanalbumin 20 %
 Humanalbumin 20%
 Humanalbumin 20% 
 Humanalbumin 20%  
 Humanalbumin 20% (10g = 50ml)
+Humanalbumin 20% über 5h
+Humanalbumin 200g/l
+Humanalbumin20%
 Huminsulin
 Huminsulin normal
+Huminsulin® Basal (NPH) 100, 100 IE/ml Inj.-Sus. in DFL - INSULIN-ISOPHAN (HUMAN)
 Hydratation parallel
 Hydrierung
+Hydrierung 24 Std
 Hydrochlorothiazid
 Hydrochlorothiazid 
 Hydrochlorthiazid
+Hydrochlorthiazid 
 Hydrocortison
+Hydromorhon 2,6 akut 
+Hydromorhon ret 4 
+Hydromorphon
 Hydromorphon 4mg
+Hydromorphon akut
+Hydromorphon-HEXAL retard 2 mg REK - HYDROMORPHON HYDROCHLORID
 Hydromorphon/Nacl 0,9% 50 ml
+Hylo-Vision (beide Augen)
+Hylovision AT beidseits
+Hypnorex ret.
+Hyrochlorothiazid
+IBU-ratiopharm® 200 mg akut Schmerztabletten - IBUPROFEN
+IBUPROFEN
+ISK (Ropi 0,2%)
+IVIG
+Iberogast® Flüssigkeit - ANGELIKAWURZEL-TINKTUR. KAMILLENBLÜTEN-TINKTUR. KÜMMEL-TINKTUR. M
 Ibu-ratiopharm® 400 mg akut Schmerztabletten - IBUPROFEN
+Ibuprifen
 Ibuprofen
+Ibuprofen 
+Ibuprofen 400 mg
+Ibuprofen 400mg
+Ibuprofen 600mg
+Ibuprofen STADA® 600mg FTA - IBUPROFEN
+Ibuprofen Saft
+Ibuprofen-Schmerzsaft
 Idarubicin /4h
+Idarubicin 4h vor AraC!
 Idarubicin/ 1h
 Ideos
+Ideos KT
+Ideos-Kapseln500/400
+Ifo 3h
+Ifosfamid
+Ifosfamid / 3h
+Ifosfamid /3h
+IgG (Kiovig)
+Immodium
+Immodium lingual
+Imodium
+Imodium 
+Impfstoff Gardasil 9
+Individueller Ernährungsbeutel
 Infanrix hexa, A21CD448A
+Infantrix hexa
+Infantrix hexa Ch:A21FD448 (rechts)
+Infectocortisept
+Infectoscab 5%
 Infliximab
+Infloran
+Infloran Kapseln
 Infusion I (Glucose)
 Infusion I - NaCl 0.9 % (alt)
 Infusion III - NaCl 0.9 % (alt)
@@ -373,84 +1050,234 @@ Infusioon II - NaCl 0.9 % (alt)
 Inhalation mit NaCL
 Inhalation mit NaCl 0,9%
 Inhalation mit NaCl 0,9% mit Salbutamol + Atrovent
+InstillaMed
 Insulin
 Insulin (50IE/50ml NaCl 0,9%)
 Insulin Glargin
+Insulin glargin (Lantus)
+Intradialytische TPE 
 Intratect
 Intratect 2g
+Irenat Tropfen 300 mg/ml Tropfen z. Einn. - NATRIUMPERCHLORAT-1-WASSER
+Isotone Kochsalz-Lösung 0,9 % Braun Inf.-Lsg., Ecobag 1000 ml - NATRIUMCHLORID
+Isotone Kochsalzlösung 0,9% Braun Ecoflac® Plus 100ml - NATRIUMCHLORID
+Isotone Kochsalzlösung 0,9% Braun Ecoflac® Plus 500ml - NATRIUMCHLORID
+Ivabradin PUREN 5 mg FTA - IVABRADIN HYDROCHLORID
+Ivermectin
+Jardiance
+Jatrosom
 Jatrosom (OÄ dixit)
+Jodetten
 KA-VIT® Tropfen, 20mg/ml Emulsion z. Einn. - PHYTOMENADION
+KALINOR Retard Kapseln
+KALINOR® 1,56 g Kalium/2,5 g Citrat BTA - CITRONENSÄURE. KALIUMCITRAT-1-WASSER. KALIUMHYDR
+KALINOR® 1,56g Kalium/2,5g Citrat BTA - KALIUMCITRAT-1-WASSER. KALIUMH
+KALINOR®-retard P 600mg REK - KALIUMCHLORID
 KCL
 KCL (Laufrate 10 mmol/h)
 KCL (Laufrate 10 mmol/l)
+KCL 10 mval/h zentral
 KCL 40.0 in 4 Std.
 KCL 60.0 i.v. in 6 Std.
 KCL 60.0 pur.
+KCL 7,45%
 KCL 7,45% (in die laufende Infusion)
 KCL 7,45% (über 4 h)
 KCl           
 KCl (10 mval/h)
+KCl (10mmol/h über zentralen Zugang)
 KCl (10mval/h)
 KCl 10 mval/h zentral
 KCl 7,45%
 KCl in Sterofundin
+KCl in Sterofundin über 4h
 Ka-Vit
 Kaisernatron
 Kalinor
+Kalinor 40 mmol BT
 Kalinor BT
+Kalinor BT 
 Kalinor BT (40 mval)
+Kalinor BT : 1-0-1-0 (mg), täglich
+Kalinor BTA
 Kalinor Brause
+Kalinor Brause 
+Kalinor Brause Tablette in Wasser aufgelöst
+Kalinor Brausetabl.
 Kalinor Brausetablette
+Kalinor Kapsel
+Kalinor Ret.
 Kalinor ret
+Kalinor ret Kps
+Kalinor ret.
 Kalinor ret. Kapsel
+Kalinor ret. Kapseln
 Kalinor retard
 Kalinor retard (8 mmol)
+Kalinor-BT
+Kalinor-Brause
+Kalinor-Brausetablette
+KalinorBrause
+Kalinorbrause
+Kalinorbrause (über Sonde!)
+Kalinorbrause Tbl.
 Kalium
 Kalium (10 mval pro Stunde)
 Kalium 7,45% 60,0
 Kalium 7,45% 60,0 in 6 Std.
 Kalium 7,45% in laufende TPE
+Kalium 7,64%
+Kalium Kapsel
+Kalium Kapseln ret. 
+Kalium ret.
 Kaliumchlorid (über 8 Stunden)
 Kalzium/Vit D 600 mg/400 IE BT 
+Kepinol
+Keppra
+Ketanest
 Kevatril
 Kiovig
+Klistier
+Klysstier
+Kochsalz-Tabletten
+Kochsalzlösung 0,9%
+Kochsalzlösung 0,9%  100ml - NATRIUMCHLORID
+Kochsalzlösung 0,9% B.Braun Spüllsg. Ecotainer, 500ml - 
+Kochsalzlösung 0,9% Ecoflac plus, 100ml - NATRIUMCHLORID
+Kochsalzlösung 0,9% Ecoflac plus, 500ml - NATRIUMCHLORID
+Kochsalzlösung 0,9% Ecoflac plus, 50ml - NATRIUMCHLORID
+Kochsalztabletten 1000mg
+Koffein vor EKT
 Konakion
 Konakion 
 Konakion 10
 Konakion i.v.
+Konakion tropfen
+Konakion® MM 10 mg - PHYTOMENADION
+Kreon
 Kreon 
 Kybernin
 Kybernin (AntithrombinIII) über 6 Std. über PVK
+Kümmel-Zäpfchen
+L Thyroxin
+L- Thyroxin
+L- Thyroxin 150µg
+L-Polamidon
+L-Thorxin
+L-Thyrox
 L-Thyroxin
+L-Thyroxin 
+L-Thyroxin 125µg
+L-Thyroxin Henning 100, 100 µg, TAB - LEVOTHYROXIN NATRIUM
+L-Thyroxin Henning® 100, 100 µg, TAB - LEVOTHYROXIN NATRIUM
+L-Thyroxin Henning® 50, 50 µg, TAB - LEVOTHYROXIN NATRIUM
+L-Thyroxin Henning® 75, 75 µg, TAB - LEVOTHYROXIN NATRIUM
+LThyrox
+Lactolose
 Lactulose
+Lactulosesirup 
+Lafamme  1/2 mg 
+Laktuloseschwenkeinlauf
+Lamotrigin
+Lanicor
+Lanicor® 0,25 mg Digoxin / Tablette - DIGOXIN
 Lantus
 Lasix
 Lasix 
+Lasix (250mg/50ml NaCl 0,9%) 
 Lasix 250 mg
+Lasix 250mg
 Lasix 250mg/50ml NaCl 0.9%
+Lasix 250mg/50ml Nacl
 Lasix® 20 mg Inj.-Lsg. - FUROSEMID NATRIUM
+Lasix® 250 mg Inf.-Lsg. - FUROSEMID NATRIUM
+Lavanid-Gel
 Lavanidsalbenverband
+Lavasept-Gel (dünn auf Labien auftragen)
+Laxans
 Laxans 
+Laxans Zäpfchen
+Laxans-Tropfen
+Laxans-ratiopharm
+Laxans-ratiopharm® 10 mg SUP - BISACODYL
+Laxans-ratiopharm® 7,5 mg/ml Pico Tropfen - NATRIUM PICOSULFAT-1-WASSER
 Laxanstropfen
 Laxoberal
 Laxoberal 
+Laxoberal 15°
+Laxoberal Tropfen
+Lefax
 Lenalidomid [Revlimid]
+Lercaddipin 10mg
+Lercandipin
+Lercanidipin
+Lercanidipin 10 mg
 Letermovir
+LetroHEXAL® 2,5 mg FTA - LETROZOL
+Letrozol 2,5mg
+Leucovorin
 Leucovorin (6h nach MTX)
 Leukovorin (6h nach MTX)
+Levemir
+Levetiracetam
+Levetiracetam 100mg/ml
+Levetiracetam 100mg/ml: 3.5-0.0-3.5-0.0 (ml), täglich
+Levetiracetam 750mg 
+Levetiracetam HEXAL® 250 mg FTA - LEVETIRACETAM
+Levetiracetam HEXAL® 500 mg FTA - LEVETIRACETAM
+Levetiracetam-ratiopharm® 100 mg/ml Konz. z. Herst. e. Inf.-Lsg. - LEVETIRACETAM
+Levetiracetamsirup
+Levodopa
+Levodopa 
+Levodopa/Carbidopa 100/25mg
+Levofloxacin
+Levofloxacin Kabi 5 mg/ml Inf.-Lsg., KabiPac 100 ml - LEVOFLOXACIN-0,5-WASSER
+Levosimendan (1mg ad 50 ml G5%)
+Lidocain Gel
+Lidocain Spüllösung
+Lidocain-Gel zur rectalen Anwendung 
+Linecolid 600 mg
 Linezolid
+Linezolid 
+Linezolid 600mg
+Linezolid HEXAL® 600 mg FTA - LINEZOLID
+Liprololog nach Schema: Faktor 3, Ziel 120-140 mg/dL
+Lisinopril
+Lisinopril 20mg
+Lisinopril-ratiopharm® 10 mg TAB - LISINOPRIL-2-WASSER
 Lithium
 Lithium 
+Lixiana 
+Lixiana 60mg
+Loadingdose Coffeinbase
 Lonolox® 10 mg TAB - MINOXIDIL
+Loperamid
 Lorazepam
+Lorazepam 
+Lorazepam 1mg
 Lyrica
 MCP
+MCP 
+MCP  Tropfen 
+MCP (Prä-Med Tx)
 MCP (Prämed TX)
+MCP (prämed TX)
+MCP PräMed TX
+MCP-ratiopharm® 10 mg TAB - METOCLOPRAMID HYDROCHLORID-1-W
 MMF
 MMF 
+MOVICOL Beutel
 MOVICOL® Junior aromafrei 6,9 g Pulv. z. Herst. e. Lsg. z. Einn. - 
 MTX
+MTX 
+Macitentan (Opsumit)
+Macroclisma
+Macrogol
+Macrogol Btl.
+Macrogol-ratiopharm® Balance Pulv. z. Herst. e. Lsg. z. Einn. - KALIUMCHLORID. MACROGOL 33
+Macumar 3mg
 Magnesium
+Magnesium 
 Magnesium (Laufrate 8 mmol/h)
 Magnesium (Laufrate 8 mmol/h) 
 Magnesium 10% Inresa zu den MZ
@@ -459,38 +1286,115 @@ Magnesium 24 mmol in 3 Std.
 Magnesium BT
 Magnesium Verla
 Magnesium Verla Dragee
+Magnesium Verla® N Dragées, 40 mg
+Magnesium Verla® N Dragées, magensaftresistente Tbl. - MAGNESIUMBIS(HYDROGEN-L-GLUTAMAT) 4
 Magnesium inresa 10%
 Magnesium optopan
+Magnesium optopan 250 mg
+Magnesium verla
+Magnesium verla 
 Magnesiumsulfat (über 3 h)
 Magnesiumsulfat 50 % Inresa Konz. MAGNESIUMSULFAT HEPTA
 Magnesiumsulfat 50 % Inresa Konz. z. Herst. e. Inj.- od. Inf.-Lsg. - MAGNESIUMSULFAT HEPTA
+Makrogol 
+Makrogol : 1-0-0-0 (Beutel), täglich
+Marcumar
+Marcumar 
+Marcumar nach INR
+Marcumar nach INR von heute
+Medikinet
+Medikinet 
+Medikinet - Doppelblindversuch
+Medikinet 40 retard
+Medikinet 40 retard Doppelblindversuch
 Medikinet 5 mg
+Medikinet ret.
+Medikinet ret. 20mg Kps. oder Placebo im Doppelblindversuch, Gabe aus beschrift Umschlägen
+Medikinet ret. 20mg Kps. und Placebo im Doppelblindversuch, Gabe aus Umschlägen
+Medikinet retard
+Medikinet retard 
 Medikinet retard 10 mg
+Medikinet retard 40mg
+Medikinet unretadiert
 Melatonin
 Melatonin 
+Melatonin (zur Nacht) 
+Melatonin 3
+Melatonin zur Nacht
 Melperon
+Melperon-neuraxpharm® 25 mg FTA - MELPERON HYDROCHLORID
+Melperon-ratiopharm® 25 mg/5 ml Lsg. - MELPERON HYDROCHLORID
+Melperonsaft 25mg/5ml (80mg)
 Melphalan
+Memantin
+Mepilex Pflaster
+Meronem
 Meropenem
 Meropenem 
 Meropenem (DK)
+Meropenem 2g
 Meropenem Dr. Eberth 1 g Pulv. z. Herst. e. Inj.-Lsg. od. Inf.-Lsg. - MEROPENEM-3-WASSER
+Meropenem PUREN 1 g Pulv. z. Herst. e. Inj.-/Inf.-Lsg. - MEROPENEM-3-WASSER
 Meropenem als KI
+Mesalazin-Klysma
+Mesna
+Mesna 4500mg
+Mesna 4500mg n. plan
+Mesna 875mg
+Mesna Std 0
+Mesna Std.0
 Metamizol
+Metamizol (Novalgin)
+Metamizol 500
+Metformin
+Metformin 1000 mg
+Metformin 850mg
 Methotrexat
 Methotrexat i.th.
 Methylprednisolon
+Methylprednisolon-Puls
+Methylprednisolut® 1000 mg - METHYLPREDNISOLON 21-HYDROGENS
 Metoprolol
+Metoprolol 
+Metoprolol 23,75mg
+Metoprolol 23,75mg: 1-0-1-0 (Tablette), täglich
+Metoprolol 37,5 mg1
+Metoprolol succ
+Metoprolol tartrat
+Metoprololsuccinat
+Metronidazol B. Braun 5 mg/ml Inf.-Lsg. - METRONIDAZOL
 Mg 10 % Inresa
+Mg Optopan
+Mianserin
 Micafungin
+Miconazol Mundgel 2%
+Microclisma
 Microclyss
+Microlax Rektallösung - DODECYL(SULFOACETAT), NATRIUMSALZ. NATRIUM CITRAT. SORBITOL-LÖSUNG
 Midazolam
+Midazolam-hameln 5 mg/ml Inj.-/Inf.-Lsg., 1 ml - MIDAZOLAM HYDROCHLORID
+Midostaurin
+Midostaurin (Rydapt)
+Mikroklist
 Milnacipran
+Milrinon 8 mg ad 50 mL NaCl 0.9%
+Mimpara
+Mircafungin 100mg
+Mirtazapim
 Mirtazapin
+Mirtazapin 
+Mirtazapin HEXAL® 15 mg FTA - MIRTAZAPIN
+Mirtazepin
 Mischbeutel
 Mitoxantron 
 Mitoxantron / 30Min.
+Mitoxantron über 30 min
+Mitrazapin 15
+Mitrazapin 15: 0-0-1-0 (mg), täglich
 Montekulast
+Montelucast 10mg
 Montelukast
+Moronal
 Morphin
 Morphin 
 Morphin 10mg/NaCl 50ml
@@ -498,43 +1402,118 @@ Morphin 40 mg / NaCl 50 ml
 Morphin 50mg /50ml NaCl0,9%
 Morphin- Bolus
 Morphin-Bolus
+Morphin-hameln 10 mg Inj.-Lsg. - MORPHIN SULFAT
 Motilium 10mg bis zu 30mg Einzeldosis
 Motilium vor den Mahlzeiten
+Motilium® Tropfen, 10 mg/ml SUS - DOMPERIDON
+Movicol
+Movicol 
+Movicol Beutel 
+Movicol Btl
+Movicol Btl.
+Movicol Junior
+Movicol Junior ad 62 ml 
+Movicol junior
+Moviprep
+Moxonidin
+MucoClear 3% (nur durch Atemtherapie)
+Mucoclear 3%
+Mucofalk
+Mucofalk-Beutel
+Mucositis Mundspüllösung 100g - DEXPANTHENOL.LIDOCAIN HYDROCHL
+Mucositis-Mundspül.
+Mucosolvan Inhalationslösung
+Mucosolvan Saft
+Mucufalk
+Mukofalk-Beutel
+Mukositis MSL
+Mukositis Mundspüllösung
 Mukositis-Lsg.
+Mukositislösung
 Multibionta nutrition Trpf
 Multivitamin Dragee
 Multivitamindragee
 Multivitamindragees
 Multivitamine (Eunova)
+Mundspüllösung
 Mycophenolatmofetil
+Mydocalm 50
 NAC-ratiopharm® akut 200 mg Hustenlöser, BTA - ACETYLCYSTEIN
+NAC-ratiopharm® akut 600 mg Hustenlöser, BTA - ACETYLCYSTEIN
 NACL
+NACL 0,9%
+NACL 0.9 %
+NACL 100ml
+NACL 250ml
 Na Cl 0,45 % / Glucose 2,5%
 NaBic
 NaBic 8,4%
+NaCL 0,9 %
 NaCL 0,9%
+NaCL nach Thiamininfusion
+NaChl 0,9%
 NaCl
+NaCl 
+NaCl  0,9% 250ml
+NaCl 0,45% + Glucose 2,5%
 NaCl 0,45% / Glucose 2,5%
+NaCl 0,45% /Glucose 2,5%
 NaCl 0,45% Glucose 2,5%
+NaCl 0,45%/ Glucose 2,5%
+NaCl 0,45%/Glucose 2,5%
+NaCl 0,9
 NaCl 0,9 %
+NaCl 0,9 % 50 ml 
 NaCl 0,9 % Schenkel 2
 NaCl 0,9 % für PORT
 NaCl 0,9%
+NaCl 0,9% 
+NaCl 0,9%  
+NaCl 0,9% (parallel zum Foscavir)
+NaCl 0,9% (über 1h)
+NaCl 0,9% (über 1h) 
+NaCl 0,9% 100ml
 NaCl 0,9% 200ml über 2h
+NaCl 0,9% 2ml
+NaCl 0,9% 45ml
 NaCl 0,9% 50 ml
+NaCl 0,9% 50ml
 NaCl 0,9% Nasentropfen
 NaCl 0,9% Schenkel 1
 NaCl 0,9% ad 48 ml
+NaCl 0,9% zur Nacht
+NaCl 0,9% über Robi
+NaCl 0,9%.
+NaCl 0,9%. 
+NaCl 0.45%/Glucose 2.5%
 NaCl 0.9 %
 NaCl 0.9 % ad 48 ml
+NaCl 0.9% Bypass
 NaCl 10%
+NaCl 10% 
 NaCl 10% (je 300 ml Nahrung)
+NaCl 2g
+NaCl 50ml
+NaCl Nasentropfen
+NaCl nach Thiamininfusion
+NaCl o,9%
+NaCl-Nasentropfen
 NaCl0,9%
 NaCl0,9%.
 Nabic
+NacL 0,9%
 Nacl
 Nacl 0,9%
+Nacl 0,9% 
+Nacl 0,9% 50ml
+Nacl 0,9%50ml
+Nacl 0.9%
+Nacl 50ml
 Nacl.
+Nacl0,9%
+Nadosol Mundspüllösung
+Nariumglycerolphosphat
+Nasenspray
 Natriumbicarbonat
 Natriumbicarbonat 
 Natriumglycerolphosphat
@@ -544,179 +1523,544 @@ Natriumglycerophosphat 1mmol/ml sondiert in 100 ml Wasser
 Natriumglycyrolphosphat ü. 6h
 Natriumhydrogencarbonat
 Natriumhydrogencarbonat 
+Natriumhydrogencarbonat 8,4%
+Natriumhydrogencarbont 8,4%
 Natriumphosphat
+Natriumthiosulfat 25%
+Natriumthiosulphat 25%
+Nebilet® 5 mg TAB - NEBIVOLOL HYDROCHLORID
+Nebivolol
+Nephrotrans
+Nephrotrans® 500 mg magensaftresistente WKA - NATRIUMHYDROGENCARBONAT
+Neulasta
 Neupogen
+Neupogen (300 µg = 30 Mio IE)
+Neupogen 300
 Neurocil
+Nexium
+Nexium® mups 20mg TMR - ESOMEPRAZOL HEMIMAGNESIUM-1,5-
+Nicorette
+Nicotinell 14mg/24-Std.
+Nifedipin
+Nifedipin AL 5 - NIFEDIPIN
+Nifedipin bei RR>180
 Nikofrenon
 Nikofrenon 10 
 Nimenrix
+Normoc
 Norspan
 Nortrilen
 Novalgin
 Novalgin 
 Novalgin 1 g
+Novalgin 1g 
+Novalgin 30
 Novalgin 4g
 Novalgin 4g/50ml NaCl 0,9%
+Novalgin 500mg
+Novalgin Trpf 40
+Novalgin-Tropfen
+Novalminsulfon 500mg
+Novamin
+Novaminsulfon
+Novaminsulfon 1 g als KI
+Novaminsulfon 30°
+Novaminsulfon 500mg
+Novaminsulfon-Tropfen 
+Novaminsulfon-ratiopharm® 1 g/2 ml Inj.-Lsg. - METAMIZOL NATRIUM-1-WASSER
+Novaminsulfon-ratiopharm® 2g
 Novaminsulfon-ratiopharm® 500 mg TAB - METAMIZOL NATRIUM-1-WASSER
+Novaminsulfon-ratiopharm® 500 mg/ml Tropfen - METAMIZOL NATRIUM-1-WASSER
+Novlagin
+Novorapid nach Plan
 Novothyral® 75, TAB - LEVOTHYROXIN NATRIUM. LIOTHYRO
 Noxafil
+Noxafil (Posaconazol)
+Noxafil® 100 mg TMR - POSACONAZOL
+Nubral Creme
 Nurofen
+Nurofen® Junior Fiebersaft 2% Orange SUS z. Einn. - IBUPROFEN
+Nutrini Energy Fiber 1,5 kcal/ml
+Nystaderm
 Nystatin
 Nystatin Creme
 Nystatin Suspension
+Nystatinsuspension
+OPD Survimed
 Obnitix
 Obnitix 90
 Obnitix 90 
+Octreotid
+Ofloxacin (Floxal) 1°/Auge
 Olanzapin
+Olanzapin (OÄ dixit)
+Olimel 2,5
+Olimel 2,5 %
+Olimel 2,5%
+Olimel 2,5% 
 Olimel 3,5%
 Olimel 3,5%1500 + Addel 1 Amp.+Cernevit 1 Amp. über die Nacht
 Olimel 5,7
+Olimel 5,7 %
 Olimel 5,7 % E Emulsion z. Inf., 1500 ml - ALANIN. ARGININ. ASPARAGINSÄURE. CALCIUMCHLORID
 Olimel 5,7%
+Olimel Infusion 1000 ml mit Zusatz Addel und Cernevit
+Olimel Peri 2,5 % 
+Olimel Peri 2,5 % E Emulsion z. Inf., 1500 ml - ALANIN. ARGININ. ASPARAGINSÄURE. CALCIUMCH
+Olimel Peri 2,5 % E Emulsion z. Inf., 2000 ml
+Olimel peri
 Olimel peri 2,5 % + 1 Amp Addel + 1 Amp Cernevit
+Olmesartan
+Olmesartan.
 Omacor
+Omega 3 Fettsäure
 Omeprazol
+Omeprazol  40 mg
+Omeprazol (iv Lsg. über PEJ)
+Ondanestaron
 Ondansatron
 Ondansetron
+Ondansetron 
 Ondansetron (Prämed vor STZ)
 Ondansetron (Zofran)
 Ondansetron (Zofran) SZT Prämedikation
 Ondansetron 4mg
+Ondansetron B Braun 2mg/ml Inj.-Lsg., 2ml - ONDANSETRON HYDROCHLORID-2-WAS
+Ondansetron ST
+Ondasetron
+Opipramol
+Opipramol 50 mg
+Optiderm® Creme - HARNSTOFF. POLIDOCANOL
 Ordansetron 
 Oseltamivir
+Otiven NT für Säuglinge
 Otowaxol® - 
+Otriven
+Otriven 
 Otriven (je Nasenloch)
+Otriven 0,025%
+Otriven 0,05% je NL
+Otriven 0,1 %
 Otriven NT 0,025%
+Otriven NT 0,1%
+Otriven NT-Kinder
+Otriven Nasenspray 
+Otriven Nasenspray für Erwachsene
+Otriven Nasentropfen
 Otriven Nasentropfen Anwendung
+Otriven OT 0,05%
+Otriven® gg. Schnupfen 0,025% Nasentropfen - XYLOMETAZOLIN HYDROCHLORID
+Otriven® gg. Schnupfen 0,05 % Nasentropfen - XYLOMETAZOLIN HYDROCHLORID
 Otriven® gg. Schnupfen 0,1 % DSS oh. Konserv., 10 ml - XYLOMETAZOLIN HYDROCHLORID
+Otriven® gg. Schnupfen 0,1 % Einzeldosispipetten - XYLOMETAZOLIN HYDROCHLORID
+Otriven® gg. Schnupfen 0,1% Nasentropfen - XYLOMETAZOLIN HYDROCHLORID
+Oxazepam
+Oxgesic akut
+Oxycodon
+Oxycodon ret.
+Oxygesic® 10 mg RET - OXYCODON HYDROCHLORID
+Oxygesic® akut 5 mg HKP - OXYCODON HYDROCHLORID
+PANTOPRAZOL Carino 40 mg Pulv. z. Herst. e. Inj.-Lsg. - PANTOPRAZOL NATRIUM-1,5-WASSER
+PCEA
+PCEA (Ropi. 0,2% + Suf.)
 PCEA Ropivacain 0,02%
+PCIA
 PCIA (Hydromorphon 0,25mg/ml)
 PCIA (Hydromorphon 1mg/ml)
 PCM
+PCM 
 PCM Prämed
+PICOPREP® Pulv. z. Herst. e. Lsg. z. Einn. - CITRONENSÄURE. MAGNESIUMOXID, LEICHTES. NATRI
+Paclitaxel
 Palladon
+Palladon 
+Palladon 2,6mg
+Palladon 4
 Palladon 4 mg
+Palladon 4mg
+Palladon 6 mg
 Palladon Bolus
 Palladon akut
 Palladon akut1,3
 Palladon ret.
+Palladon ret. 
 Palladon retard
+Palladon-Bolus
+Palladon-Bolus (4mg/50ml)
+Palladon® 1,3 mg HKP - HYDROMORPHON HYDROCHLORID
+Palladon® 2,6 mg HKP - HYDROMORPHON HYDROCHLORID
+Palladon® injekt 2 mg - HYDROMORPHON HYDROCHLORID
+Palladon® retard 4 mg, REK - HYDROMORPHON HYDROCHLORID
+Palldon retard
+Pallladon
 Pamidronat über 3h
 Pamifos
+Pamorelin LA 11,25 mg alle 3 Monate
 Pantoprazol
+Pantoprazol 
+Pantoprazol 20
+Pantoprazol 20mg
+Pantoprazol-Actavis 20 mg 
+Pantoprazol-Actavis 20 mg TMR - PANTOPRAZOL NATRIUM-1,5-WASSER
+Pantoprazol-Actavis 40 mg TMR - PANTOPRAZOL NATRIUM-1,5-WASSER
 Pantozl
 Pantozol
+Pantozol 
+Pantozol 20
+Pantozol 20: 0-0-1-0 (mg), täglich
+Pantozol 40
+Pantozol als kurzinfusion
+Pantroprazol
 Paracetamol
+Paracetamol 
+Paracetamol (Perfalgan)
 Paracetamol (Prä-Medikation Alemtuzumab)
+Paracetamol (Prämedikation)
+Paracetamol (Prämedikation) 
+Paracetamol 1g
+Paracetamol 1gr
+Paracetamol 500mg
 Paracetamol 500mg (Ben-u-ron)
+Paracetamol als KI
+Paracetamol comp. STADA® 500 mg/30 mg TAB - CODEINPHOSPHAT HEMIHYDRAT. PAR
+Paracetamol-ratiopharm® 1000 mg SUP - PARACETAMOL
+Paracetamol-ratiopharm® 125 mg SUP - PARACETAMOL
 Paracetamol-ratiopharm® 500 mg TAB - PARACETAMOL
+Parsabiv 2.5mg Injektionslösung nach Dialyse
+Penicillin G INFECTOPHARM® 5 Mega, Pulv. z. Herst. e. Inj.- bzw. Inf.-Lsg. - BENZYLPENICIL
 Penicillin V
 Penicillin V 
+Penicillin V 1,5 mio Einheiten
 Pentacarinat
 Pentacarinat-Inhalation
+Pentacarinatinhalation
 Pentamidin-Inhalation
+Pentcarinat Inhalation
+Peptamen
+Peptamin
+Perazin
+Perenterol
+Perenterol Kapsel
+Perfalgan
+Perfalgan 1g als KI
+Perflagan
+Perindopril dura 4/1,25 mg
+Pflaumensaft
+Phenprocoumon
 Phosphat
+Phosphat Brausetablette
+Pille aus Eigenbestand
+Pimpamperon
+Pipameron
+Pipamperon
+Pipamperon 
+Pipamperon HEXAL® 40 mg TAB - PIPAMPERON DIHYDROCHLORID
+Piperaciliin/Tazobactam (nach Pip-Anteil)
+Piperacilliin/Tazobac 4,5 g
 Piperacillin / Tazobactam
 Piperacillin Fresenius 4 g Pulv. z. Herst. e. Inj.- od. Inf.-Lsg. - PIPERACILLIN NATRIUM
+Piperacillin+ Tazobactam (Dosis für Pip-Anteil)
+Piperacillin/ Tazobactam nach Piperacillinanteil
 Piperacillin/Tazobactam
 Piperacillin/Tazobactam (Pip-Anteil)
 Piperacillin/Tazobactam (nach Pip-Anteil)
+Piperacillin/Tazobactam (nach Piperacillinanteil)
+Piperacillin/Tazobactam 4/0,5
 Piperacillin/Tazobactam Kabi 4g/0,5g Pulv. z. Herst. e. Inf.-Lsg. - PIPERACILLIN NATRIUM. 
+Piperacillin/Tazobactam nach Pip-Anteil
 Piperazillin + Tazobactam (Piperazillin Anteil)
+Piperazillin + Tazobactam (nach Pip Anteil)
+Piperazillin/Tazobactam (nach Pip Anteil)
+Piperazillin/Tazobactam (nach Pip)
+Pirenzepin 
+Piritramic
 Piritramid
+Piritramid 45mg ad 50ml NaCl 0,9%
+Piritramid 45mg/50ml NaCl
 Piritramid Bolus
 Piritramid n.RS.
+Piritramid-Bolus
 Piritramid-hameln 7,5 mg/ml Inj.-Lsg., 1ml - PIRITRAMID
+Plavix 
+Plavix® 300 mg FTA - CLOPIDOGREL SULFAT
+Plavix® 75 mg FTA - CLOPIDOGREL SULFAT
 Pneumokokken 
 Pomalidomid
 Posaconazol
+Posaconozol
+Posthydrierung 1h
+Praktoklist
+Pramipexol
+Pramipexol 
+Prantoprazol 20 mg
 Pravastatin
+Prednislon 10 mg
+Prednisolol
 Prednisolon
+Prednisolon 
 Prednisolon (Prämed vor STZ)
+Prednisolon (Prämedikation)
 Prednisolon (Soludecortin) SZT Prämedikation
+Prednisolon 10 mg
+Prednisolon Tbl.
 Prednisolon i.th.
+Prednisolon vor TK-Gabe
+Pregabalin
+Pregabalin 
+Pregabalin 25
+Pregabalin 75
+Pregabalin-ratiopharm® 100 mg HKP - PREGABALIN
+Pregabalin-ratiopharm® 150 mg HKP - PREGABALIN
 Pregabalin-ratiopharm® 20 mg/ml Lsg. z. Einn. - PREGABALIN
+Pregabalin-ratiopharm® 25 mg HKP - PREGABALIN
+Pregabalin-ratiopharm® 75 mg HKP - PREGABALIN
+Pregabalin-ratiopharm® mg HKP - PREGABALIN
+Pregabalin: 25-0-25-0 (mg), täglich
+Prevenar 13 Ch: CL5123 (links)
 Prevenar 13, CD1581
+Prevenar13
+Privigen
+Probenicid
 Prograf
+Prograf 
+Prograf® 0,5mg HKP - TACROLIMUS-1-WASSER
+Prograf® 1mg HKP - TACROLIMUS-1-WASSER
+Progynova 21 Mite - Estradiol 
+Prolia (Denosumab)
+Promethazin
+Promethazin (Atosil )
+Promethazin (nach ärztl. RS)
 Propanolol
+Propiverin-HCl STADA® 15mg FTA - PROPIVERINHYDROCHLORID
 Propofol (10mg/1ml)
 Propofol 1%
+Propranolol
+Prostacure® 0,4 mg REK - TAMSULOSIN HYDROCHLORID
+Prähydrierung
+Pyridoxinhydrochlorid (Vit B6)
 PÄD I
+Päd  II /3h
 Päd II
 Päd II 4000ml
+Quantalan
+Quetaipin ret.
 Quetiapin
 Quetiapin 
+Quetiapin 100mg
+Quetiapin 150mg
+Quetiapin Ret.
+Quetiapin ret
 Quetiapin ret.
 Quetiapin ret. 
+Quetiapin retard
+Quetiapin unret.
+Quetiapin unretardiert
 Quetiapin-ratiopharm® 25 mg FTA - QUETIAPIN HEMIFUMARAT
 Quetiaptin retard 
+Quetiaqpin
 Quilomum retard
+Quilonum
+Quilonum ret 
+Quilonum ret.
+Quilonum® retard, 450 mg RET - LITHIUMCARBONAT
+Qzilonum retard
+RESORBA CELL fibrillar 5x10cm - 
 Ramipril
 Ramipril 
+Ramipril 2,5
+Ramipril 2,5 mg
+Ramipril HEXAL® 2,5 mg, Tbl. - RAMIPRIL
+Ramipril HEXAL® 5 mg, Tbl. - RAMIPRIL
+Ranexa 
 Ranitidin
 Ranitidin-ratiopharm® 50 mg/5 ml Inj.-Lsg. - RANITIDIN HYDROCHLORID
 Ranolazin
+Rasburicase
+Rectodelt® 100, SUP - PREDNISON
+Reducto spezial
 Reducto spezial2
 Reducto® spezial 602 mg/360 mg TAB m. veränd. Wirkst.freisetz. - KALIUMDIHYDROGENPHOSPHAT.
+Relistor
+Remergil
+Renacor (10mg Enalapril + 25mg HCT)
+Resonium
 Resonium 
+Restex 100/25mg
+Revolade (Eltromobopag) 
 Ribavirin
+Ribavirin 200 
+Rifampicin
+Rifaximin
 Riopan
 Riopan Magen Gel Stick Pac - MAGALDRAT - Gel
 Riopan Magengel
 Riopan® Magen Gel, 1600 mg Gel z. Einn. - MAGALDRAT
+Risedron-HEXAL® 35 mg einmal wöchentlich FTA - MONONATRIUMRISEDRONAT
 Risperidon
+Risperidon 
+Risperidon (OÄ-Visite)
+Ritalin LA
 Rituximab
+Rituximab 
 Rituximab Truxima
+Rituximab Truxima 
+Rivastigminpflaster 4,6 mg/Tag
+Rocaltrol Eurim
+Rocaltrol Eurim 0,25µg
+Rocuronium
 Ruxolitinib
+Ruxolitinib/Jakavi
 S 2 NaCl0,9 % und KI´s
 SDH
+SDH (Prä-Med ATG)
+SDH (Prä-Med Tx)
 SDH (Prämed ATG)
 SDH (Prämed TX)
+SDH (prämed ATG)
+SDH (prämed TX)
 SDH 150 mg
+SDH 150mg (prämed ATG)
+SDH 150mg/50ml NaCl 0,9%
+SDH PräMed ATG
+SDH PräMed TX
 SMOF lipid
 SMOflipid
 Sab Simplex
+Sab Simplex Susp. - SIMETICON
 Sab simplex
+Sab-simplex beim Sondieren mit dazu geben
+SalbuHEXAL 100 Mikrogramm/Dosis Dosieraerosol
 Salbutamol
+Salbutamol 
 Salbutamol (3 Tropfen, in 2 ml NaCl 0,9%)
+Salbutamol DA 100 µg
+Salbutamol Inhalation (1/2 Ampulle = 0.6 mg)
 Salbutamol-Inhalation
+Salbutamol-ratiopharm® Fertiginhalat - SALBUTAMOL SULFAT
+Salbutamol/Atrovent Inhalation
+Salbutamol/Ipratromiumbromid
+Salbutamol/Ipratropiumbromid
+Salofalk Clysma
 Sancuso
 Sancuso (Granisetron) 3,1 mg/24h
+Sandimmun
+Sandimmun optoral
+Sandimmun® Optoral 25mg WKA - CICLOSPORIN, MIKROEMULGIERT
 Saroten
+Schenkel II: NaCl 0,9%
+Schenkel II: NaCl 0,9% 
+Schenkel III: NaCl 0,9%
 Schlaftee
+Scopoderm
+Scopoderm 
+Scopoderm TTS® Membranpflaster - SCOPOLAMIN
+Seroquel
+Seroquel ret
+Seroquel ret.
+Sertralin
+Sertralin HEXAL® 50 mg FTA - SERTRALIN HYDROCHLORID
+Sevelamer
+Sevelamer-Pulver 
+Sevredol
+Sevredol® 10 mg FTA - MORPHIN SULFAT
+Silapo (an der Dialyse)
 Sildenafil
+Silodosin (Urorec)
+Siltuximab
 SimvaHEXAL® 10 mg FTA - SIMVASTATIN
+SimvaHEXAL® 40 mg FTA - SIMVASTATIN
+Simvastatin
+Simvastatin 
+Simvastatin 20mg
+Simvastatin 40 mg
 Sinupret
+Sinupret überzog. Tbl
+Sinupret®, überzog. Tbl. - ENZIANWURZEL. GARTENSAUERAMPFERKRAUT. HOLUNDERBLÜTEN. PRIMEL MI
+Siofor® 500, 500 mg FTA - METFORMIN HYDROCHLORID
+Sirolimus
+Sitagliptin
+Skinorensalbe
+Smof Kabiven zental elektrolytfrei Emulsion z. Inf., 1970ml - ALANIN. ARGININ. FISCHÖL, OM
+SmofKabiven
+Smofkabiven
+Smoflipid 200mg/ml
 Solu Dec
 Solu Decortin
+Solu-Decortin (Prä-Medikation ATG)
+Solu-Decortin H
 Solu-Decortin H (Prämed ATG)
 Solu-Decortin H (Prämed TX)
 Solu-Decortin H (Prämed. ATG)
 Solu-Decortin H 60mg/ 50ml NaCl 0,9%
 Sorafenib
+Spasmex
+Spiriva 2,5 µg
+Spiriva Respimat 2,5 
+Spironolacton
+Spironolacton 
+Spironolacton HEXAL® 100 mg, TAB - SPIRONOLACTON
+Spironolacton HEXAL® 50 mg, TAB - SPIRONOLACTON
+Staphylex
+Stero (parallel zu Rituximab)
 Sterofundin
+Sterofundin 
+Sterofundin (parallel zu Rituximab)
+Sterofundin (über 5 Stunden)
 Sterofundin + 40 mval KCL (über mind. 4h)
 Sterofundin 1500 ml
+Sterofundin 15000ml
 Sterofundin 1500ml
+Sterofundin 1L
+Sterofundin 2000ml
+Sterofundin 3L
+Sterofundin 500 ml
+Sterofundin ISO 
+Sterofundin ISO Inf.-Lsg., Ecoflac Plus 1000 ml - CALCIUMCHLORID DIHYDRAT. KALIUMCHLORID. 
 Sterofundin ISO Inf.-Lsg., Ecoflac Plus 500 ml - CALCIUMCHLORID DIHYDRAT. KALIUMCHLORID. M
+Sterofundin Iso Ecofl Plus - - Infusionslösung
 Sterofundin über 4 Stunden
 Sterofundin über 4 Stunden 
+Stozzon 20mg
+Stozzon Tbl
 Stuhlpumpe
 Stuhlpumpe 
+Sucrabest 1 g Granulat z. Herst. e. SUS z. Einn. - SUCRALFAT
+Sucralfat btl 1g
+Sulfasalazin 500mg 
+Sultanol 100 µg
+Sultanol 200 Hub Dosieraerosol - SALBUTAMOL SULFAT
+Sultanol/Atrovent
+Suprarenin/NaCl 0.9% 1 mL + 1 mL
+Suprarenin® DFL, 1 mg/ml Inj.-Lsg. - EPINEPHRIN HYDROCHLORID
+Symbiovag-Vaginalzäpfchen
 Synagis 100mg/ml Ch.-B.  383692
+Synagis Ch B 383220
+Synoflor Vaginalzäpfchen
 TK !2764231920417605
+TK !2764232022785603
+TK (freitropfend)
 TPE
 TPE 
 TPE  I
 TPE (35 kcal/kg KG)
+TPE (Apotheke)
 TPE (individueller Beutel)
+TPE (nach Plan)
 TPE - Glucose (neu)
 TPE - Glucose und Gemisch (neu)
+TPE 15 kcal/KG
 TPE 15kcal/kg
+TPE 15kcal/kg Nephrotec 1g/kg
+TPE 25 kCal/Kg
+TPE 25 kcal
 TPE 25 kcal/kg
+TPE 25 kcal/kg Nephrotec 1g/kg
 TPE 25kcal/kg
 TPE 25kcal/kg (Glu 3g/kg; AminoHepa 1,2g/kg
+TPE 25kcal/kgKG,Nephrotect 1g/KGKG
+TPE 25mg/kg
 TPE 35 kcal/kg
+TPE 35 kcal/kg (Nephrotect)
 TPE Fette 
 TPE I - Glucose
 TPE II - Glucose + Gemisch
@@ -724,80 +2068,263 @@ TPE II Glucose + Gemisch
 TPE III - Fett
 TPE Nephrotect 25 kcal/kg
 TPE lt. Verordnung
+TPE n. Plan
+TPE n.Plan
+TPE nach Plan
 TPE+A+C
+TPE+Fette (aus der Apotheke)
+TPE+Fette nach Plan
+TPE- Glucose
+Tacrolimus
+Tamsolusin
+Tamsulosin
+Tamsulosin 0,4
+Tamsulosin 0,4mg
+Tamsulosinhydrochlorid 0,4mg
+Tapentadol ret.
+Targocid 
 Tavegil
+Tavegil 
+Tavegil  vor TK
 Tavegil (Premäd TX)
+Tavegil (Prä-Med ATG)
+Tavegil (Prä-Med Tx)
 Tavegil (Prä-Medikation Alemtuzumab)
 Tavegil (Prämed ATG)
 Tavegil (Prämed TX)
 Tavegil (Prämed. ATG)
+Tavegil (prämed ATG)
+Tavegil (prämed TX)
+Tavegil 30 Minuten vor EK-Gabe
+Tavegil PräMed ATG
+Tavegil PräMed TX
 Tavegil Prämed
 Tavegil® Inj.-Lsg. 2 mg/2ml - CLEMASTIN FUMARAT
 Tavor
 Tavor (OÄ dixit)
+Tavor exp
+Tavor exp.
 Tavor exp. 1mg. 
 Tavor expedit
+Tavor expidet
+Tavor® 0,5 mg Expidet®, Plättchen - LORAZEPAM
+Tavor® 1,0 mg Expidet®, Plättchen - LORAZEPAM
+Tavor® Tabs 2,0 mg, TAB - LORAZEPAM
+Tavor® pro injectione 2 mg, Inj.-Lsg. - LORAZEPAM
 Tazobac
 Tazobac 
+Tazobac (Piperacillin/Tazobactam)
+Tazobac 4,5
 Tazobac nach Pip Anteil
 Tears Again
 Tears again
 Tears again 
+Tebonin Intens 120mg
 Teicoplanin
+Teicoplanin HEXAL® 1000 mg Pulv. u. Lsgm. z. Herst. e. Inj. - TEICOPLANIN
+Teicoplanin HEXAL® 1000mg
+Teicoplanin HEXAL® 600 mg Pulv. u. Lsgm. z. Herst. e. Inj. - TEICOPLANIN
+Teicoplanin.
+Temgesic
+Temgesic 
+Temodal 
+Thermacare
+Thiamin
+Thiamin 
+Thiamin 100 mg
 Thrombozytenkonzentrat
+Thyranojod
+Thyrogen® 0,9 mg Pulv. z. Herst. e. Inj.-Lsg. - THYROTROPIN ALFA
+Thyronajod® 100 Henning 100 µg/196,2 µg, TAB - KALIUMIODID. LEVOTHYROXIN NATR
 Tigecyclin
 Tigecyclin-ratiopharm® 50 mg Pulv. z. Herst. e. Inf.-Lsg. - TIGECYCLIN
+Tilidin 100/8
+Tilidin 50 mg / 4 mg
+Tilidin N 20
+Tilidin akut
+Tilidin akut 50mg/4mg
+Tilidin ret 50mg/4mg
+Timko-Comod 0,25% Augentropfen 
 Tinctura opii
 Tinktur Opii 
+Tinktura Opii
+Torasemid
+Torasemid 
+Torasemid 10 mg 
+Torasemid 10mg
 Torasemid 20 mg 1-A pharma 
+Torasemid 200 mg
+Torasemid 5
+Torasemid HEXAL® 10 mg TAB - TORASEMID
+Torasemid HEXAL® 200 mg TAB - TORASEMID
 Torem
 Torem 
+Torem 10mg
+Torem® 5mg
+Tramadol
 Tranexamsäure
+Tranexamsäure Tupfer
+Tranylcypromin
+Trazodon
 Treosulfan
+Triapten auf Mundschleimhaut
+Triapten-Gel (Fosvacir)
 Tribow
+Trihexyphenidyl
+Trimethoprim/Sulfamethoxazol (nach Trimethoprim-Anteil)
+Trimipramin
+Trulicity
 Tygacil
 UDC
+Ultibro 85/43 
+Unacid
+Unacid 
+Unacid 3
+Unacid® 1,5 g, 0,5 g Sulbactam u. 1 g Ampicillin Pulv. z. Herst. e. Inj.-/ Inf.-Lsg. - AMP
+Unacid® 2.000 mg/ 1.000 mg, Pulv. z. Herst. e. Inf.-Lsg. - AMPICILLIN NATRIUM. SULBACTAM N
+Unacid® 3 g, 1 g Sulbactam u. 2 g Ampicillin Pulv. z. Herst. e. Inf.-Lsg. - AMPICILLIN SUL
+Unacid® PD oral, 375 mg, FTA - SULTAMICILLIN TOSILAT-2-WASSER
+Ung. leniens.
 Unizink (Zink)
+Unizink® 50 TAB - ZINKBIS(HYDROGEN-DL-ASPARTAT)
+Unizink® Amp. - ZINKBIS(HYDROGEN-DL-ASPARTAT)
+Urapidil
 Urbason
+Urbason 
 Ursodeoxycholsäure
+Ursodesox 250 mg
 Ursodesoxycholsäure
 Ursofalk
+Ursofalk 
 Ursofalk Saft
+Ursofalk® 250mg KAP - URSODEOXYCHOLSÄURE
+Ursofalk® 500mg FTA - URSODEOXYCHOLSÄURE
 Valcyte
+Valdoxan
+Valoron N 50mg
 Valproat
 Valproat (Ergenyl chrono)
+Valproinsäure ret. (Ergenyl chrono)
+Valsartan 320/12,5 mg 
 Vanco
 Vancomycin
 Vancomycin 
+Vancomycin HEXAL® 1,0 g, Pulv. z. Herst. e. Lsg. z. Einn. od. Inf.-Lsg. - VANCOMYCINHYDROC
 Vancomycin doppel konzentriert 
+Vancomycin.
+Velphoro
+Venlafaxin ret.
+Venlafaxin ret..
+Venlafaxin retard 
 Vergentan
 Vergentan 
+Vergentan 50 mg
 Vergentan®, 50 mg/2 ml Inj.-Lsg. - ALIZAPRID HYDROCHLORID
 Verrucid
+Viani
+Viani (Salmeterol 50 µg/Fluticason 250 µg)
+Viani 50µg/250µg
+Vianiforte 25ng/250ng
 Vigantol
 Vigantolette
+Vigantolette 1000iE
 Vigantoletten
 Vigantoletten 
+Vigantoletten  
 Vigantoletten 1000 I.E. Vitamin D3 TAB - COLECALCIFEROL
+Vigantoletten 500 I.E. Vitamin D3 TAB - COLECALCIFEROL
+Vigantoletten Vitamin D
+Vimpat
+Vincristin
+Vincristin KI
+Vit B12
+Vit. B12
+Vit. D
+Vit. K.
 Vitamin B Komplex ratiopharm KAP - 
+Vitamin B- Komplex- Präparat
+Vitamin B1
+Vitamin B12 1000 µg inject JENAPHARM® Inj.-Lsg. - CYANOCOBALAMIN
 Vitamin D
+Vitamin D 
 Vitamin D (Vigantolette)
+Vitamin D 1000IE
 Vitamin D Fluorette
+Vitamin K
+Vitamin K zur U3
 Vitarenal
 Vitmain B1 Kapsel
 Vitrenal
+Voltaren
+Voltaren Salbe
+Voltaren Salbenverband
+Voltaren-Verband OSG links
+VoltarenGel
+Voltarensalbe
+Vomacur®, 50 mg Tabl. - DIMENHYDRINAT
 Vomex
+Vomex A
+Vomex A® i. v. 
+Vomex A® i. v. Inj.-Lsg. 62 mg/10 ml - DIMENHYDRINAT
+Vomex Tbl
 Voriconazol
 Voriconazol (VFend)
+Voriconazol (Vfend)
+Voriconazol-ratiopharm® 200 mg FTA - VORICONAZOL
+Vorlauf
+Wasser
 Weiß: NaCl 0,9%
 Weißer Schenkel
+X-Systo 400mg 
+Xifaxan® 550 mg, FTA - RIFAXIMIN
+Xipamid
 ZVK-Schenkel I: Basis 2
 ZVK-Schenkel II
 ZVK-Schenkel II: Basis 2
 ZVK-Schenkel III: Basis 2
+Zink
+Zinkpaste
 Zofran
 Zofran 
+Zofran 4mg
+Zofran® 4 mg IV
+Zofran® 4 mg Zydis® Lingual SMT - ONDANSETRON
+Zofran® 4 mg als KI
+Zoladex 3,6mg
+Zoladex® 3,6 mg
+Zoladex® 3,6 mg, Implantat - GOSERELIN ACETAT (1:X)
 Zoledronat (in 250 ml über 15 min)
+Zoledronsäure 4 mg 100 ml als Infusion alle 4 Wochen
+Zoledronsäure 4 mg alle 4 Wochen
+Zolpiclon
 Zopiclon
+Zopiclon 7,5
+Zopiclon HEXAL® 7,5 mg FTA - ZOPICLON
+Zopiclon-ratiopharm® 3,75 mg FTA - ZOPICLON
+Zoplidem 10 mg
+Zovirax
+Zpoiclon
+Zuclopenthixol
+Zymafluor D® 1000 Tbl. - COLECALCIFEROL. NATRIUMFLUORID
+Zytiga 500 mg
+bicaNorm® - NATRIUMHYDROGENCARBONAT
+blau NaCl 0,9% Bypass Chemo
+braun NaCl 0,9%
+clexane
+decortin
+ferro sanol® 30mg/ml Tropf. - EISEN(II)-GLYCIN-SULFAT-KOMPLE
+ferro sanol® Tropfen
 ferro sanol® duodenal 100mg HKP - EISEN(II)-GLYCIN-SULFAT-KOMPLE
+kalinor brause 
+lafamme 1/2mg
+melperon
+micafungin 100 mg
+nacl 0,9%
+nikofrenon® 10. 17,5 mg transdermales Pflaster - NICOTIN
+palladon
+prograf
+ramipril
 sab simplex
+sandoz Brause phosphat
+ursofalk
+vomex
