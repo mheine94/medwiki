@@ -9,7 +9,7 @@ const fetch = require("node-fetch")
 const express = require('express')
 const bodyParser = require('body-parser');
 const app = express()
-const port = 80
+const port = 3000
 
 app.use(express.static('public'))
 app.use(bodyParser.json());

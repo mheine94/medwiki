@@ -1,35 +1,22 @@
 const https = require('https')
 const cheerio = require('cheerio')
-require('events').EventEmitter.prototype._maxListeners = 0;
-function get(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, (resp) => {
-      let data = '';
+const fetch = require("node-fetch")
 
-      resp.on('data', (chunk) => {
-        data += chunk;
-      });
-      resp.on('end', () => {
-        try {
-          resolve(data)
-        } catch (ex) {
-          reject(data)
-        }
-      })
-    })
-  })
-}
+require('events').EventEmitter.prototype._maxListeners = 0;
+
 function getErrorResponse(message, query) {
   return {
     error: message,
     query: query
   }
 }
-function getHtmlPage(title, lang) {
-  return get('https://' + lang + '.wikipedia.org/wiki/' + title)
+async function getHtmlPage(title, lang) {
+  let url = new URL(`/wiki/${title}`,`https://${lang}.wikipedia.org/`)
+  return await (await fetch(url.toString())).text()
 }
-function search(term, lang) {
-  return get('https://' + lang + '.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + term + '&utf8=&format=json')
+async function search(term, lang) {
+  let url = new URL(`/w/api.php?action=query&list=search&srsearch=${term}&utf8=&format=json`,`https://${lang}.wikipedia.org/`)
+  return await (await fetch(url.toString())).text()
 }
 
 /**
