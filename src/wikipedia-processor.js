@@ -43,6 +43,8 @@ function createTableDict($, tableSelector) {
           rowData.eq(0).text().trim().toLowerCase(),
           rowData.eq(1).text().trim()
         );
+      } else if(index == 0 && rowData.length > 0){
+        dict.set("tableHeader", rowData.text().trim())
       }
     });
     return dict;
@@ -105,7 +107,7 @@ try{
           let drugClassBox;
           switch (lang) {
             case 'de':
-              inn = infoDict.get("freiname") || infoDict.get("name") || "";
+              inn = infoDict.get("freiname") || infoDict.get("name") || infoDict.get("tableHeader") || "";
 
               if (infoDict.has('wirkstoffklasse')) {
                 drugClass = infoDict.get('wirkstoffklasse').split('\n');
