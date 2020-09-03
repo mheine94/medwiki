@@ -14,6 +14,16 @@ module.exports = async function(job){
     return res
   }
 
+  function mapToResult(medicationNames, lang){
+    let wikiQ = new Queue("wikiQ")
+    let queryPromises = medicationNames.map(q => new Promise(async (resolve) => {
+        let job = await  wikiQ.add({word:q,lang:lang})
+        let res = await job.finished()
+        resolve({ query: q, result: res })
+      }))
+    return queryPromises
+  }
+
   /**
    * Searches every medication name in the medicationNames array with 
    * the wikipediaSearch function. It aggregates the results so that two medications
@@ -24,17 +34,19 @@ module.exports = async function(job){
    * @returns {object} innDict Object containing one object per inn and an unknown array containing not found medications.
    */
   async function wikiApi(medicationNames,lang){
-    let wikiQ = new Queue("wikiQ")
-    let queryPromises = medicationNames.map(q => new Promise(async (resolve) => {
-        let job = await  wikiQ.add({word:q,lang:lang})
-        let res = await job.finished()
-        resolve({ query: q, result: res })
-      }))
-      let queryResults = await Promise.all(queryPromises)
-      let innDict = {}
+    
+    let queryPromises = mapToResult(medicationNames,lang)
+    let queryResults = await Promise.all(queryPromises)
+    let innDict = new Object();
+
       queryResults.forEach((res) => {
         let v = res.result
     
+        if(!v){
+          console.log("Undefined result!")
+          return
+        }
+
         if (v.error || !v.inn) {
           if (innDict["unknown"] == null || innDict["unknown"] == undefined) {
             innDict["unknown"] = []
