@@ -103,7 +103,7 @@ try{
           // if (!hasInfobox)
           //   throw new Error('Page: "' + pageTitle + '" has no infobox.')
 
-          let infoDict = createTableDict($, '.infobox');
+          let infoDict = createTableDict($, '.infobox, wikitable');
           if (!infoDict)
             continue;
           // console.log(JSON.stringify(Object.fromEntries(infoDict.entries()), null, 2));
