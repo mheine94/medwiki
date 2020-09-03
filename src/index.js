@@ -44,6 +44,9 @@ app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
 
 app.listen(port, () => console.log(`Wikipedia-medication-extractor listening at http://localhost:${port}`))
+if(process.env.HTTPS_PORT){
+  app.listen(process.env.HTTPS_PORT, () => console.log(`Wikipedia-medication-extractor listening at https://localhost:${process.env.HTTPS_PORT}`) )
+}
 
 var wikiQ = new Queue('wikiQ')
 var wikiApiQ = new Queue("wikiApiQ")
