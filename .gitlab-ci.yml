@@ -16,6 +16,7 @@ deploy:
         - cp -a ./package.json /wikipedia-medication-extractor/package.json
         - cp -a ./README.md /wikipedia-medication-extractor/README.md
         - cp -a ./google-credentials.json /wikipedia-medication-extractor/google-credentials.json
+        - cp -a ./server.env /wikipedia-medication-extractor/server.env
         - cd /wikipedia-medication-extractor
         - npm install
 

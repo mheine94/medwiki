@@ -1,8 +1,17 @@
 const path = require('path')
+const fs = require('fs')
 const rootDir = path.join(__dirname, "..")
-const envPath = path.join(rootDir,"local.env")
-result = require('dotenv').config({path: envPath})
-
+const localEnv = path.join(rootDir,"local.env")
+const serverEnv = path.join(rootDir, "server.env")
+if(fs.existsSync(localEnv)){
+  console.log("Using local environment...")
+  require('dotenv').config({path: localEnv})
+} else if(fs.existsSync(serverEnv)) {
+  console.log("Using server environment...")
+  require('dotenv').config({paht: serverEnv})
+}else{
+  console.log("Environmen could not be loaded.\nPlease put either a loca.env or server.env file in the main direcotry.\n The file should contain APP_NAME and PORT")
+}
 const os = require('os')
 let cpuCount = os.cpus().length
 const process = require('process')
@@ -19,6 +28,7 @@ process.env.USER_AGENT = userAgent;
 
 const express = require('express')
 const bodyParser = require('body-parser');
+const { fstat } = require('fs')
 const app = express()
 
 const port = process.env.PORT?process.env.PORT:80
