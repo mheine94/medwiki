@@ -32,7 +32,6 @@ const { fstat } = require('fs')
 const app = express()
 
 const port = process.env.PORT?process.env.PORT:80
-console.log("Listening to port"+ port)
 app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.text());

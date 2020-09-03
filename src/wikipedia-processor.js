@@ -15,7 +15,6 @@ function getErrorResponse(message, query) {
 }
 async function getHtmlPage(title, lang) {
   let url = new URL(`/wiki/${title}`,`https://${lang}.wikipedia.org/`)
-  let userAg = process.env.USER_AGENT
   return await (await fetch(url.toString(),opts)).text()
 }
 async function search(term, lang) {
@@ -99,14 +98,9 @@ try{
           let pageHtml = await getHtmlPage(pageTitle, lang)
           const $ = cheerio.load(pageHtml);
 
-          // let hasInfobox = $('.infobox').length > 0
-          // if (!hasInfobox)
-          //   throw new Error('Page: "' + pageTitle + '" has no infobox.')
-
           let infoDict = createTableDict($, '.infobox, wikitable');
           if (!infoDict)
             continue;
-          // console.log(JSON.stringify(Object.fromEntries(infoDict.entries()), null, 2));
 
           let drugClassBox;
           switch (lang) {
