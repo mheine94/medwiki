@@ -38,6 +38,7 @@ function createTableDict($, tableSelector) {
     table.find('tr').each((index, elem) => {
       let tableRow = $(elem);
       let rowData = tableRow.children('td, th');
+      rowData.find("br").replace('\n');
       if (rowData.length > 1) {
         dict.set(
           rowData.eq(0).text().trim().toLowerCase(),
