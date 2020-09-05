@@ -3,10 +3,13 @@ const fs = require('fs')
 const os = require('os')
 const process = require('process')
 
+const redis = require('redis')
+
 const express = require('express')
 const bodyParser = require('body-parser');
+const apicache = require('apicache')
 const app = express()
-
+let cacheWithRedis = apicache.options({ redisClient: redis.createClient() }).middleware
 
 const mappingApi = require('./mappingAPI')
 const wikiApi = require('./wikiAPI')
@@ -41,16 +44,44 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.post('/api', wikiApi)
-app.get('/api', wikiApi)
-app.get('/api/all', wikiApiAll)
+app.post('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApi)
+app.get('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApi)
+app.get('/api/all',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApiAll)
 app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
 
 //Pretty urls
-app.get('/:lang/:query', wikiApi)
-app.get('/:lang', wikiApi)
-app.post('/:lang/:query', wikiApi)
+app.get('/:lang/:query',
+    cacheWithRedis(process.env.CACHE_EXPIRE),
+    (req, res)=>{
+      req.params.query === 'all'?wikiApiAll(req,res):wikiApi(req,res)
+    }
+)
+app.post('/:lang/:query',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApi)
+
+
+// routes are automatically added to index, but may be further added
+// to groups for quick deleting of collections
+app.get('/api/:collection/:item?', (req, res) => {
+  req.apicacheGroup = req.params.collection
+  res.json({ success: true })
+})
+ 
+// add route to display cache performance (courtesy of @killdash9)
+app.get('/api/cache/performance', (req, res) => {
+  res.json(apicache.getPerformance())
+})
+ 
+// add route to display cache index
+app.get('/api/cache/index', (req, res) => {
+  res.json(apicache.getIndex())
+})
+ 
+// add route to manually clear target/group
+app.get('/api/cache/clear/:target?', (req, res) => {
+  res.json(apicache.clear(req.params.target))
+})
+
 
 app.listen(process.env.PORT,process.env.ADRESS, () => console.log(`Wikipedia-medication-extractor listening at ${process.env.ADRESS}:${process.env.PORT}`))
 if(process.env.HTTPS_PORT){

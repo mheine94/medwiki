@@ -1,7 +1,7 @@
 const Queue = require('bull')
 module.exports = async function wikiAllRequestHandler(req,res){
   try{
-    let lang = req.query.lang ? req.query.lang : 'en'
+    let lang = req.query.lang ? req.query.lang : req.params.lang? req.params.lang : 'en'
     var wikiAllQ = new Queue("wikiAll")
     let job = await wikiAllQ.add({lang:lang})
     let result = await job.finished()
