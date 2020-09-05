@@ -9,6 +9,8 @@ const app = express()
 
 
 const mappingApi = require('./mappingAPI')
+const wikiApi = require('./wikiAPI')
+const wikiApiAll = require('./wikiAPI-all')
 const Queue = require('bull')
 
 const rootDir = path.join(__dirname, "..")
@@ -39,16 +41,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.post('/api', wikiApiRequestHandler)
-app.get('/api', wikiApiRequestHandler)
-app.get('/api/all', wikiAllRequestHandler)
+app.post('/api', wikiApi)
+app.get('/api', wikiApi)
+app.get('/api/all', wikiApiAll)
 app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
 
-
-app.get('/:lang/:query', wikiApiRequestHandler)
-app.get('/:lang', wikiAllRequestHandler)
-app.post('/:lang/:query', wikiApiRequestHandler)
+//Pretty urls
+app.get('/:lang/:query', wikiApi)
+app.get('/:lang', wikiApi)
+app.post('/:lang/:query', wikiApi)
 
 app.listen(process.env.PORT,process.env.ADRESS, () => console.log(`Wikipedia-medication-extractor listening at ${process.env.ADRESS}:${process.env.PORT}`))
 if(process.env.HTTPS_PORT){
@@ -65,92 +67,3 @@ wikiQ.process(cpuCount*10,path.join(__dirname,'wikipedia-processor.js'));
 wikiApiQ.process(cpuCount*2,path.join(__dirname,'wikiAPI-processor.js'));
 wikiAllQ.process(cpuCount*2,path.join(__dirname,'wikiAPI-all-processor.js'));
 
-async function wikiAllRequestHandler(req,res){
-  try{
-    let lang = req.query.lang ? req.query.lang : 'en'
-    let job = await wikiAllQ.add({lang:lang})
-    let result = await job.finished()
-    res.statusCode = result.error?400:200
-    res.setHeader("Content-Type", 'application/json')
-    try {
-
-      let jsonpretty = JSON.stringify(result, null, 4)
-      res.setHeader("Content-Type", 'application/json')
-      res.send(jsonpretty)
-    } catch (exjson) {
-      res.json(result)
-    }
-  } catch (ex) {
-    console.log(ex)
-    res.json({
-      error: ex,
-      query: query
-    })
-  }
-
-}
-
-/**
- * Handles the http requests to the wikipediaApi
- *
- * @param {*} req {@link express} the express request object
- * @param {*} res the express result object
- */
-async function wikiApiRequestHandler(req, res){
-  try {
-    let query = req.query.query ? req.query.query : req.params.query? req.params.query :''
-    let lang = req.query.lang ? req.query.lang : req.params.lang? req.params.lang : 'en'
-    let body = req.body
-
-    if (query == undefined | query == null) {
-      res.status(501)
-    }
-    res.status(200)
-
-    let result;
-    let wikiQ = new Queue('wikiQ')
-    let wikiApiQ = new Queue("wikiApiQ")
-
-    if (!(Object.keys(body).length === 0 && body.constructor === Object)) {
-      let queryWords;
-      if (body.query) {
-        console.log("Post body query:", body.query)
-        console.log("Post lang:", body.lang)
-        queryWords = body.query;
-        lang = body.lang
-      } else {
-        queryWords = body.replace(/\r/g, '').split(/\n/)
-      }
-      console.log("Post body query list", queryWords)
-      let apiJob = await wikiApiQ.add({querySplit:queryWords,lang:lang})
-      result = await apiJob.finished()
-    } else {
-      let queryWords = query.split(',');
-      console.log("Get query list", queryWords)
-      if (queryWords.length > 1) {
-        let apiJob = await wikiApiQ.add({querySplit:queryWords,lang:lang})
-        result = await apiJob.finished()
-      } else {
-        let wikiJob = await wikiQ.add({word:query,lang:lang})
-        result = await wikiJob.finished()
-      }
-    }
-    
-    res.statusCode = result.error?400:200
-    res.setHeader("Content-Type", 'application/json')
-    try {
-
-      let jsonpretty = JSON.stringify(result, null, 4)
-      res.setHeader("Content-Type", 'application/json')
-      res.send(jsonpretty)
-    } catch (exjson) {
-      res.json(result)
-    }
-  } catch (ex) {
-    console.log(ex)
-    res.json({
-      error: ex,
-      query: req.query.query ? req.query.query : ''
-    })
-  }
-}
