@@ -45,6 +45,11 @@ app.get('/api/all', wikiAllRequestHandler)
 app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
 
+
+app.get('/:lang/:query', wikiApiRequestHandler)
+app.get('/:lang', wikiAllRequestHandler)
+app.post('/:lang/:query', wikiApiRequestHandler)
+
 app.listen(process.env.PORT,process.env.ADRESS, () => console.log(`Wikipedia-medication-extractor listening at ${process.env.ADRESS}:${process.env.PORT}`))
 if(process.env.HTTPS_PORT){
   app.listen(process.env.HTTPS_PORT,process.env.ADRESS, () => console.log(`Wikipedia-medication-extractor listening at https ${process.env.ADRESS}:${process.env.HTTPS_PORT}`) )
@@ -93,8 +98,8 @@ async function wikiAllRequestHandler(req,res){
  */
 async function wikiApiRequestHandler(req, res){
   try {
-    let query = req.query.query ? req.query.query : ''
-    let lang = req.query.lang ? req.query.lang : 'en'
+    let query = req.query.query ? req.query.query : req.params.query? req.params.query :''
+    let lang = req.query.lang ? req.query.lang : req.params.lang? req.params.lang : 'en'
     let body = req.body
 
     if (query == undefined | query == null) {
