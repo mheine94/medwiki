@@ -1,8 +1,22 @@
 const path = require('path')
 const fs = require('fs')
+const os = require('os')
+const process = require('process')
+
+const express = require('express')
+const bodyParser = require('body-parser');
+const app = express()
+
+
+const mappingApi = require('./mappingAPI')
+const Queue = require('bull')
+
 const rootDir = path.join(__dirname, "..")
 const localEnv = path.join(rootDir,"local.env")
 const serverEnv = path.join(rootDir, "server.env")
+let cpuCount = os.cpus().length
+
+
 if(fs.existsSync(localEnv)){
   console.log("Using local environment...")
   require('dotenv').config({path: localEnv})
@@ -11,27 +25,15 @@ if(fs.existsSync(localEnv)){
   require('dotenv').config({paht: serverEnv})
 }else{
   console.log("Environmen could not be loaded.\nPlease put either a loca.env or server.env file in the main direcotry.\n The file should contain APP_NAME and PORT")
+  exit();
 }
-const os = require('os')
-let cpuCount = os.cpus().length
-const process = require('process')
-let args = process.argv.slice(2)
 
-const mappingApi = require('./mappingAPI')
-const Queue = require('bull')
-
-const fetch = require("node-fetch")
 //need custom useragent to prevent errors with wikipedia
 //https://meta.wikimedia.org/wiki/User-Agent_policy
-const userAgent = `${process.env.APP_Name?APP_Name:"Wikipedia-Medication-Extractor"}_bot/${process.env.npm_package_version} (http://medication-wiki-api.uni-muenster.de)`
+const userAgent = `${process.env.APP_Name}_bot/${process.env.npm_package_version} (${process.env.USER_AGENT_CONTACT})`
 process.env.USER_AGENT = userAgent;
 
-const express = require('express')
-const bodyParser = require('body-parser');
-const { fstat } = require('fs')
-const app = express()
 
-const port = process.env.PORT?process.env.PORT:80
 app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.text());
@@ -43,9 +45,9 @@ app.get('/api/all', wikiAllRequestHandler)
 app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
 
-app.listen(port, () => console.log(`Wikipedia-medication-extractor listening at http://localhost:${port}`))
+app.listen(process.env.PORT,process.env.ADRESS, () => console.log(`Wikipedia-medication-extractor listening at ${process.env.ADRESS}:${process.env.PORT}`))
 if(process.env.HTTPS_PORT){
-  app.listen(process.env.HTTPS_PORT, () => console.log(`Wikipedia-medication-extractor listening at https://localhost:${process.env.HTTPS_PORT}`) )
+  app.listen(process.env.HTTPS_PORT,process.env.ADRESS, () => console.log(`Wikipedia-medication-extractor listening at https ${process.env.ADRESS}:${process.env.HTTPS_PORT}`) )
 }
 
 var wikiQ = new Queue('wikiQ')
