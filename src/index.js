@@ -27,9 +27,9 @@ if(fs.existsSync(localEnv)){
   require('dotenv').config({path: localEnv})
 } else if(fs.existsSync(serverEnv)) {
   console.log("Using server environment...")
-  require('dotenv').config({paht: serverEnv})
+  console.log(require('dotenv').config({path: serverEnv}))
 }else{
-  console.log("Environmen could not be loaded.\nPlease put either a loca.env or server.env file in the main direcotry.\n The file should contain APP_NAME and PORT")
+  console.log("Environmen could not be loaded.\nPlease put either a loca.env or prod.env file in the main direcotry.\n The file should contain APP_NAME and PORT")
   exit();
 }
 
