@@ -12,7 +12,6 @@ install:
 test:
     stage: test
     script: npm run test:junit
-    needs: [install]
     artifacts: 
         reports:
             junit: junit.xml
