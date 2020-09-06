@@ -20,8 +20,7 @@ install:
 test:
     stage: test
     script: npm run test:junit
-    dependencies:
-        - install
+    
     artifacts: 
         reports:
             junit: junit.xml
