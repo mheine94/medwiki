@@ -5,7 +5,8 @@ before_script:
 
 install:
     stage: test
-    before_script: git clean -fd
+    before_script: 
+        - git clean -fd
     script: npm install
 
 test:
