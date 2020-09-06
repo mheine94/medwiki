@@ -12,8 +12,8 @@ const app = express()
 let cacheWithRedis = apicache.options({ redisClient: redis.createClient() }).middleware
 
 const mappingApi = require('./mappingAPI')
-const wikiApi = require('./wikiAPI')
-const wikiApiAll = require('./wikiAPI-all')
+let  wikiApiRequestHandler = require('./wikiAPI').wikiApiRequestHandler
+let  wikiAllRequestHandler = require('./wikiAPI-all').wikiAllRequestHandler
 const Queue = require('bull')
 
 const rootDir = path.join(__dirname, "..")
@@ -44,9 +44,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.post('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApi)
-app.get('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApi)
-app.get('/api/all',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApiAll)
+app.post('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApiRequestHandler)
+app.get('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApiRequestHandler)
+app.get('/api/all',cacheWithRedis(process.env.CACHE_EXPIRE), wikiAllRequestHandler)
 app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
 
@@ -54,10 +54,10 @@ app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.get('/:lang/:query',
     cacheWithRedis(process.env.CACHE_EXPIRE),
     (req, res)=>{
-      req.params.query === 'all'?wikiApiAll(req,res):wikiApi(req,res)
+      req.params.query === 'all'?wikiAllRequestHandler(req,res):wikiApiRequestHandler(req,res)
     }
 )
-app.post('/:lang/:query',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApi)
+app.post('/:lang/:query',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApiRequestHandler)
 
 
 // routes are automatically added to index, but may be further added

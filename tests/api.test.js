@@ -1,5 +1,5 @@
 const sampleApiCalls = require('./sample-api-calls.js')
-const wikipediaSearch = require('../src/wikipedia.js')
+const {wikipediaSearch} = require('../src/wikipedia.js')
 
 describe("API Test", ()=>{
     let sampleCalls = require('./sample-api-calls.js')
