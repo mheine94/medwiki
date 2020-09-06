@@ -12,8 +12,7 @@ install:
 test:
     stage: test
     script: npm run test:junit
-    dependencies: 
-        - install
+    needs: [install]
     artifacts: 
         reports:
             junit: junit.xml
@@ -28,6 +27,7 @@ test:
 
 deploy:
     stage: deploy
+    needs: [test]
     script:
         - rm -r /wikipedia-medication-extractor
         - mkdir /wikipedia-medication-extractor
