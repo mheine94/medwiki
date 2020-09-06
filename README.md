@@ -9,7 +9,8 @@
 * lang //"de" oder "en" default bei keiner Angabe ist "en"
 * query //csv der zu suchenden Medikamente
 #### Beispiel
-* http://medication-wiki-api.uni-muenster.de/api?lang=de&query=amoxicillin,nurofen
+* https://medication-wiki-api.uni-muenster.de/api?lang=de&query=amoxicillin,nurofen
+* https://medication-wiki-api.uni-muenster.de/de/amoxicillin,nurofen
 
 ### Post
 #### Postbody
@@ -19,8 +20,16 @@
 * query newline seperated Namen der Medikamente im Post body
 ##### Beispiel
 http://medication-wiki-api.uni-muenster.de/api?lang=de
+http://medication-wiki-api.uni-muenster.de/de
 
 POST /api?lang=de HTTP/1.1
+Content-Type: text/plain
+Content-Length: 33
+Amoxicillin
+Nurofen,
+Diclofenac
+
+POST /de HTTP/1.1
 Content-Type: text/plain
 Content-Length: 33
 Amoxicillin
