@@ -5,7 +5,9 @@ before_script:
     - git clean -fd
 test:
     stage: test
-    script: npm run test
+    script: 
+        - npm install
+        - npm run test
 
     only:
         refs:
