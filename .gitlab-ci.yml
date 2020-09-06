@@ -1,23 +1,17 @@
 stages:
+    - install
     - test
     - deploy
 before_script:
     - git clean -fd
-test:
+
+deployment:
+    stage: install
+    script: npm intall
+
     stage: test
-    script: 
-        - npm install
-        - npm run test
+    script: npm run test
 
-    only:
-        refs:
-            - master
-            - schedules
-    tags: 
-        - prod
-        - production
-
-deploy:
     stage: deploy
     script:
         - rm -r /wikipedia-medication-extractor
