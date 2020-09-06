@@ -17,5 +17,3 @@ describe("API Test", ()=>{
     }
    
 })
-
-test("Should fail", ()=> expect(false).toBe(true))
