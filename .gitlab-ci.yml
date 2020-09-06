@@ -3,24 +3,12 @@ stages:
     - deploy
 before_script:
 
-
-install:
-    stage: test
-    script: 
-        -npm install
-
-    only:
-        refs:
-            - master
-            - schedules
-    tags: 
-        - prod
-        - production
-
 test:
     stage: test
-    script: npm run test:junit
-    
+    script:
+        - npm install
+        - npm run test:junit
+
     artifacts: 
         reports:
             junit: junit.xml
