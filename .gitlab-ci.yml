@@ -1,13 +1,13 @@
 stages:
-    - install
     - test
     - deploy
 before_script:
-    - git clean -fd
+
 
 install:
-    stage: install
-    script: npm install
+    stage: test
+    script: 
+        -npm install
 
     only:
         refs:
