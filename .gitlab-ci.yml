@@ -27,11 +27,13 @@ install:
 test:
     stage: test
     needs: [install]
-    script: npm run test:junit
+    script: 
+        - npm run test:junit
+        - ls
     artifacts: 
         reports:
-            junit: junit.xml
             cobertura: coverage/cobertura-coverage.xml
+            junit: junit.xml
 
     only:
         refs:
