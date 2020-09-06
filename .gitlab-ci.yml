@@ -5,13 +5,36 @@ stages:
 before_script:
     - git clean -fd
 
-deployment:
+install:
     stage: install
-    script: npm intall
+    script: npm install
+    
+    only:
+        refs:
+            - master
+            - schedules
+    tags: 
+        - prod
+        - production
 
+test:
     stage: test
-    script: npm run test
+    script: npm run test:junit
+    dependenciese:
+        - install
+    artifacts: 
+        reports:
+            junit: junit.xml
 
+    only:
+        refs:
+            - master
+            - schedules
+    tags: 
+        - prod
+        - production
+
+deploy:
     stage: deploy
     script:
         - rm -r /wikipedia-medication-extractor
