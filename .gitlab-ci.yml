@@ -1,16 +1,18 @@
 stages:
+    - install
     - test
     - deploy
 before_script:
 
 install:
-    stage: test
+    stage: install
     before_script: 
         - git clean -fd
     script: npm install
 
 test:
     stage: test
+    needs: [install]
     script: npm run test:junit
     artifacts: 
         reports:
