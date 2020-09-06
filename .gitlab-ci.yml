@@ -1,7 +1,11 @@
 stages:
+    - test
     - deploy
 before_script:
     - git clean -fd
+test:
+    stage: test
+    script: npm run test
 deploy:
     stage: deploy
     script:
