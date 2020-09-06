@@ -8,7 +8,7 @@ before_script:
 install:
     stage: install
     script: npm install
-    
+
     only:
         refs:
             - master
@@ -20,7 +20,7 @@ install:
 test:
     stage: test
     script: npm run test:junit
-    dependenciese:
+    dependencies:
         - install
     artifacts: 
         reports:
