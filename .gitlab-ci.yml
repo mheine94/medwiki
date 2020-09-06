@@ -3,12 +3,15 @@ stages:
     - deploy
 before_script:
 
+install:
+    stage: test
+    before_script: git clean -fd
+    script: npm install
+
 test:
     stage: test
-    script:
-        - npm install
-        - npm run test:junit
-
+    script: npm run test:junit
+    dependencies: install
     artifacts: 
         reports:
             junit: junit.xml
