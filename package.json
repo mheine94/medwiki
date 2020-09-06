@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "docs": "./node_modules/.bin/jsdoc src -c ./jsDocConf.json -d docs",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:junit": "jest --ci --reporters=default --reporters=jest-junit",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
   },

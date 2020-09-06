@@ -4,3 +4,4 @@
 .vercel
 .next
 junit.xml
+/coverage
