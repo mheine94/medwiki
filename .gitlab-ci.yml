@@ -1,8 +1,13 @@
+cache:
+  untracked: true
+  key: "$CI_BUILD_REF_NAME"
+  paths:
+    - node_modules/
+
 stages:
     - install
     - test
     - deploy
-before_script:
 
 install:
     stage: install
