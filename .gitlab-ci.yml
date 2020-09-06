@@ -8,12 +8,13 @@ test:
     script: npm run test
 
     only:
-    refs:
-        - master
-        - schedules
+        refs:
+            - master
+            - schedules
     tags: 
         - prod
         - production
+
 deploy:
     stage: deploy
     script:
