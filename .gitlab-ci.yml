@@ -30,7 +30,7 @@ test:
     artifacts: 
         reports:
             junit: junit.xml
-            cobertura: ./coverage/cobertura-coverage.xml
+            cobertura: coverage/cobertura-coverage.xml
 
     only:
         refs:
