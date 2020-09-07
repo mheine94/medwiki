@@ -44,8 +44,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.post('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApiRequestHandler)
-app.get('/api',cacheWithRedis(process.env.CACHE_EXPIRE), wikiApiRequestHandler)
+app.post('/api', wikiApiRequestHandler)
+app.get('/api', wikiApiRequestHandler)
 app.get('/api/all',cacheWithRedis(process.env.CACHE_EXPIRE), wikiAllRequestHandler)
 app.get('/api/sheet/:documentId/:sheetId?', mappingApi)
 app.post('/api/sheet/:documentId/:sheetId?', mappingApi)
