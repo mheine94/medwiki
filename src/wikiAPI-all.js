@@ -7,7 +7,7 @@ module.exports = {
     try{
       let lang = req.query.lang ? req.query.lang : req.params.lang? req.params.lang : 'en'
       var wikiAllQ = new Queue("wikiAll")
-      let job = await module.exports.wikiAllQ.add({lang:lang})
+      let job = await wikiAllQ.add({lang:lang})
       let result = await job.finished()
       res.statusCode = result.error?400:200
       res.setHeader("Content-Type", 'application/json')
@@ -23,7 +23,7 @@ module.exports = {
       console.log(ex)
       res.json({
         error: ex,
-        query: query
+        query: "all-query"
       })
     }
   
@@ -44,13 +44,13 @@ module.exports = {
       let  htmlPage = await module.exports.getAllMedsPage(lang)
       let names= [];
      do {
-         names = parsePage(htmlPage);
+         names = module.exports.parsePage(htmlPage);
          
           names.each((index,element) => {
              allMeds.add(element) 
           });
           if(names.length > 1)
-              htmlPage = await getAllMedsPage(lang,names[names.length-1])
+              htmlPage = await module.exports.getAllMedsPage(lang,names[names.length-1])
   
      }while(names.length > 1)
      console.log(JSON.stringify(allMeds))
@@ -70,7 +70,7 @@ module.exports = {
   },
   
   allMedsExtracted: async function (lang){
-      const medicationNames = await allMeds(lang)   
+      const medicationNames = await module.exports.allMeds(lang)   
       let wikiQ = new Queue("wikiApiQ")
       let job = await wikiQ.add({querySplit:Array.from(medicationNames), lang:lang})
       let result = await job.finished()

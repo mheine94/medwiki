@@ -166,6 +166,7 @@ module.exports = {
             return result;
           }
         }
+        return module.exports.getErrorResponse("Nothing was found on wikipedia", query);
       } else {
         return module.exports.getErrorResponse("Nothing was found on wikipedia", query);
       }

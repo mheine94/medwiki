@@ -102,6 +102,7 @@ wikiApi : async function (medicationNames,lang){
   
       if(!v){
         console.log("Undefined result!")
+        console.log(JSON.stringify(res, null, 4))
         return
       }
 
