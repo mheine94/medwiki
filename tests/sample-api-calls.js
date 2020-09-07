@@ -46,5 +46,47 @@ module.exports = [
             ],
             "inn": "Acetylsalicylsäure"
         }
+    },
+    {
+        "query": "Vancomycin",
+        "lang" : "de",
+        "result": {
+            "tradenames": [],
+            "ingredientClass": [
+                "Glykopeptid-Antibiotikum"
+            ],
+            "cas": [],
+            "atc": [
+                "A07AA09",
+                "J01XA01"
+            ],
+            "formula": [],
+            "inn": "Vancomycin"
+        }
+    },    
+    {
+        "query": "Nurofen",
+        "lang" : "de",
+        "result": {
+            "tradenames": [
+                "Nurofen"
+            ],
+            "ingredientClass": [
+                "Nichtsteroidales Antirheumatikum"
+            ],
+            "cas": [
+                "15687-27-1"
+            ],
+            "atc": [
+                "M02AA13",
+                "M01AE01",
+                "C01EB16",
+                "G02CC01"
+            ],
+            "formula": [
+                "C13H18O2"
+            ],
+            "inn": "Ibuprofen"
+        }
     }
 ]

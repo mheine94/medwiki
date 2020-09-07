@@ -114,23 +114,23 @@ wikiApi : async function (medicationNames,lang){
         if (v.inn && innDict[v.inn.toLowerCase()]) {
           if (v.ingredientClass) {
             Array.prototype.push.apply(innDict[v.inn.toLowerCase()].ingredientClass, v.ingredientClass)
-            unique(innDict[v.inn.toLowerCase()].ingredientClass = innDict[v.inn.toLowerCase()].ingredientClass)
+            innDict[v.inn.toLowerCase()].ingredientClass = unique(innDict[v.inn.toLowerCase()].ingredientClass)
           }
           if (v.formula) {
             Array.prototype.push.apply(innDict[v.inn.toLowerCase()].formula, v.formula)
-            unique(innDict[v.inn.toLowerCase()].formula = innDict[v.inn.toLowerCase()].formula)
+            innDict[v.inn.toLowerCase()].formula = unique(innDict[v.inn.toLowerCase()].formula)
           }
           if (v.tradenames) {
             Array.prototype.push.apply(innDict[v.inn.toLowerCase()].tradenames, v.tradenames)
-            unique(innDict[v.inn.toLowerCase()].tradenames = innDict[v.inn.toLowerCase()].tradenames)
+            innDict[v.inn.toLowerCase()].tradenames = unique(innDict[v.inn.toLowerCase()].tradenames)
           }
           if (v.cas) {
             Array.prototype.push.apply(innDict[v.inn.toLowerCase()].cas, v.cas)
-            unique(innDict[v.inn.toLowerCase()].cas = innDict[v.inn.toLowerCase()].cas)
+            innDict[v.inn.toLowerCase()].cas = unique(innDict[v.inn.toLowerCase()].cas)
           }
           if (v.atc) {
             Array.prototype.push.apply(innDict[v.inn.toLowerCase()].atc, v.atc)
-            unique(innDict[v.inn.toLowerCase()].atc = innDict[v.inn.toLowerCase()].atc)
+            innDict[v.inn.toLowerCase()].atc = unique(innDict[v.inn.toLowerCase()].atc)
           }
         } else {
           if (v.inn) {
