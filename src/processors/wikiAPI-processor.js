@@ -1,4 +1,4 @@
-const {wikiApi} = require('./wikiAPI')
+const {wikiApi} = require('../api/wikiAPI')
 module.exports = async function(job){
     console.log("wikiApi:",job.data)
     const lang = job.data.lang

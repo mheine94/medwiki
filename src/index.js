@@ -11,9 +11,9 @@ const apicache = require('apicache')
 const app = express()
 let cacheWithRedis = apicache.options({ redisClient: redis.createClient() }).middleware
 
-const mappingApi = require('./mappingAPI')
-let  wikiApiRequestHandler = require('./wikiAPI').wikiApiRequestHandler
-let  wikiAllRequestHandler = require('./wikiAPI-all').wikiAllRequestHandler
+const mappingApi = require('./api/mappingAPI')
+let  wikiApiRequestHandler = require('./api/wikiAPI').wikiApiRequestHandler
+let  wikiAllRequestHandler = require('./api/wikiAPI-all').wikiAllRequestHandler
 const Queue = require('bull')
 
 const rootDir = path.join(__dirname, "..")
@@ -94,7 +94,7 @@ var wikiAllQ = new Queue("wikiAll")
 
 
 // You can use concurrency as well:
-wikiQ.process(cpuCount*10,path.join(__dirname,'wikipedia-processor.js'));
-wikiApiQ.process(cpuCount*2,path.join(__dirname,'wikiAPI-processor.js'));
-wikiAllQ.process(cpuCount*2,path.join(__dirname,'wikiAPI-all-processor.js'));
+wikiQ.process(cpuCount*10,path.join(__dirname,'./processors/wikipedia-processor.js'));
+wikiApiQ.process(cpuCount*2,path.join(__dirname,'./processors/wikiAPI-processor.js'));
+wikiAllQ.process(cpuCount*2,path.join(__dirname,'./processors/wikiAPI-all-processor.js'));
 

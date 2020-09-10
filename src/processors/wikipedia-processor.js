@@ -1,4 +1,4 @@
-const {wikipediaSearch} = require('./wikipedia')
+const {wikipediaSearch} = require('../api/wikipedia')
 
 module.exports = async function (job) {
   console.log(`wikiSearch:`, job.data)
