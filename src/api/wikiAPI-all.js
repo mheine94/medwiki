@@ -1,6 +1,7 @@
 const Queue = require('bull')
 const cheerio = require('cheerio')
 const fetch = require('node-fetch');
+const { getHtml } = require('../util');
 
 module.exports = {
   wikiAllRequestHandler : async function (req,res){
@@ -29,19 +30,16 @@ module.exports = {
   
   },
   
-  
-  getHtmlPage: async function (url) {
-    return await (await fetch(url.toString())).text()
-  },
 
-  getAllMedsPage: function (lang,from){
-        let url = new URL(`https://${lang}.wikipedia.org/w/index.php?title=Kategorie:Arzneistoff${from?'&pagefrom='+from:''}`)
+  getAllMedsPage: async function (lang,from){
+        
         console.log("loading from name: "+from)
-        return module.exports.getHtmlPage(url);
+        return await (await fetch(url.toString())).text()   
   },
   allMeds: async function(lang){
       const allMeds = new Set();
-      let  htmlPage = await module.exports.getAllMedsPage(lang)
+      let url = new URL(`https://${lang}.wikipedia.org/w/index.php?title=Kategorie:Arzneistoff`)
+      let  htmlPage = await getHtml(url)
       let names= [];
      do {
          names = module.exports.parsePage(htmlPage);
@@ -49,9 +47,10 @@ module.exports = {
           names.each((index,element) => {
              allMeds.add(element) 
           });
-          if(names.length > 1)
-              htmlPage = await module.exports.getAllMedsPage(lang,names[names.length-1])
-  
+          if(names.length > 1){
+            let url = new URL(`https://${lang}.wikipedia.org/w/index.php?title=Kategorie:Arzneistoff${names[names.length-1]?'&pagefrom='+names[names.length-1]:''}`)
+            htmlPage = await getHtml(url)
+          }  
      }while(names.length > 1)
      console.log(JSON.stringify(allMeds))
      return allMeds;
