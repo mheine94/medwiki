@@ -95,9 +95,12 @@ wikiApi : async function (medicationNames,lang){
   
   let queryPromises = module.exports.mapToResult(medicationNames,lang)
   let queryResults = await Promise.all(queryPromises)
-  let innDict = new Object();
+   return module.exports.createInnDict(queryResults)
+},
+createInnDict : function(data){
+   let innDict = new Object();
 
-    queryResults.forEach((res) => {
+    data.forEach((res) => {
       let v = res.result
   
       if(!v){
@@ -171,5 +174,6 @@ wikiApi : async function (medicationNames,lang){
   
     })
     return innDict
+  
 }
 }
