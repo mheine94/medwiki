@@ -73,7 +73,7 @@ module.exports = {
       searchresult = JSON.parse(res)
   }catch (jsonEx){
     console.log(jsonEx.message)
-    throw new Error("Cant parse wikipedia api response!")
+    return this.getErrorResponse("Cant parse wikipedia api response!", query)
   }
       if (searchresult && searchresult.query && searchresult.query.searchinfo && searchresult.query.searchinfo.totalhits > 0) {
         for (let searchElem in searchresult.query.search) {
