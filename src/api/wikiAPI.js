@@ -15,14 +15,15 @@ module.exports ={
  */
 wikiApiRequestHandler : async function (req, res){
   try {
-    let query = req.query.query ? req.query.query : req.params.query? req.params.query :''
+    let query = req.query.query ? req.query.query : req.params.query? req.params.query :undefined
     let lang = req.query.lang ? req.query.lang : req.params.lang? req.params.lang : 'en'
     let body = req.body
 
+    res.setHeader("Content-Type", 'application/json')
     if (query == undefined | query == null) {
       res.status(501)
+      throw new Error("No query.")
     }
-    res.status(200)
 
     let result;
     let wikiQ = new Queue('wikiQ')
@@ -53,18 +54,14 @@ wikiApiRequestHandler : async function (req, res){
       }
     }
     
-    res.statusCode = result.error?400:200
-    res.setHeader("Content-Type", 'application/json')
+    res.status(result.error?400:200)
     try {
-
       let jsonpretty = JSON.stringify(result, null, 4)
-      res.setHeader("Content-Type", 'application/json')
       res.send(jsonpretty)
     } catch (exjson) {
       res.json(result)
     }
   } catch (ex) {
-    console.log(ex)
     res.json({
       error: ex,
       query: req.query.query ? req.query.query : ''

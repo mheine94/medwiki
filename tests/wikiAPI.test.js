@@ -1,4 +1,4 @@
-const {createInnDict, mapToResult} = require('../src/api/wikiAPI')
+const {createInnDict, mapToResult,wikiApiRequestHandler} = require('../src/api/wikiAPI')
 const {data} = require('./wikiApi-test-data')
 const Queue = require('bull')
 jest.mock('bull')
@@ -19,20 +19,31 @@ describe('INNDict tests', ()=>{
 })
 
 describe('mapToResult tests',()=>{
-   test('queue functionss are called and awaited and result as expected', async ()=>{
-        let mockFinish =  jest.fn(()=>{return Promise.resolve("success")})
-        let mockAdd =  jest.fn(function() {  let res = Promise.resolve(
+     let mockFinish =  jest.fn(()=>{return Promise.resolve("success")})
+        let mockAdd =  jest.fn(function(jobObj) {  let res = Promise.resolve(
                     {
+                        jobObj : jobObj,
                         finished:()=> mockFinish()
                     })
                 return res
         })
-       Queue.mockImplementation(()=>
-       {
-        return  {
-            add : ()=>{return mockAdd()}
-        }
-       })
+    beforeAll(() => {
+        Queue.mockImplementation(()=>
+        {
+         return  {
+             add : (jobObj)=>{return mockAdd(jobObj)}
+         }
+        })
+    });
+    beforeEach(() => {
+  // Clear all instances and calls to constructor and all methods:
+  Queue.mockClear();
+  mockAdd.mockClear();
+  mockFinish.mockClear();
+});
+
+   test('queue functionss are called and awaited and result as expected', async ()=>{
+
       let promises = mapToResult(["Amoxicillin","Nurofen"], "de")
       let result = await Promise.all(promises)
       expect(result).toEqual([{query:"Amoxicillin",result:"success"},{query:"Nurofen",result:"success"}])
@@ -40,4 +51,55 @@ describe('mapToResult tests',()=>{
       expect(mockAdd).toHaveBeenCalledTimes(2);
       expect(mockFinish).toHaveBeenCalledTimes(2);
    }) 
+
+
+   describe('wikiAPI request handler tests',()=>{
+            let req = {
+               body:{},
+               query:{
+                   lang:undefined,
+                   query:undefined
+               },
+               params:{
+                   lang:data.requestHandler.input.lang,
+                   query:data.requestHandler.input.query
+               }
+           }
+           let res = {
+               status: jest.fn((status)=>status),
+               send: jest.fn((data)=>data),
+               setHeader: jest.fn((name,value)=>[name,value]),
+               json: jest.fn((data)=>data)
+           }
+           beforeEach(()=>{
+               res.status.mockClear()
+               res.send.mockClear()
+               res.setHeader.mockClear()
+               res.json.mockClear()
+           })
+
+       test('get request url params', async ()=>{
+            let r = await wikiApiRequestHandler(req, res)
+            expect(Queue).toHaveBeenCalledTimes(2)
+            expect(mockAdd).toHaveBeenCalledTimes(1)
+            let querySplit = data.requestHandler.input.query.split(/,/g)
+            expect(mockAdd.mock.calls[0][0]).toEqual({lang:data.requestHandler.input.lang,querySplit:querySplit})
+            expect(querySplit.length).toBe(2)
+            expect(mockFinish).toHaveBeenCalledTimes(1)
+            let r2 = await mockFinish.mock.results[0].value
+            expect(res.send).toHaveBeenCalledTimes(1)
+            expect(res.json).toHaveBeenCalledTimes(0)
+            expect(res.send.mock.calls[0][0]).toEqual(JSON.stringify(r2,null,4));
+       })
+       test('undefined query returns error responese with status 501', async ()=>{
+           let p_old = req.params.query
+           req.params.query = undefined
+           let r = await wikiApiRequestHandler(req,res)
+           expect(res.status).toHaveBeenCalledTimes(1)
+           expect(res.status.mock.calls[0][0]).toBe(501)
+           expect(res.json).toHaveBeenCalledTimes(1)
+           expect(res.json.mock.calls[0][0].error!=undefined).toBe(true)
+           req.params.query= p_old
+       })
+   })
 })

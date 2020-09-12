@@ -241,6 +241,36 @@ module.exports = {
                     ]
                 }
             }
+        },
+        requestHandler: {
+            input:{
+                query:"Nurofen,Ibuhexal",
+                lang :"de"
+            },
+            output:{
+                "ibuprofen": {
+                    "inn": "ibuprofen",
+                    "ingredientClass": [
+                        "Nichtsteroidales Antirheumatikum"
+                    ],
+                    "tradenames": [
+                        "Nurofen",
+                        "Ibuhexal"
+                    ],
+                    "formula": [
+                        "C13H18O2"
+                    ],
+                    "cas": [
+                        "15687-27-1"
+                    ],
+                    "atc": [
+                        "M02AA13",
+                        "M01AE01",
+                        "C01EB16",
+                        "G02CC01"
+                    ]
+                }
+            }
         }
     }
 }
