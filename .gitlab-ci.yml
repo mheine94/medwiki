@@ -18,6 +18,7 @@ install:
     only:
         refs:
             - master
+            - test
             - schedules
     tags: 
         - prod
@@ -36,6 +37,7 @@ test:
     only:
         refs:
             - master
+            - test
             - schedules
     tags: 
         - prod
