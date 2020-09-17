@@ -7,94 +7,13 @@ function unique(arr) {
 };
 
 module.exports ={
-/**
- * Handles the http requests to the wikipediaApi
- *
- * @param {*} req {@link express} the express request object
- * @param {*} res the express result object
- */
-wikiApiRequestHandler : async function (req, res){
-  try {
-    let query = req.query.query ? req.query.query : req.params.query? req.params.query :undefined
-    let lang = req.query.lang ? req.query.lang : req.params.lang? req.params.lang : 'en'
-    let body = req.body
+ wikiApiRequestHandler:wikiApiRequestHandler,
+mapToResult:mapToResult,
+wikiApi:wikiApi,
+createInnDict:createInnDict  
+}
 
-    res.setHeader("Content-Type", 'application/json')
-    if (query == undefined | query == null) {
-      res.status(501)
-      throw new Error("No query.")
-    }
-
-    let result;
-    let wikiQ = new Queue('wikiQ')
-    let wikiApiQ = new Queue("wikiApiQ")
-
-    if (!(Object.keys(body).length === 0 && body.constructor === Object)) {
-      let queryWords;
-      if (body.query) {
-        console.log("Post body query:", body.query)
-        console.log("Post lang:", body.lang)
-        queryWords = body.query;
-        lang = body.lang
-      } else {
-        queryWords = body.replace(/\r/g, '').split(/\n/)
-      }
-      console.log("Post body query list", queryWords)
-      let apiJob = await wikiApiQ.add({querySplit:queryWords,lang:lang})
-      result = await apiJob.finished()
-    } else {
-      let queryWords = query.split(',');
-      console.log("Get query list", queryWords)
-      if (queryWords.length > 1) {
-        let apiJob = await wikiApiQ.add({querySplit:queryWords,lang:lang})
-        result = await apiJob.finished()
-      } else {
-        let wikiJob = await wikiQ.add({word:query,lang:lang})
-        result = await wikiJob.finished()
-      }
-    }
-    
-    res.status(result.error?400:200)
-    try {
-      let jsonpretty = JSON.stringify(result, null, 4)
-      res.send(jsonpretty)
-    } catch (exjson) {
-      res.json(result)
-    }
-  } catch (ex) {
-    res.json({
-      error: ex,
-      query: req.query.query ? req.query.query : ''
-    })
-  }
-},
-
-mapToResult : function (medicationNames, lang){
-  let wikiQ = new Queue("wikiQ")
-  let queryPromises = medicationNames.map(q => new Promise(async (resolve) => {
-      let job = await  wikiQ.add({word:q,lang:lang})
-      let res = await job.finished()
-      resolve({ query: q, result: res })
-    }))
-  return queryPromises
-},
-
-/**
- * Searches every medication name in the medicationNames array with 
- * the wikipediaSearch function. It aggregates the results so that two medications
- * with the same inn are grouped together in one object in the result.
- *
- * @param {Array<string>} medicationNames Array of medicationNames that will be searched on wikipedia.
- * @param {string} lang ("en" | "de") The language in wich wikipedia will be queried.
- * @returns {object} innDict Object containing one object per inn and an unknown array containing not found medications.
- */
-wikiApi : async function (medicationNames,lang){
-  
-  let queryPromises = module.exports.mapToResult(medicationNames,lang)
-  let queryResults = await Promise.all(queryPromises)
-   return module.exports.createInnDict(queryResults)
-},
-createInnDict : function(data){
+function createInnDict(data){
    let innDict = new Object();
 
     data.forEach((res) => {
@@ -173,4 +92,88 @@ createInnDict : function(data){
     return innDict
   
 }
+/**
+ * Searches every medication name in the medicationNames array with 
+ * the wikipediaSearch function. It aggregates the results so that two medications
+ * with the same inn are grouped together in one object in the result.
+ *
+ * @param {Array<string>} medicationNames Array of medicationNames that will be searched on wikipedia.
+ * @param {string} lang ("en" | "de") The language in wich wikipedia will be queried.
+ * @returns {object} innDict Object containing one object per inn and an unknown array containing not found medications.
+ */
+async function wikiApi(medicationNames,lang){
+  
+  let queryPromises = module.exports.mapToResult(medicationNames,lang)
+  let queryResults = await Promise.all(queryPromises)
+   return module.exports.createInnDict(queryResults)
+}
+function mapToResult(medicationNames, lang){
+  let wikiQ = new Queue("wikiQ")
+  let queryPromises = medicationNames.map(q => new Promise(async (resolve) => {
+      let job = await  wikiQ.add({word:q,lang:lang})
+      let res = await job.finished()
+      resolve({ query: q, result: res })
+    }))
+  return queryPromises
+}
+/**
+ * Handles the http requests to the wikipediaApi
+ *
+ * @param {*} req {@link express} the express request object
+ * @param {*} res the express result object
+ */
+async function wikiApiRequestHandler (req, res){
+  try {
+    let query = req.query.query ? req.query.query : req.params.query? req.params.query :undefined
+    let lang = req.query.lang ? req.query.lang : req.params.lang? req.params.lang : 'en'
+    let body = req.body
+
+    res.setHeader("Content-Type", 'application/json')
+    if (query == undefined | query == null) {
+      res.status(501)
+      throw new Error("No query.")
+    }
+
+    let result;
+    let wikiQ = new Queue('wikiQ')
+    let wikiApiQ = new Queue("wikiApiQ")
+
+    if (!(Object.keys(body).length === 0 && body.constructor === Object)) {
+      let queryWords;
+      if (body.query) {
+        console.log("Post body query:", body.query)
+        console.log("Post lang:", body.lang)
+        queryWords = body.query;
+        lang = body.lang
+      } else {
+        queryWords = body.replace(/\r/g, '').split(/\n/)
+      }
+      console.log("Post body query list", queryWords)
+      let apiJob = await wikiApiQ.add({querySplit:queryWords,lang:lang})
+      result = await apiJob.finished()
+    } else {
+      let queryWords = query.split(',');
+      console.log("Get query list", queryWords)
+      if (queryWords.length > 1) {
+        let apiJob = await wikiApiQ.add({querySplit:queryWords,lang:lang})
+        result = await apiJob.finished()
+      } else {
+        let wikiJob = await wikiQ.add({word:query,lang:lang})
+        result = await wikiJob.finished()
+      }
+    }
+    
+    res.status(result.error?400:200)
+    try {
+      let jsonpretty = JSON.stringify(result, null, 4)
+      res.send(jsonpretty)
+    } catch (exjson) {
+      res.json(result)
+    }
+  } catch (ex) {
+    res.json({
+      error: ex,
+      query: req.query.query ? req.query.query : ''
+    })
+  }
 }

@@ -5,8 +5,9 @@ const fetch = require("node-fetch")
 const {getErrorResponse, getHtml, createTableDict} = require('../util')
 
 module.exports = {
-  
-  /**
+  wikipediaSearch:wikipediaSearch  
+ }
+/**
    * Searches wikipedia with the query and if the page has an infobox parses
    * inn, drugclass, cas, atc and the sum formula. If the first result doesn't have
    * an infobox then the next pages in the wikipedia search will be analysed instead.
@@ -15,7 +16,7 @@ module.exports = {
    * @param {string} lang ("en", "de") The language in wich wikipedia will be searched.
    * @returns {object} searchResult An object containing the parsed information or an error object.
    */
-  wikipediaSearch : async function (query, lang) {
+  async function wikipediaSearch(query, lang) {
     try {
       if (query == undefined || query == null || query === "") {
         return getErrorResponse("Empty query", query)
@@ -128,5 +129,3 @@ module.exports = {
       return getErrorResponse(ex.message, query)
     }
   }
-  
-}
