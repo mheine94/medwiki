@@ -3,17 +3,20 @@ const opts = {
     headers:{'User-Agent': process.env.USER_AGENT}
   }
 module.exports = {
-    getErrorResponse : function (message, query) {
+  getErrorResponse : getErrorResponse,
+  getHtml:getHtml,
+  createTableDict:createTableDict
+}
+function getErrorResponse(message, query) {
     return {
       error: message,
       query: query
     }
-  },
-  async getHtml(url){
+  }
+ async function getHtml(url){
     return await (await fetch(url.toString(),opts)).text()
-  },
- 
-  /**
+  }
+/**
    * Parses the infobox of a table and and returs a dict containing the table 
    * information.
    *
@@ -21,7 +24,7 @@ module.exports = {
    * @param {string} tableSelector The jQuery selector
    * @returns {object} The TableDict contains a key for each table heading.
    */
-  createTableDict : function($, tableSelector) {
+  function createTableDict ($, tableSelector) {
     let table = $(tableSelector).first();
     table.find('sup').remove();
     if (table.length > 0) {
@@ -41,7 +44,4 @@ module.exports = {
       });
       return dict;
     }
-  },
-  
-
-}
+  }

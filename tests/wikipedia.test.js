@@ -1,7 +1,7 @@
 const sampleApiCalls = require('./sample-api-calls.js')
 const {wikipediaSearch} = require('../src/api/wikipedia.js')
 
-describe("API Test", ()=>{
+                    describe("Wikipedia test", ()=>{
     let sampleCalls = require('./sample-api-calls.js')
     let byQuery = sampleCalls.reduce((p,n) => {
         p[n.query]=n
@@ -15,5 +15,10 @@ describe("API Test", ()=>{
             expect(result).toEqual(expected.result)
         })
     }
+
+    test('bogo',async ()=>{
+        result  = await wikipediaSearch("giididid",sample.lang)
+        expect(result.error!=undefined).toBe(true)
+    })
    
 })
