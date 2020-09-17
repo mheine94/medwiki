@@ -130,7 +130,7 @@ async function wikiApiRequestHandler (req, res){
     let body = req.body
 
     res.setHeader("Content-Type", 'application/json')
-    if (body==undefined && (query == undefined || query == null)) {
+    if ((query == undefined || query == null)&&Object.keys(body).length<1) {
       res.status(501)
       throw new Error("No query.")
     }
