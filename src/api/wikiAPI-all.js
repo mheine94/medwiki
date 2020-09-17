@@ -30,8 +30,13 @@ function parsePage(pageHtml){
       return allTitlesOnPage;
   }
 async function allMeds(lang){
+      if(lang!="de"){
+        throw new Error("only german is supported at the moment")
+      }    
       const allMeds = new Set();
-      let url = new URL(`https://${lang}.wikipedia.org/w/index.php?title=Kategorie:Arzneistoff`)
+      //let url = new URL(`https://${lang}.wikipedia.org/w/index.php?title=Kategorie:Arzneistoff`)
+      let baseUrl = process.env.ALL_MEDS_URL.replace('${lang}',lang).replace('${medsCategory}',process.env.MEDS_CATEGORY_DE)
+      let url = new URL(baseUrl)
       let  htmlPage = await getHtml(url)
       let names= [];
      do {
@@ -41,7 +46,7 @@ async function allMeds(lang){
              allMeds.add(element) 
           });
           if(names.length > 1){
-            let url = new URL(`https://${lang}.wikipedia.org/w/index.php?title=Kategorie:Arzneistoff${names[names.length-1]?'&pagefrom='+names[names.length-1]:''}`)
+            let url = new URL(`${baseUrl}${names[names.length-1]?'&pagefrom='+names[names.length-1]:''}`)
             htmlPage = await getHtml(url)
           }  
      }while(names.length > 1)

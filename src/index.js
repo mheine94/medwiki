@@ -19,6 +19,7 @@ const Queue = require('bull')
 const rootDir = path.join(__dirname, "..")
 const localEnv = path.join(rootDir,"local.env")
 const serverEnv = path.join(rootDir, "server.env")
+const commonEnv = path.join(rootDir,"common.env")
 let cpuCount = os.cpus().length
 
 
@@ -32,6 +33,16 @@ if(fs.existsSync(localEnv)){
   console.log("Environmen could not be loaded.\nPlease put either a loca.env or prod.env file in the main direcotry.\n The file should contain APP_NAME and PORT")
   exit();
 }
+if(fs.existsSync(commonEnv)){
+  console.log("Loading common environment variables")
+  require('dotenv').config({path:commonEnv})
+}
+//console.log(process.env.PAGE_URL)
+//console.log(process.env.SEARCH_URL)
+//console.log(process.env.MEDS_CATEGORY_DE)
+//console.log(process.env.ALL_MEDS_URL)
+//console.log(process.env.USER_AGENT_CONTACT)
+//console.log(process.env.APP_NAME)
 
 //need custom useragent to prevent errors with wikipedia
 //https://meta.wikimedia.org/wiki/User-Agent_policy
