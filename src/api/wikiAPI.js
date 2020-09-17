@@ -105,7 +105,8 @@ async function wikiApi(medicationNames,lang){
   
   let queryPromises = module.exports.mapToResult(medicationNames,lang)
   let queryResults = await Promise.all(queryPromises)
-   return module.exports.createInnDict(queryResults)
+  let innDict = module.exports.createInnDict(queryResults)
+  return innDict 
 }
 function mapToResult(medicationNames, lang){
   let wikiQ = new Queue("wikiQ")
@@ -129,7 +130,7 @@ async function wikiApiRequestHandler (req, res){
     let body = req.body
 
     res.setHeader("Content-Type", 'application/json')
-    if (query == undefined | query == null) {
+    if (body==undefined && (query == undefined || query == null)) {
       res.status(501)
       throw new Error("No query.")
     }
