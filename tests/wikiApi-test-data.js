@@ -242,9 +242,30 @@ module.exports = {
                 }
             }
         },
+        unknowResults:{
+            input:[{
+                    query:"Dasistkeinmedikament",
+                    result:{
+                        error: "Nothing was found on wikipedia",
+                        query: "Dasistkeinmedikament"
+                    }
+                },
+                {
+                    query:"NoResultQuery",
+                    result: undefined
+                }
+            ],
+            output: {"unknown": ["Dasistkeinmedikament"]}
+        },
         requestHandler: {
             input:{
                 query:"Nurofen,Ibuhexal",
+                lang :"de"
+            },
+        },
+        wikiApi: {
+            input:{
+                medicationNames:["Nurofen","Ibuhexal"],
                 lang :"de"
             },
             output:{
