@@ -7,17 +7,16 @@ const {wikipediaSearch} = require('../src/api/wikipedia.js')
         p[n.query]=n
         return p;
     },{})
-  
-    for (sample of sampleCalls){
-        test(`query:"${sample.query}" lang:"${sample.lang}" output as exprected`, async () =>{
-            let expected = byQuery[sample.query]
-            let result = await wikipediaSearch(sample.query, sample.lang);
-            expect(result).toEqual(expected.result)
-        })
-    }
+ 
+    let callsTable = sampleCalls.map((sample)=>[sample.query,sample.lang, sample.result])
 
-    test('bogo',async ()=>{
-        result  = await wikipediaSearch("giididid",sample.lang)
+    test.each(callsTable)(`wikipediaSearch(%s,%s)`, async (query,lang,expected)=>{
+        let result = await wikipediaSearch(query,lang)
+        expect(result).toEqual(expected)
+    })
+    
+    test('handle undefined results',async ()=>{
+        result  = await wikipediaSearch("giididid","de")
         expect(result.error!=undefined).toBe(true)
     })
    
