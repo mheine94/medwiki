@@ -17,7 +17,7 @@ describe('INNDict tests', ()=>{
         expect(createInnDict(data.unknownInnAndKnown.input)).toEqual(data.unknownInnAndKnown.output)
     })
     test('unknown result in data', ()=>{
-        expect(createInnDict(data.unknowResults.input)).toEqual(data.unknowResults)
+        expect(createInnDict(data.unknowResults.input)).toEqual(data.unknowResults.output)
     })
 })
 
