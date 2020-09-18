@@ -1,27 +1,3 @@
-const fs = require('fs')
-const path = require('path')
-const process = require('process')
-const rootDir = path.join(__dirname, "..")
-const localEnv = path.join(rootDir,"local.env")
-const serverEnv = path.join(rootDir, "server.env")
-const commonEnv = path.join(rootDir,"common.env")
-
-
-if(fs.existsSync(localEnv)){
-  console.log("Using local environment...")
-  require('dotenv').config({path: localEnv})
-} else if(fs.existsSync(serverEnv)) {
-  console.log("Using server environment...")
-  console.log(require('dotenv').config({path: serverEnv}))
-}else{
-  console.log("Environmen could not be loaded.\nPlease put either a loca.env or prod.env file in the main direcotry.\n The file should contain APP_NAME and PORT")
-  exit();
-}
-if(fs.existsSync(commonEnv)){
-  console.log("Loading common environment variables")
-  require('dotenv').config({path:commonEnv})
-}
-
 const {createInnDict, mapToResult,wikiApiRequestHandler, wikiApi} = require('../src/api/wikiAPI')
 const {data} = require('./wikiApi-test-data')
 const Queue = require('bull')

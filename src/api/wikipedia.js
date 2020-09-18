@@ -1,6 +1,7 @@
 const https = require('https')
 const cheerio = require('cheerio')
 const fetch = require("node-fetch")
+const config = require('../../config')
 
 const {getErrorResponse, getHtml, createTableDict} = require('../util')
 
@@ -22,7 +23,7 @@ module.exports = {
         throw new Error("Empty query")
       }    
       //let url = new URL(`/w/api.php?action=query&list=search&srsearch=${query}&utf8=&format=json`,`https://${lang}.wikipedia.org/`)
-      let url = new URL(process.env.SEARCH_URL.replace('${lang}',lang).replace('${query}',query))
+      let url = new URL(config.SEARCH_URL.replace('${lang}',lang).replace('${query}',query))
       let res = await getHtml(url) 
       let searchresult
       try{
@@ -53,7 +54,7 @@ module.exports = {
               pageTitle = page.title.substring(0, page.title.search(' brand names'))
             }
             //let url = new URL(`/wiki/${pageTitle}`,`https://${lang}.wikipedia.org/`)
-            let url = new URL(process.env.PAGE_URL.replace('${lang}',lang).replace('${title}',pageTitle))
+            let url = new URL(config.PAGE_URL.replace('${lang}',lang).replace('${title}',pageTitle))
             let pageHtml = await getHtml(url)
             const $ = cheerio.load(pageHtml);
   

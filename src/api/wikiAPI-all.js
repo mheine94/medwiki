@@ -2,6 +2,7 @@ const Queue = require('bull')
 const cheerio = require('cheerio')
 const fetch = require('node-fetch');
 const { getHtml } = require('../util');
+const config = require('../../config')
 
 module.exports = {
   wikiAllRequestHandler:wikiAllRequestHandler,
@@ -35,7 +36,7 @@ async function allMeds(lang){
       }    
       const allMeds = new Set();
       //let url = new URL(`https://${lang}.wikipedia.org/w/index.php?title=Kategorie:Arzneistoff`)
-      let baseUrl = process.env.ALL_MEDS_URL.replace('${lang}',lang).replace('${medsCategory}',process.env.MEDS_CATEGORY_DE)
+      let baseUrl = config.ALL_MEDS_URL.replace('${lang}',lang).replace('${medsCategory}',config.MEDS_CATEGORY_DE)
       let url = new URL(baseUrl)
       let  htmlPage = await getHtml(url)
       let names= [];

@@ -1,6 +1,7 @@
 const fetch = require('node-fetch')
+const config = require('../config')
 const opts = {
-    headers:{'User-Agent': process.env.USER_AGENT}
+    headers:{'User-Agent': config.USER_AGENT}
   }
 module.exports = {
   getErrorResponse : getErrorResponse,
