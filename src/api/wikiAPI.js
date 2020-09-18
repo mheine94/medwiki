@@ -14,82 +14,78 @@ createInnDict:createInnDict
 }
 
 function createInnDict(data){
-   let innDict = new Object();
-    data.forEach((res) => {
-      let v = res.result
-  
-      if(!v){
+   return data.reduce((previousValue, currentValue)=>{
+     let {result,query} = currentValue
+     let innDict = previousValue
+      if(!result){
         console.log("Undefined result!")
-        console.log(JSON.stringify(res, null, 4))
-        return
+        console.log(JSON.stringify(currentValue, null, 4))
+        return innDict
       }
-
-      if (v.error || !v.inn) {
+      if (result.error || !result.inn) {
         if (innDict["unknown"] == null || innDict["unknown"] == undefined) {
           innDict["unknown"] = []
         }
-        innDict["unknown"].push(res.query)
+        innDict["unknown"].push(query)
       } else {
-        if (v.inn && innDict[v.inn.toLowerCase()]) {
-          if (v.ingredientClass) {
-            Array.prototype.push.apply(innDict[v.inn.toLowerCase()].ingredientClass, v.ingredientClass)
-            innDict[v.inn.toLowerCase()].ingredientClass = unique(innDict[v.inn.toLowerCase()].ingredientClass)
+        if (result.inn && innDict[result.inn.toLowerCase()]) {
+          if (result.ingredientClass) {
+            Array.prototype.push.apply(innDict[result.inn.toLowerCase()].ingredientClass, result.ingredientClass)
+            innDict[result.inn.toLowerCase()].ingredientClass = unique(innDict[result.inn.toLowerCase()].ingredientClass)
           }
-          if (v.formula) {
-            Array.prototype.push.apply(innDict[v.inn.toLowerCase()].formula, v.formula)
-            innDict[v.inn.toLowerCase()].formula = unique(innDict[v.inn.toLowerCase()].formula)
+          if (result.formula) {
+            Array.prototype.push.apply(innDict[result.inn.toLowerCase()].formula, result.formula)
+            innDict[result.inn.toLowerCase()].formula = unique(innDict[result.inn.toLowerCase()].formula)
           }
-          if (v.tradenames) {
-            Array.prototype.push.apply(innDict[v.inn.toLowerCase()].tradenames, v.tradenames)
-            innDict[v.inn.toLowerCase()].tradenames = unique(innDict[v.inn.toLowerCase()].tradenames)
+          if (result.tradenames) {
+            Array.prototype.push.apply(innDict[result.inn.toLowerCase()].tradenames, result.tradenames)
+            innDict[result.inn.toLowerCase()].tradenames = unique(innDict[result.inn.toLowerCase()].tradenames)
           }
-          if (v.cas) {
-            Array.prototype.push.apply(innDict[v.inn.toLowerCase()].cas, v.cas)
-            innDict[v.inn.toLowerCase()].cas = unique(innDict[v.inn.toLowerCase()].cas)
+          if (result.cas) {
+            Array.prototype.push.apply(innDict[result.inn.toLowerCase()].cas, result.cas)
+            innDict[result.inn.toLowerCase()].cas = unique(innDict[result.inn.toLowerCase()].cas)
           }
-          if (v.atc) {
-            Array.prototype.push.apply(innDict[v.inn.toLowerCase()].atc, v.atc)
-            innDict[v.inn.toLowerCase()].atc = unique(innDict[v.inn.toLowerCase()].atc)
+          if (result.atc) {
+            Array.prototype.push.apply(innDict[result.inn.toLowerCase()].atc, result.atc)
+            innDict[result.inn.toLowerCase()].atc = unique(innDict[result.inn.toLowerCase()].atc)
           }
         } else {
-          if (v.inn) {
+          if (result.inn) {
             let entry =
             {
-              "inn": v.inn.toLowerCase(),
+              "inn": result.inn.toLowerCase(),
               "ingredientClass": [],
               "tradenames": [],
               "formula": [],
               "cas": [],
               "atc": []
             }
-            if (v.ingredientClass) {
-              Array.prototype.push.apply(entry.ingredientClass, v.ingredientClass)
+            if (result.ingredientClass) {
+              Array.prototype.push.apply(entry.ingredientClass, result.ingredientClass)
               entry.ingredientClass = unique(entry.ingredientClass)
             }
-            if (v.formula) {
-              Array.prototype.push.apply(entry.formula, v.formula)
+            if (result.formula) {
+              Array.prototype.push.apply(entry.formula, result.formula)
               entry.formula = unique(entry.formula)
             }
-            if (v.cas) {
-              Array.prototype.push.apply(entry.cas, v.cas)
+            if (result.cas) {
+              Array.prototype.push.apply(entry.cas, result.cas)
               entry.cas = unique(entry.cas)
             }
-            if (v.atc) {
-              Array.prototype.push.apply(entry.atc, v.atc)
+            if (result.atc) {
+              Array.prototype.push.apply(entry.atc, result.atc)
               entry.atc = unique(entry.atc)
             }
-            if (v.tradenames) {
-              Array.prototype.push.apply(entry.tradenames, v.tradenames)
+            if (result.tradenames) {
+              Array.prototype.push.apply(entry.tradenames, result.tradenames)
               entry.tradenames = unique(entry.tradenames)
             }
-            innDict[v.inn.toLowerCase()] = entry
+            innDict[result.inn.toLowerCase()] = entry
           }
         }
       }
-  
-    })
-    return innDict
-  
+      return innDict
+   }, new Object())
 }
 /**
  * Searches every medication name in the medicationNames array with 
