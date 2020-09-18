@@ -19,22 +19,22 @@ module.exports = {
   async function wikipediaSearch(query, lang) {
     try {
       if (query == undefined || query == null || query === "") {
-        return getErrorResponse("Empty query", query)
+        throw new Error("Empty query")
       }    
       //let url = new URL(`/w/api.php?action=query&list=search&srsearch=${query}&utf8=&format=json`,`https://${lang}.wikipedia.org/`)
       let url = new URL(process.env.SEARCH_URL.replace('${lang}',lang).replace('${query}',query))
       let res = await getHtml(url) 
       let searchresult
-  try{
-      searchresult = JSON.parse(res)
-  }catch (jsonEx){
-    console.log(jsonEx.message)
-    return getErrorResponse("Cant parse wikipedia api response!", query)
-  }
+      try{
+          searchresult = JSON.parse(res)
+      }catch (jsonEx){
+        console.log(jsonEx.message)
+        throw new Error("Cant parse wikipedia api response!")
+      }
       if (searchresult && searchresult.query && searchresult.query.searchinfo && searchresult.query.searchinfo.totalhits > 0) {
         for (let searchElem in searchresult.query.search) {
           if (!(searchElem < 5)) {
-            return getErrorResponse("Nothing was found on wikipedia", query);
+            throw new Error("Nothing was found on wikipedia")
           }
           else {
             let page = searchresult.query.search[searchElem];
@@ -123,9 +123,9 @@ module.exports = {
             return result;
           }
         }
-        return getErrorResponse("Nothing was found on wikipedia", query);
+        throw new Error("Nothing was found on wikipedia")
       } else {
-        return getErrorResponse("Nothing was found on wikipedia", query);
+        throw new Error("Nothing was found on wikipedia")
       }
     } catch (ex) {
       return getErrorResponse(ex.message, query)
