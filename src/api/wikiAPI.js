@@ -15,7 +15,6 @@ createInnDict:createInnDict
 
 function createInnDict(data){
    let innDict = new Object();
-
     data.forEach((res) => {
       let v = res.result
   

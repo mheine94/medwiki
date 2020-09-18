@@ -5,7 +5,15 @@ const rootDir = path.join(__dirname, "..")
 const localEnv = path.join(rootDir,"local.env")
 const serverEnv = path.join(rootDir, "server.env")
 const commonEnv = path.join(rootDir,"common.env")
-const {getErrorResponse} = require('../src/util')
+
+jest.mock('../src/util')
+const util = require('../src/util')
+const actualUtil = jest.requireActual('../src/util')
+util.getErrorResponse.mockImplementation(actualUtil.getErrorResponse)
+util.createTableDict.mockImplementation(actualUtil.createTableDict)
+util.getHtml.mockImplementation(actualUtil.getHtml)
+const {getErrorResponse,getHtml} = util
+
 
 if(fs.existsSync(localEnv)){
   console.log("Using local environment...")
@@ -45,7 +53,12 @@ const {wikipediaSearch} = require('../src/api/wikipedia.js')
     })
     
     test('handle undefined results',async ()=>{
-        result  = await wikipediaSearch("giididid","de")
+        let  result  = await wikipediaSearch("giididid","de")
         expect(result.error!=undefined).toBe(true)
+    })
+    test('handle unparsable wikipedia api response',async ()=>{
+      getHtml.mockImplementationOnce(()=>"<notjson>")
+      let result = await wikipediaSearch("bongo","de")
+      expect(result).toEqual(getErrorResponse("Cant parse wikipedia api response!","bongo"))
     })
 })
