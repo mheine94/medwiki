@@ -5,7 +5,7 @@ const rootDir = path.join(__dirname, "..")
 const localEnv = path.join(rootDir,"local.env")
 const serverEnv = path.join(rootDir, "server.env")
 const commonEnv = path.join(rootDir,"common.env")
-
+const {getErrorResponse} = require('../src/util')
 
 if(fs.existsSync(localEnv)){
   console.log("Using local environment...")
@@ -33,7 +33,12 @@ const {wikipediaSearch} = require('../src/api/wikipedia.js')
     },{})
  
     let callsTable = sampleCalls.map((sample)=>[sample.query,sample.lang, sample.result])
-
+    let emptyQueries = [
+      [undefined,"de", getErrorResponse("Empty query", )],
+      [null,"de", getErrorResponse("Empty query",null)],
+      ["","de", getErrorResponse("Empty query","")],
+    ]
+    callsTable = callsTable.concat(emptyQueries)
     test.each(callsTable)(`wikipediaSearch(%s,%s)`, async (query,lang,expected)=>{
         let result = await wikipediaSearch(query,lang)
         expect(result).toEqual(expected)
@@ -43,5 +48,4 @@ const {wikipediaSearch} = require('../src/api/wikipedia.js')
         result  = await wikipediaSearch("giididid","de")
         expect(result.error!=undefined).toBe(true)
     })
-   
 })
