@@ -24,7 +24,8 @@
     "jest": "^26.4.2",
     "jest-junit": "^11.1.0",
     "node-fetch": "^2.6.0",
-    "redis": "^3.0.2"
+    "redis": "^3.0.2",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "jsdoc": "^3.6.4"
