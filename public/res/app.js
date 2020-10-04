@@ -77,25 +77,27 @@ const opts = {
    * @param {string} tableSelector The jQuery selector
    * @returns {object} The TableDict contains a key for each table heading.
    */
-  function createTableDict (instance, tableSelector) {
-    let table = instance.find(tableSelector).first();
-    table.find('sup').remove();
-    if (table.length > 0) {
+  function createTableDict (dom, tableSelector) {
+
+    let table = dom.querySelector(tableSelector);
+    if(table != null){
+      table.querySelectorAll('sup').forEach(el => el.remove())
       let dict = new Map();
-      table.find('tr').each((index, elem) => {
-        let tableRow = $(elem);
-        let rowData = tableRow.children('td, th');
-        rowData.find("br").replaceWith('\n');
-        if (rowData.length > 1) {
-          dict.set(
-            rowData.eq(0).text().trim().toLowerCase(),
-            rowData.eq(1).text().trim()
-          );
-        } else if(index == 0 && rowData.length > 0){
-          dict.set("tableHeader", rowData.text().trim())
-        }
-      });
-      return dict;
+      table.querySelectorAll('tr').forEach((elem,index) => {
+      let tableRow = elem;
+          let rowData = tableRow.querySelectorAll('td, th');
+          rowData.forEach(el=> el.querySelectorAll("br").forEach(br=>br.replaceWith('\n')))
+          //rowData.find("br").replaceWith('\n');
+          if (rowData.length > 1) {
+            dict.set(
+              rowData[0].textContent.trim().toLowerCase(),
+              rowData[1].textContent.trim()
+            );
+          } else if(index == 0 && rowData.length > 0 && rowData.textContent != null){
+            dict.set("tableHeader", rowData.textContent.trim())
+          }
+        });
+        return dict;
     }
   }
 
@@ -217,10 +219,12 @@ async function wikipediaSearch(query, lang) {
             let apiResponse = await getHtml(url)
             let apiResponseJson = JSON.parse(apiResponse)
             let pageHtmlString = apiResponseJson.parse.text["*"]
-            let pageHtml = $.parseHTML(pageHtmlString)
-            const jq = $(pageHtml);
+            let domparser = new DOMParser()
+            let pageHtml = domparser.parseFromString(pageHtmlString, "text/html")
+            //let pageHtml = $.parseHTML(pageHtmlString)
+            //const jq = $(pageHtml);
   
-            let infoDict = createTableDict(jq, '.infobox, .wikitable');
+            let infoDict = createTableDict(pageHtml, '.infobox, .wikitable');
             if (!infoDict)
               continue;
   
