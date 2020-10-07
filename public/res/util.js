@@ -1,4 +1,6 @@
-function Resolver(){
+import { VERSION,APP_NAME,USER_AGENT, PAGE_URL, SEARCH_URL, MEDS_CATEGORY_DE, ALL_MEDS_URL , opts} from './config.js'
+
+function Resolver() {
     let cb = (callback, data)=> callback(data)
     let waitingPromises = {}
     let resolverFuncs= {

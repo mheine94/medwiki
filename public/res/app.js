@@ -1,6 +1,6 @@
 import { Resolver} from './util.js'
 import { WikiAllWorker, WikiApiWorker, WikipediaWorker, wikiAllRequestHandler,wikiApiRequestHandler} from './wiki-api.js'
-import { VERSION,APP_NAME,USER_AGENT, PAGE_URL, SEARCH_URL, MEDS_CATEGORY_DE, ALL_MEDS_URL} from './config.js'
+import { VERSION,APP_NAME,USER_AGENT, PAGE_URL, SEARCH_URL, MEDS_CATEGORY_DE, ALL_MEDS_URL , opts} from './config.js'
 
 const formSearch = document.getElementById('formSearch');
 const textareaOutput = document.getElementById('textareaOutput');
@@ -20,7 +20,7 @@ formSearch.addEventListener('submit', async function (event) {
          * @property {String} query comma separated string with query values
          */
         let data = Object.fromEntries(formData.entries());
-        result = await wikiApiRequestHandler(data.query.replace(/\s+/g, ' ').trim().split(/\s|\s*,\s*/g), data.lang)
+        let result = await wikiApiRequestHandler(data.query.replace(/\s+/g, ' ').trim().split(/\s|\s*,\s*/g), data.lang)
        
         if (result.error) throw new Error('Error: ' + result.error.message);
         let outputString = JSON.stringify(result, null, 4);
@@ -46,7 +46,7 @@ btnAll.addEventListener('click', async function (event) {
         textareaOutput.rows = 1;
         let formData = new FormData(formSearch);
         let data = Object.fromEntries(formData.entries());
-        result = await wikiAllRequestHandler(data.lang)
+        let result = await wikiAllRequestHandler(data.lang)
        
         if (result.error) throw new Error('Error: ' + result.error.message);
         let outputString = JSON.stringify(result, null, 4);
