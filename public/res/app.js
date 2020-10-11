@@ -1,5 +1,5 @@
 import { Resolver} from './util.js'
-import { WikiAllWorker, WikiApiWorker, WikipediaWorker, wikiAllRequestHandler,wikiApiRequestHandler} from './wiki-api.js'
+import { wikiAllRequestHandler,wikiApiRequestHandler} from './wiki-api.js'
 import { VERSION,APP_NAME,USER_AGENT, PAGE_URL, SEARCH_URL, MEDS_CATEGORY_DE, ALL_MEDS_URL , opts} from './config.js'
 
 const formSearch = document.getElementById('formSearch');

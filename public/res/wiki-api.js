@@ -1,4 +1,4 @@
-import {Resolver, unique, getErrorResponse, getHtml} from './util.js'
+import {Resolver, unique, getErrorResponse, getHtml, promiseAllLimitConcurrency } from './util.js'
 import { VERSION,APP_NAME,USER_AGENT, PAGE_URL, SEARCH_URL, MEDS_CATEGORY_DE, ALL_MEDS_URL , opts} from './config.js'
 
 let resolver = Resolver()
@@ -233,27 +233,15 @@ async function wikipediaSearch(query, lang) {
     } catch (ex) {
       return getErrorResponse(ex.message, query)
     }
-  }
-
+}
   
-
- async function queueWikiSearches(medicationNames, lang){
-   let queryPromises = []
-   for(let i = 0; i< medicationNames.length; i++){
-   let query = medicationNames[i]
-   let id = jobID++
-   let jp =  resolver.register(id)
-   let qId = await wikipediaQ.add({
-       handler:"wikipedia",   
-       args:{id:id, query:query,lang:lang}
-    })
-    queryPromises.push(new Promise(async resolve=>{
-       let result = await jp
-       resolve({query: query, result:result})
-     }))
-   }
-   return queryPromises
- }
+async function wikipediaSearchAdapter(data) {
+  let result = await wikipediaSearch(data.query, data.lang)
+  return {query:data.query, result:result}
+}
+function wikipediaSearchParameterWrap(medicationName, lang) {
+  return {query:medicationName,lang:lang}
+}
 
  /**
   * Searches every medication name in the medicationNames array with 
@@ -264,12 +252,13 @@ async function wikipediaSearch(query, lang) {
   * @param {string} lang ("en" | "de") The language in wich wikipedia will be queried.
   * @returns {object} innDict Object containing one object per inn and an unknown array containing not found medications.
   */
- async function wikiApi(medicationNames,lang){
-    let queryPromises = await queueWikiSearches(medicationNames,lang)
-    let queryResults = await Promise.all(queryPromises)
-    let innDict = createInnDict(queryResults)
-    return innDict 
-  }
+async function wikiApi(medicationNames, lang) {
+  let wrappedParams = medicationNames.map(e => wikipediaSearchParameterWrap(e, lang))
+  let promise = promiseAllLimitConcurrency(wrappedParams, wikipediaSearchAdapter, 10)
+  let result = await(promise)
+  let innDict = createInnDict(result)
+  return innDict 
+}
 
 
 
@@ -320,17 +309,7 @@ async function getAllMedsPage(lang,from){
 }
 async function wikiAllRequestHandler(lang){
   try{
-      wikiAllQ.start()
-      let id = jobID++
-      let jobProm = resolver.register(id)
-      await wikiAllQ.add({
-        handler:'wikiAll',
-        args:{
-          id:id,
-            lang:lang
-        }
-    })
-    let result = await jobProm 
+    let result = await allMedsExtracted(lang) 
     return result;
   } catch (ex) {
     console.log(ex)
@@ -343,13 +322,7 @@ async function wikiAllRequestHandler(lang){
 }
 async function allMedsExtracted(lang){
     const medicationNames = await allMeds(lang)   
-    let id = jobID++
-    let jobProm = resolver.register(id)
-    await wikiApiQ.add({
-        handler:'wikiApi',
-        args:{id:id, query:medicationNames, lang:lang}
-    })
-    let result = await jobProm
+    let result = await wikiApi(medicationNames,lang)
     return result
 }
 /**
@@ -364,14 +337,7 @@ async function wikiApiRequestHandler (query,lang){
     if ((query == undefined || query == null)) {
       throw new Error("No query.")
     }
-    wikiApiQ.start()
-    let id = jobID++
-    let jobProm = resolver.register(id)
-    await wikiApiQ.add({
-          handler:'wikiApi',
-        args:{id:id,query:query,lang:lang}
-      })
-    let result = await jobProm
+    let result = await wikiApi(query,lang)
     return result
   } catch (ex) {
     return {
@@ -382,93 +348,4 @@ async function wikiApiRequestHandler (query,lang){
 }
 
 
-
-
-
-class WikipediaWorker {
-    handle(args){
-        // If return value is false, this task will retry until retry value 5.
-    // If retry value is 5 in worker, current task will be as failed and freezed in the task pool.
-    let retry = 0;
-
-    // Should return true or false value (boolean) that end of the all process
-    // If process rejected, current task will be removed from task pool in worker.
-    return new Promise((resolve, reject) => {
-        try{
-      // A function is called in this example.
-      // The async operation is started by resolving the promise class with the return value.
-      wikipediaSearch(args.query,args.lang).then((data)=>{
-          console.log(data)
-        resolver.resolve(args.id, data)
-        resolve(true)
-      })
-    }catch (ex){
-         // Task will be failed.
-        // If retry value i not equal to 5,
-        // If the retry value was not 5, it is being sent back to the pool to try again.
-        resolve(false)
-    }
-    });
-    }
-}
-
-class WikiApiWorker {
-    handle(args){
-        // If return value is false, this task will retry until retry value 5.
-    // If retry value is 5 in worker, current task will be as failed and freezed in the task pool.
-    let retry = 0;
-
-    return new Promise((resolve, reject)=>{
-       wikiApi(args.query, args.lang).then((data)=>{
-           console.log(data)
-            resolver.resolve(args.id, data)
-           resolve(true)
-       })
-    })
-
-    // Should return true or false value (boolean) that end of the all process
-    // If process rejected, current task will be removed from task pool in worker.
-
-    }
-}
-class WikiAllWorker {
-    handle(args){
-        // If return value is false, this task will retry until retry value 5.
-    // If retry value is 5 in worker, current task will be as failed and freezed in the task pool.
-    let retry = 0;
-
-    // Should return true or false value (boolean) that end of the all process
-    // If process rejected, current task will be removed from task pool in worker.
-    return new Promise((resolve, reject) => {
-        try{
-      // A function is called in this example.
-      // The async operation is started by resolving the promise class with the return value.
-      allMedsExtracted(args.lang).then((res)=>{
-        resolver.resolve(args.id, data)
-        resolve(true)
-      })
-    }catch{
-         // Task will be failed.
-        // If retry value i not equal to 5,
-        // If the retry value was not 5, it is being sent back to the pool to try again.
-        resolve(false)
-    }
-    });
-    }
-}
-
-const queue = new Queue();
-Queue.workers({"wikipedia":WikipediaWorker, "wikiApi":WikiApiWorker, "wikiAll":WikiAllWorker})
-queue.setTimeout(10);
-queue.setPrinciple(Queue.FIFO);
-queue.setStorage("localstorage");
-queue.setDebug(true);
-
-const wikipediaQ = queue.create("wikipedia") 
-const wikiApiQ = queue.create("wikiApi") 
-const wikiAllQ = queue.create("wikiAll") 
-wikipediaQ.start()
-wikiApiQ.start()
-wikiAllQ.start()
-
-export { WikiAllWorker, WikiApiWorker, WikipediaWorker, allMeds, allMedsExtracted, createInnDict,createTableDict,parsePage,queueWikiSearches, wikiAllRequestHandler,wikiApi,wikiApiRequestHandler, wikipediaSearch}
+export { allMeds, allMedsExtracted, createInnDict,createTableDict,parsePage, wikiAllRequestHandler,wikiApi,wikiApiRequestHandler, wikipediaSearch}

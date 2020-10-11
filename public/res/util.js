@@ -36,5 +36,28 @@ async function getHtml(url){
     return await (await fetch(url.toString(),opts)).text()
 }
 
+
+function promiseAllLimitConcurrency(items, asyncFunc, concurrencyLimit) {
+  return new Promise((resolve, reject) => {
+    let unprocessed = [...items]
+    let active = 0
+    let results = []
+    let cb = result => {
+      console.log(`Resolved`)
+      results.push(result)
+      active--
+      if (unprocessed.length > 0) {
+        active++
+          asyncFunc(unprocessed.pop()).then(res=> cb(res))
+      } else if(results.lenght == items.lenght && active == 0){
+        resolve(results)
+      }
+    }
+    while (active < concurrencyLimit && unprocessed.length > 0) {
+      active++
+      asyncFunc(unprocessed.pop()).then(res=> cb(res))
+    }
+  })
+}
   
-export { Resolver , unique, getErrorResponse, getHtml}
+export { Resolver , unique, getErrorResponse, getHtml, promiseAllLimitConcurrency}
