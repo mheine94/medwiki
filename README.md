@@ -51,7 +51,7 @@ http://medication-wiki-api.uni-muenster.de/api
 }
 
 
-### beispiel
+### Beispiel
 https://wikiapi.now.sh/api/search?query=nurofen,ibuhexal,ibuflam,ondansetron,zofran,beloc-zok  
 
 ```json
