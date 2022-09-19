@@ -9,8 +9,8 @@ Try it out at https://mheine94.github.io/medwiki/public/
 * lang //"de" oder "en" default bei keiner Angabe ist "en"
 * query //csv der zu suchenden Medikamente
 #### Beispiel
-* https://medication-wiki-api.uni-muenster.de/api?lang=de&query=amoxicillin,nurofen
-* https://medication-wiki-api.uni-muenster.de/de/amoxicillin,nurofen
+* ?lang=de&query=amoxicillin,nurofen
+* http://hostname/de/amoxicillin,nurofen
 
 ### Post
 #### Postbody
@@ -19,8 +19,8 @@ Try it out at https://mheine94.github.io/medwiki/public/
 * lang als url Parameter
 * query newline seperated Namen der Medikamente im Post body
 ##### Beispiel
-http://medication-wiki-api.uni-muenster.de/api?lang=de
-http://medication-wiki-api.uni-muenster.de/de
+http://hostname?lang=de
+http://hostname/de
 
 POST /api?lang=de HTTP/1.1
 Content-Type: text/plain
@@ -41,7 +41,6 @@ Diclofenac
 * lang als feld
 * query als feld
 ###### Beispiel
-http://medication-wiki-api.uni-muenster.de/api
 
 {
     "query":["Amoxicillin","Nurofen","Diclofenac"],
@@ -50,7 +49,6 @@ http://medication-wiki-api.uni-muenster.de/api
 
 
 ### Beispiel
-https://wikiapi.now.sh/api/search?query=nurofen,ibuhexal,ibuflam,ondansetron,zofran,beloc-zok  
 
 ```json
 {
@@ -83,9 +81,9 @@ https://wikiapi.now.sh/api/search?query=nurofen,ibuhexal,ibuflam,ondansetron,zof
 * key: (optional) gibt an auf welchen key die Einträge gemappt werden sollen 
 
 ### Beispiel
-http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID  
-http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=opusCode  
-http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=opusCode&colums=LOINC,SNOMED  
+http://hostname/api/sheet/:documentID/:sheetID  
+http://hostname/api/sheet/:documentID/:sheetID?key=opusCode  
+http://hostname/api/sheet/:documentID/:sheetID?key=opusCode&colums=LOINC,SNOMED  
 
 
 ```json
@@ -121,7 +119,7 @@ sheets@imi-sheet-api.iam.gserviceaccount.com
 * key: gibt an auf welchen key die Einträge gemappt werden sollen 
 
 ### Beispiel
-http://medication-wiki-api.uni-muenster.de/api/sheet/:documentID/:sheetID?key=opusCode  
+http://hostname/api/sheet/:documentID/:sheetID?key=opusCode  
 
 Post Body (einzeln)
 ``` json
