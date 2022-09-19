@@ -1,7 +1,5 @@
 # Wikipedia-Medication-Extractor
 
-[![pipeline status](https://IMIGITLAB.uni-muenster.de/MeDIC/etl/wikipedia-medication-extractor/badges/master/pipeline.svg)](https://IMIGITLAB.uni-muenster.de/MeDIC/etl/wikipedia-medication-extractor/-/commits/master)    [![coverage report](https://IMIGITLAB.uni-muenster.de/MeDIC/etl/wikipedia-medication-extractor/badges/master/coverage.svg)](https://IMIGITLAB.uni-muenster.de/MeDIC/etl/wikipedia-medication-extractor/-/commits/master)
-
 Try it out at https://mheine94.github.io/medwiki/public/
 
 ## Wikipedia-api
